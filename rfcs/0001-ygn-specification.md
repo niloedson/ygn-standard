@@ -385,7 +385,7 @@ Matches lasting over 5 turns inject an inline `@YBN:` line at the beginning of e
 
 ### 5.2. Standard YGN v1.1 Translation (9 Lines, 410 Bytes)
 ```text
-T1: MULCHARMY MEOWLS vs nedson_br
+T1: nedsonbr vs THE WORLD
 @SP
   [C1: A(o.H)[#o1:Purulia]>o.GY // R1: OK ~LING(o.+H<D on S<H>)]
 @M1
