@@ -117,12 +117,12 @@ Field zones are strictly encoded as 2-character identifiers from the perspective
 
 ```
                             PLAYER 2 (Opponent)
-   [o.FS]       [o.M5] [o.M4] [o.M3] [o.M2] [o.M1]       [o.GY]
-   [o.ED]       [o.S5] [o.S4] [o.S3] [o.S2] [o.S1]       [o.D]
+   [o.D]       [o.S5] [o.S4] [o.S3] [o.S2] [o.S1]       [o.ED]
+   [o.GY]      [o.M5] [o.M4] [o.M3] [o.M2] [o.M1]       [o.FS]
                         [EL]        [ER]
-                [S1]   [S2]   [S3]   [S4]   [S5]         [ED]
-   [GY]         [M1]   [M2]   [M3]   [M4]   [M5]         [FS]
-   [D]                        PLAYER 1
+   [FS]         [M1]   [M2]   [M3]   [M4]   [M5]         [GY]
+   [ED]         [S1]   [S2]   [S3]   [S4]   [S5]         [D]
+                               PLAYER 1
 ```
 
 | Zone Code | Formal Name | Description |
