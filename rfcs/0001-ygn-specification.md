@@ -387,7 +387,7 @@ Matches lasting over 5 turns inject an inline `@YBN:` line at the beginning of e
 ```text
 T1: MULCHARMY MEOWLS vs nedson_br
 @SP
-  [C1: A(o.H)[#o1:Purulia]>o.GY // R1: OK ~LING(o.+H<H)]
+  [C1: A(o.H)[#o1:Purulia]>o.GY // R1: OK ~LING(o.+H<D on S<H>)]
 @M1
   [C1: A(H)[#1:Exceptional]>S3 // R1: S[Token]>M3, +H[#2:Urgent]<D, [#1]>GY]
   [C1: A(H)[#2:Urgent]>S3 // R1: S[#3:NightTrain](def)>M4<D, S[#4:Harvester](def)>M3<D, [#2]>GY]

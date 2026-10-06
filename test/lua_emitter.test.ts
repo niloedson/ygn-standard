@@ -33,7 +33,7 @@ function runLuaTest() {
     emitter:start_turn(1, 0)
     emitter:set_phase("@SP")
     emitter:chain_declare(1, 1, "Mulcharmy Purulia", 0x02, 0)
-    emitter:chain_resolve(1, "OK ~LING(o.+H<H)")
+    emitter:chain_resolve(1, "OK ~LING(o.+H<D on S<H)")
     emitter:finish_chain()
 
     emitter:set_phase("@M1")
@@ -58,7 +58,7 @@ function runLuaTest() {
   assert(outputTranscript.includes("T1: MULCHARMY MEOWLS"), "Should contain Turn 1");
   assert(outputTranscript.includes("N[Infinitrack Harvester]>M3"), "Should output correct Normal Summon zone");
   assert(outputTranscript.includes("S[Night Train Blue Traveler](def)>M4<D"), "Should output Special Summon with position and origin");
-  assert(outputTranscript.includes("[C1: A(o.H)[Mulcharmy Purulia] // R1: OK ~LING(o.+H<H)]"), "Should output atomic chain block");
+  assert(outputTranscript.includes("[C1: A(o.H)[Mulcharmy Purulia] // R1: OK ~LING(o.+H<D on S<H)]"), "Should output atomic chain block");
   assert(outputTranscript.includes("P2.LP-2000(6000)"), "Should output LP delta with verified state");
 
   console.log("\n>>> ALL LUA EMITTER TESTS PASSED SUCCESSFULLY! <<<");
