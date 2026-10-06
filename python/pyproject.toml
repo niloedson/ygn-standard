@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ygn"
+version = "1.0.0"
+authors = [
+  { name = "Yu-Gi-Oh! Open Tooling Working Group" }
+]
+description = "Reference Python parser, AST, and converter for YGN (Yu-Gi-Oh! Game Notation) - RFC 0001"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Games/Entertainment :: Board Games"
+]
+dependencies = []
+
+[project.scripts]
+ygn = "ygn.converter:main"

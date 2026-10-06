@@ -1,0 +1,298 @@
+[Event "Dueling Book Match"]
+[Player1 "MULCHARMY MEOWLS" 8000]
+[Player2 "nedson_br" 8000]
+[Format "Advanced (Unrated) with duel note"]
+
+T1: MULCHARMY MEOWLS
+@M1
+  // Chat: "m1?"
+  // Chat: "sp"
+@SP
+  A(H)[Mulcharmy Purulia]
+  [Mulcharmy Purulia]>GY
+@M1
+  [C1: A(S3)[Exceptional Schedule]]
+  +H[Urgent Schedule]<Deck
+  [Exceptional Schedule]>GY
+  [C1: A(S3)[Urgent Schedule]]
+  S[Night Train Blue Traveler]>M4<Deck
+  S[Infinitrack Harvester]>M3<Deck
+  [Urgent Schedule]>GY
+  // Chat: "ok?"
+  [Infinitrack Harvester]>GY
+  [Night Train Blue Traveler]>GY
+  S[Qliphort Genius]>ER<Extra Deck
+  A(GY)[Night Train Blue Traveler]
+  T>GY[Infinitrack Harvester]
+  S[Infinitrack Harvester]>M3<GY
+  S[Night Train Blue Traveler]>M5<GY
+  A(M3)[Infinitrack Harvester]
+  A(ER)[Qliphort Genius]
+  +H[Therion "King" Regulus]<Deck
+  +H[Infinitrack Brutal Dozer]<Deck
+  A(H)[Night Train Blue Traveler]
+  [Night Train Blue Traveler]>GY
+  +H[Revolving Switchyard]<Deck
+  A(H)[Infinitrack Brutal Dozer]
+  [Qliphort Genius]>GY
+  S[Infinitrack Brutal Dozer]>M2<H
+  A(M2)[Infinitrack Brutal Dozer]
+  S[Infinitrack Trencher]>M4<Deck
+  X[Infinitrack Brutal Dozer+Infinitrack Trencher]>M4
+  A(M4)[Infinitrack River Stormer]
+  !M4[Infinitrack Trencher]>GY
+  +H[Heavy Armored Knight Babeldecker]<Deck
+  S[Infinitrack Goliath]>ER<Extra Deck
+  [Infinitrack River Stormer]>GY
+  A(GY)[Infinitrack Trencher]
+  T>GY[Infinitrack Brutal Dozer]
+  S[Infinitrack Brutal Dozer]>M2<GY
+  [Infinitrack Brutal Dozer]>GY
+  [Infinitrack Goliath]>GY
+  S[Ancient Gear Ballista]>ER<Extra Deck
+  A(ER)[Ancient Gear Ballista]
+  +H[Ancient Gear Box]<Deck
+  A(H)[Ancient Gear Box]
+  +H[Convex Knight]<Deck
+  A(H)[Therion "King" Regulus]
+  T>GY[Infinitrack Goliath]
+  [Infinitrack Goliath]>S1<GY
+  S[Therion "King" Regulus]>M1<H
+  A(M3)[Infinitrack Harvester]
+  T>M1[Therion "King" Regulus]
+  X[Night Train Blue Traveler+Infinitrack Harvester]>M3
+  A(M3)[Superdreadnought Rail Cannon Flying Launcher]
+  +H[Heavy Freight Train Derricrane]<Deck
+  N[Heavy Armored Knight Babeldecker]>M4
+  A(FS)[Revolving Switchyard]
+  A(H)[Ash Blossom & Joyous Spring]
+  [Ash Blossom & Joyous Spring]>GY
+  A(M4)[Heavy Armored Knight Babeldecker]
+  A(M4)[Superdreadnought Rail Cannon Gustav Max]
+  !M4[Heavy Armored Knight Babeldecker]>GY
+  LP-2000
+  [Superdreadnought Rail Cannon Gustav Max]>GY
+  [Ancient Gear Ballista]>GY
+  S[Double Headed Anger Knuckle]>ER<Extra Deck
+  A(H)[Heavy Freight Train Derricrane]
+  S[Heavy Freight Train Derricrane]>M2<H
+  A(H)[Convex Knight]
+  S[Convex Knight]>M4<H
+  A(M4)[Convex Knight]
+  [Gizmek Taniguku, the Immobile Intellect]>GY
+  X[Heavy Freight Train Derricrane+Convex Knight]>M4
+  A(M4)[Superdreadnought Rail Cannon Gustav Max]
+  !M4[Convex Knight]>GY
+  LP-2000
+  A(GY)[Gizmek Taniguku, the Immobile Intellect]
+  T>GY[Superdreadnought Rail Cannon Gustav Max]
+  S[Superdreadnought Rail Cannon Gustav Max]>M2<GY
+  A(GY)[Exceptional Schedule]
+  T>GY[Heavy Armored Knight Babeldecker]
+  [Infinitrack Goliath]>GY
+  S[Heavy Armored Knight Babeldecker]>M5<GY
+  A(GY)[Infinitrack Goliath]
+T1: MULCHARMY MEOWLS
+@M1
+  [Artmage Finmel]>GY
+  [Harpie's Feather Duster]>GY
+  S[Artmage Non-Finito]>M2<Extra Deck
+  A(M2)[Artmage Non-Finito]
+  T>M2[Artmage Non-Finito]
+  [Artmage Impasto -Recapture-]>S2<Deck
+  A(H)[Droll & Lock Bird]
+  [Droll & Lock Bird]>GY
+  // Chat: "???"
+  // Chat: "eu nao add nada"
+  // Chat: "true"
+  A(H)[Artmage Graflare]
+  // Chat: "eu li add"
+  // Chat: "e fiquei na cabeça de usar"
+  S[Artmage Graflare]>M1<H
+  [Artmage Vandalism -Assault-]>S3<Deck
+  A(S3)[Artmage Vandalism -Assault-]
+  T>S3[Artmage Vandalism -Assault-]
+  +H[Medius the Pure]<Deck
+  A(H)[Droll & Lock Bird]
+  [Droll & Lock Bird]>GY
+  [Artmage Impasto -Recapture-]>GY
+  N[Medius the Pure]>M2
+  A(M2)[Medius the Pure]
+  S[Nervedo the Shadebeast Power Patron]>M3<Deck
+  A(M3)[Nervedo the Shadebeast Power Patron]
+  S[Nerva the Power Patron of Creation]>M4<Extra Deck
+  T>M4[Nerva the Power Patron of Creation]
+  A(Extra Deck)[Nervedo the Shadebeast Power Patron]
+  S[Jupredo the Shademachine Power Patron]>M5<Deck
+  [Medius the Pure]>GY
+  S[Beyond the Pendulum]>ER<Extra Deck
+  A(ER)[Beyond the Pendulum]
+  A(Extra Deck)[Jupredo the Shademachine Power Patron]
+  // Chat: "jupredo 1"
+  LP-1200
+  +H[Prohibited Power Patron Portal - Terminus]<Deck
+  +H[Nervedo the Shadebeast Power Patron]<Deck
+  [C1: A(S1)[Nervedo the Shadebeast Power Patron]]
+  [C1: A(S2)[Prohibited Power Patron Portal - Terminus]]
+  [Artmage Power Patron]>GY
+  +H[Vidolium the Unstable Power Patron of Unity]<Deck
+  [Prohibited Power Patron Portal - Terminus]>GY
+  [C1: A(Right Pendulum Zone)[Vidolium the Unstable Power Patron of Unity]]
+  S[Nervedo the Shadebeast Power Patron]>M3<Extra Deck
+  S[Jupredo the Shademachine Power Patron]>M5<Extra Deck
+  X[Nervedo the Shadebeast Power Patron+Jupredo the Shademachine Power Patron]>M5
+  A(Right Pendulum Zone)[Vidolium the Unstable Power Patron of Unity]
+  S[Artmage Power Patron]>M3<GY
+  A(Extra Deck)[Vidolium the Unstable Power Patron of Unity]
+  +H[Prohibited Power Patron Portal - Terminus]<Deck
+  A(GY)[Medius the Pure]
+  S[Medius the Pure]>M1<GY
+  A(M3)[Artmage Power Patron]
+  [Artmage Power Patron]>GY
+  S[Artmage Diactorus]>M1<Extra Deck
+  A(GY)[Artmage Power Patron]
+  +H[Artmage Academic Arcane Arts Acropolis]<Deck
+  A(FS)[Artmage Academic Arcane Arts Acropolis]
+  [Prohibited Power Patron Portal - Terminus]>GY
+  // Chat: "litera"
+  +H[Artmage Litera]<Deck
+  A(H)[Artmage Litera]
+  S[Artmage Litera]>M2<H
+  [Artmage Litera]>GY
+  S[Artmage Litera]>M2<GY
+  A(FS)[Artmage Academic Arcane Arts Acropolis]
+  [Artmage Impasto -Recapture-]>GY
+  // Chat: "finmel"
+  +H[Artmage Finmel]<Deck
+  A(H)[Artmage Finmel]
+  S[Artmage Finmel]>M3<H
+  [Artmage Finmel]>GY
+  [Artmage Litera]>GY
+  S[Purification Power Patron]>M3<Extra Deck
+  A(M3)[Purification Power Patron]
+  +H[Theorealize Past Lull]<Deck
+  A(FS)[Artmage Academic Arcane Arts Acropolis]
+  [Theorealize Past Lull]>GY
+  // Chat: "graflare"
+  +H[Artmage Graflare]<Deck
+  [Beyond the Pendulum]>GY
+  [Purification Power Patron]>GY
+  S[Charmer Quartet in Bloom]>EL<Extra Deck
+  A(Bloom in Left Extra Monster Zone)[Charmer Quartet]
+  S[Artmage Finmel]>M3<GY
+  S[Artmage Litera]>M2<GY
+  T>Bloom in Left Extra Monster Zone[Charmer Quartet]
+T2: nedson_br
+@M1
+  [C1: A(S3)[Lightning Storm]]
+  // Chat: "s/t"
+  LP-1500
+  [Lightning Storm]>GY
+  LP-1500
+  [Solemn Accusation]>GY
+  N[Infinitrack Harvester]>M3
+  A(M3)[Infinitrack Harvester]
+  A(H)[Heavy Freight Train Derricrane]
+  S[Heavy Freight Train Derricrane]>M2<H
+  +H[Infinitrack Brutal Dozer]<Deck
+  // Chat: "dxa eu le o add"
+  // Chat: "pf"
+  [C1: A(S3)[Heavy Forward]]
+  [Albion the Branded Dragon]>GY
+  T>S3[Heavy Forward]
+  [Heavy Forward]>GY
+  [The Fallen & The Virtuous]>GY
+  A(H)[Infinitrack Brutal Dozer]
+  [Infinitrack Harvester]>GY
+  S[Infinitrack Brutal Dozer]>M3<H
+  A(M3)[Infinitrack Brutal Dozer]
+  S[Infinitrack Trencher]>M4<Deck
+  A(M3)[Artmage Finmel]
+  T>M3[Artmage Finmel]
+  // Chat: "negate?"
+  // Chat: "sim"
+  // Chat: "alguma resposta?"
+  // Chat: "nop"
+  A(M4)[Nerva the Power Patron of Creation]
+  [Heavy Freight Train Derricrane]>GY
+  [Infinitrack Brutal Dozer]>GY
+  [Infinitrack Trencher]>GY
+T1: MULCHARMY MEOWLS
+@M1
+  [C1: A(S3)[Exceptional Schedule]]
+  A(H)[Ash Blossom & Joyous Spring]
+  [Ash Blossom & Joyous Spring]>GY
+  [Exceptional Schedule]>GY
+  A(FS)[Revolving Switchyard]
+  [Night Train Blue Traveler]>GY
+  +H[Heavy Armored Knight Babeldecker]<Deck
+  N[Heavy Armored Knight Babeldecker]>M3
+  A(M3)[Heavy Armored Knight Babeldecker]
+  A(H)[Heavy Freight Train Derricrane]
+  S[Heavy Freight Train Derricrane]>M2<H
+  S[Night Train Blue Traveler]>M1<H
+  A(M3)[Heavy Armored Knight Babeldecker]
+  A(M3)[Superdreadnought Rail Cannon Flying Launcher]
+  +H[Flying Pegasus Railroad Stampede]<Deck
+  N[Flying Pegasus Railroad Stampede]>M4
+  A(M4)[Flying Pegasus Railroad Stampede]
+  T>GY[Night Train Blue Traveler]
+  S[Night Train Blue Traveler]>M5<GY
+  A(M4)[Flying Pegasus Railroad Stampede]
+  T>M5[Night Train Blue Traveler]
+  X[Flying Pegasus Railroad Stampede+Night Train Blue Traveler]>M5
+  A(M5)[Superdreadnought Rail Cannon Gustav Max]
+  LP-2000
+  !M5[Night Train Blue Traveler]>GY
+  S[Ancient Gear Ballista]>ER<Extra Deck
+  [Superdreadnought Rail Cannon Gustav Max]>GY
+  [Superdreadnought Rail Cannon Flying Launcher]>GY
+  A(ER)[Ancient Gear Ballista]
+  +H[Ancient Gear Box]<Deck
+  A(H)[Ancient Gear Box]
+  +H[Convex Knight]<Deck
+  A(H)[Convex Knight]
+  S[Convex Knight]>M3<H
+  A(M3)[Convex Knight]
+  [Gizmek Taniguku, the Immobile Intellect]>GY
+  X[Night Train Blue Traveler+Convex Knight]>M3
+  A(M3)[Superdreadnought Rail Cannon Gustav Max]
+  LP-2000
+  !M3[Convex Knight]>GY
+  [Ancient Gear Box]>GY
+  A(GY)[Exceptional Schedule]
+  T>GY[Heavy Armored Knight Babeldecker]
+  S[Heavy Armored Knight Babeldecker]>M3<GY
+  [Revolving Switchyard]>GY
+  X[Heavy Freight Train Derricrane+Heavy Armored Knight Babeldecker]>M3
+  A(M3)[Superdreadnought Rail Cannon Gustav Max]
+  LP-2000
+  !M3[Heavy Armored Knight Babeldecker]>GY
+  [Superdreadnought Rail Cannon Gustav Max]>GY
+  [Ancient Gear Ballista]>GY
+  S[Qliphort Genius]>ER<Extra Deck
+  A(GY)[Night Train Blue Traveler]
+  T>GY[Heavy Armored Knight Babeldecker]
+  S[Heavy Armored Knight Babeldecker]>M3<GY
+  S[Night Train Blue Traveler]>M5<GY
+  A(ER)[Qliphort Genius]
+  +H[Infinitrack Brutal Dozer]<Deck
+  A(H)[Infinitrack Brutal Dozer]
+  [Qliphort Genius]>GY
+  S[Infinitrack Brutal Dozer]>M2<H
+  A(M2)[Infinitrack Brutal Dozer]
+  S[Infinitrack Tunneller]>M4<Deck
+  X[Infinitrack Brutal Dozer+Infinitrack Tunneller]>M4
+  A(M4)[Infinitrack River Stormer]
+  !M4[Infinitrack Tunneller]>GY
+  +H[Therion "King" Regulus]<Deck
+  A(H)[Therion "King" Regulus]
+  [Qliphort Genius]>S2<GY
+  S[Therion "King" Regulus]>M2<H
+  A(GY)[Infinitrack Tunneller]
+  T>GY[Superdreadnought Rail Cannon Gustav Max]
+  T>GY[Superdreadnought Rail Cannon Gustav Max]
+  T>GY[Ancient Gear Ballista]
+  T>GY[Ancient Gear Box]
+  T>GY[Convex Knight]
+  X[Heavy Armored Knight Babeldecker+Night Train Blue Traveler]>M5

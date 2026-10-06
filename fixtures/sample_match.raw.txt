@@ -1,0 +1,734 @@
+[0:00] MULCHARMY MEOWLS hosted 2 out of 3 Match in Advanced (Unrated) with duel note "nilo"
+[0:00] Accepted nedson_br into duel
+[0:05] "glhf !"
+[0:10] "glhf !"
+----------------(Turn 1)----------------
+[0:13] Chose to go first
+[0:13] Drew Artmage Litera
+[0:13] Drew Artmage Power Patron
+[0:13] Drew Artmage Finmel
+[0:13] Drew Mulcharmy Purulia
+[0:13] Drew Called by the Grave
+[0:13] Drew Exceptional Schedule
+[0:13] Drew Infinitrack Harvester
+[0:13] Drew Dominus Purge
+[0:13] Drew Infinitrack Harvester
+[0:13] Drew Night Train Blue Traveler
+[0:22] "m1?"
+[0:25] "sp"
+[0:27] Entered Standby Phase
+[0:27] Declared effect of Mulcharmy Purulia in hand (4/5)
+[0:28] Sent Mulcharmy Purulia from hand (4/5) to GY
+[0:35] Signaled OK
+[0:38] Signaled OK
+[0:41] Entered Main Phase 1
+[0:53] Activated Exceptional Schedule from hand (1/5) to S-3
+[0:58] Signaled OK
+[1:01] Viewed deck
+[1:01] Summoned a token in M-3
+[1:07] Added Urgent Schedule from Deck to hand
+[1:08] Stopped viewing Deck
+[1:08] Shuffled deck
+[1:18] Sent Exceptional Schedule from S-3 to GY
+[1:24] Activated Urgent Schedule from hand (1/5) to S-3
+[1:27] Signaled OK
+[1:31] Viewed deck
+[1:34] Special Summoned Night Train Blue Traveler from Deck to M-4 (DEF)
+[1:43] Special Summoned Infinitrack Harvester from Deck to M-3 (DEF)
+[1:45] Sent Urgent Schedule from S-3 to GY
+[1:46] Stopped viewing Deck
+[1:46] Shuffled deck
+[1:57] "ok?"
+[2:00] Signaled OK
+[2:01] Sent Infinitrack Harvester from M-3 to GY
+[2:02] Sent Night Train Blue Traveler from M-4 to GY
+[2:02] Viewed Extra Deck
+[2:05] Stopped viewing Extra Deck
+[2:06] Special Summoned Qliphort Genius from Extra Deck to Right EMZ (ATK)
+[2:12] Viewed GY
+[2:14] Declared effect of Night Train Blue Traveler from GY
+[2:16] Pointed at Infinitrack Harvester from GY
+[2:17] Signaled OK
+[2:20] Special Summoned Infinitrack Harvester from GY to M-3 (DEF)
+[2:22] Special Summoned Night Train Blue Traveler from GY to M-5 (DEF)
+[2:24] Stopped viewing GY
+[2:26] Declared effect of Infinitrack Harvester in M-3
+[2:27] Declared effect of Qliphort Genius in Right Extra Monster Zone
+[2:31] Signaled OK
+[2:32] Viewed deck
+[2:35] Added Therion "King" Regulus from Deck to hand
+[2:36] Added Infinitrack Brutal Dozer from Deck to hand
+[2:39] Stopped viewing Deck
+[2:39] Shuffled deck
+[2:56] Declared effect of Night Train Blue Traveler in hand (6/6)
+[2:58] Sent Night Train Blue Traveler from hand (6/6) to GY
+[2:59] Signaled OK
+[3:01] Viewed deck
+[3:04] Added Revolving Switchyard from Deck to hand
+[3:06] Stopped viewing Deck
+[3:06] Shuffled deck
+[3:13] Declared effect of Infinitrack Brutal Dozer in hand (6/6)
+[3:15] Sent Qliphort Genius from Right Extra Monster Zone to GY
+[3:16] Signaled OK
+[3:19] Special Summoned Infinitrack Brutal Dozer from hand (6/6) to M-2 (DEF)
+[3:19] Drew Nervedo the Shadebeast Power Patron
+[3:20] Declared effect of Infinitrack Brutal Dozer in M-2
+[3:21] Shuffled hand
+[3:22] Signaled OK
+[3:25] Viewed deck
+[3:29] Special Summoned Infinitrack Trencher from Deck to M-4 (DEF)
+[3:31] Stopped viewing Deck
+[3:31] Shuffled deck
+[3:37] Viewed Extra Deck
+[3:43] Overlayed Infinitrack Brutal Dozer in M-2 onto Infinitrack Trencher in M-4
+[3:46] Special Summoned Infinitrack River Stormer from Extra Deck onto Infinitrack Brutal Dozer in M-4 (ATK)
+[3:49] Stopped viewing Extra Deck
+[3:53] Declared effect of Infinitrack River Stormer in M-4
+[3:54] Detached Xyz Material Infinitrack Trencher from Infinitrack River Stormer in M-4
+[3:55] Signaled OK
+[3:59] Viewed deck
+[4:09] Added Heavy Armored Knight Babeldecker from Deck to hand
+[4:11] Stopped viewing Deck
+[4:11] Shuffled deck
+[4:15] Viewed Extra Deck
+[4:18] Stopped viewing Extra Deck
+[4:19] Special Summoned Infinitrack Goliath from Extra Deck to Right EMZ (ATK)
+[4:20] Sent Infinitrack River Stormer from M-4 to GY
+[4:22] Signaled OK
+[4:23] Viewed GY
+[4:26] Declared effect of Infinitrack Trencher from GY
+[4:28] Banished Infinitrack Trencher from GY
+[4:31] Pointed at Infinitrack Brutal Dozer from GY
+[4:36] Signaled OK
+[4:39] Special Summoned Infinitrack Brutal Dozer from GY to M-2 (DEF)
+[4:46] Stopped viewing GY
+[4:48] Viewed Extra Deck
+[4:53] Stopped viewing Extra Deck
+[4:54] Viewed Extra Deck
+[4:58] Sent Infinitrack Brutal Dozer from M-2 to GY
+[4:59] Stopped viewing Extra Deck
+[5:00] Sent Infinitrack Goliath from Right Extra Monster Zone to GY
+[5:01] Viewed Extra Deck
+[5:02] Stopped viewing Extra Deck
+[5:03] Special Summoned Ancient Gear Ballista from Extra Deck to Right EMZ (ATK)
+[5:05] Declared effect of Ancient Gear Ballista in Right Extra Monster Zone
+[5:07] Signaled OK
+[5:10] Viewed deck
+[5:14] Added Ancient Gear Box from Deck to hand
+[5:16] Viewed Opponent's Graveyard
+[5:19] Stopped viewing Opponent's GY
+[5:21] Stopped viewing Deck
+[5:21] Shuffled deck
+[5:25] Declared effect of Ancient Gear Box in hand (2/7)
+[5:26] Changed stats of "Token" in M-3 to 3000/3000
+[5:26] Signaled OK
+[5:28] Viewed Opponent's Graveyard
+[5:28] Viewed deck
+[5:31] Stopped viewing Opponent's GY
+[5:34] Added Convex Knight from Deck to hand
+[5:37] Stopped viewing Deck
+[5:37] Shuffled deck
+[5:40] Declared effect of Therion "King" Regulus in hand (1/8)
+[5:41] Viewed GY
+[5:43] Signaled OK
+[5:44] Pointed at Infinitrack Goliath from GY
+[5:47] Placed Infinitrack Goliath from GY to S-1
+[5:50] Special Summoned Therion "King" Regulus from hand (1/8) to M-1 (ATK)
+[5:51] Drew Theorealize Past Lull
+[5:52] Stopped viewing GY
+[5:52] Shuffled hand
+[5:55] Declared effect of Infinitrack Harvester in M-3
+[5:57] Pointed at Therion "King" Regulus in M-1
+[6:00] Signaled OK
+[6:07] Overlayed Night Train Blue Traveler in M-5 onto Infinitrack Harvester in M-3
+[6:09] Viewed Extra Deck
+[6:12] Stopped viewing Extra Deck
+[6:12] Special Summoned Superdreadnought Rail Cannon Flying Launcher from Extra Deck onto Night Train Blue Traveler in M-3 (ATK)
+[6:14] Declared effect of Superdreadnought Rail Cannon Flying Launcher in M-3
+[6:20] Signaled OK
+[6:23] Viewed deck
+[6:31] Added Heavy Freight Train Derricrane from Deck to hand
+[6:32] Stopped viewing Deck
+[6:32] Shuffled deck
+[6:35] Activated Field Spell Revolving Switchyard from hand (5/8)
+[6:46] Normal Summoned Heavy Armored Knight Babeldecker from hand (7/7) to M-4
+[6:49] Drew Ash Blossom & Joyous Spring
+[6:49] Shuffled hand
+[6:49] Declared effect of Revolving Switchyard in Field Spell Zone
+[6:52] Thinking
+[7:02] Declared effect of Ash Blossom & Joyous Spring in hand (2/7)
+[7:04] Sent Ash Blossom & Joyous Spring from hand (2/7) to GY
+[7:12] Signaled OK
+[7:16] Declared effect of Heavy Armored Knight Babeldecker in M-4
+[7:19] Signaled OK
+[7:21] Viewed Extra Deck
+[7:24] Stopped viewing Extra Deck
+[7:24] Special Summoned Superdreadnought Rail Cannon Gustav Max from Extra Deck onto Heavy Armored Knight Babeldecker in M-4 (ATK)
+[7:28] Declared effect of Superdreadnought Rail Cannon Gustav Max in M-4
+[7:29] Detached Xyz Material Heavy Armored Knight Babeldecker from Superdreadnought Rail Cannon Gustav Max in M-4
+[7:31] Lost 2000 LP
+[7:34] Viewed Extra Deck
+[7:39] Stopped viewing Extra Deck
+[7:42] Sent Superdreadnought Rail Cannon Gustav Max from M-4 to GY
+[7:44] Sent Ancient Gear Ballista from Right Extra Monster Zone to GY
+[7:46] Viewed Extra Deck
+[7:48] Stopped viewing Extra Deck
+[7:50] Special Summoned Double Headed Anger Knuckle from Extra Deck to Right EMZ (ATK)
+[7:56] Declared effect of Heavy Freight Train Derricrane in hand (4/6)
+[7:59] Signaled OK
+[8:01] Special Summoned Heavy Freight Train Derricrane from hand (4/6) to M-2 (DEF)
+[8:02] Drew The Fallen & The Virtuous
+[8:04] Declared effect of Convex Knight in hand (5/5)
+[8:07] Signaled OK
+[8:07] Special Summoned Convex Knight from hand (5/5) to M-4 (DEF)
+[8:09] Drew Mulcharmy Fuwalos
+[8:09] Shuffled hand
+[8:10] Declared effect of Convex Knight in M-4
+[8:15] Signaled OK
+[8:17] Viewed deck
+[8:29] Sent Gizmek Taniguku, the Immobile Intellect from Deck to GY
+[8:31] Stopped viewing Deck
+[8:31] Shuffled deck
+[8:36] Viewed GY
+[8:39] Stopped viewing GY
+[8:42] Viewed Extra Deck
+[8:45] Stopped viewing Extra Deck
+[8:46] Overlayed Heavy Freight Train Derricrane in M-2 onto Convex Knight in M-4
+[8:48] Viewed Extra Deck
+[8:50] Stopped viewing Extra Deck
+[8:51] Special Summoned Superdreadnought Rail Cannon Gustav Max from Extra Deck onto Heavy Freight Train Derricrane in M-4 (ATK)
+[8:52] Viewed Opponent's Graveyard
+[8:55] Stopped viewing Opponent's GY
+[8:58] Declared effect of Superdreadnought Rail Cannon Gustav Max in M-4
+[9:01] Detached Xyz Material Convex Knight from Superdreadnought Rail Cannon Gustav Max in M-4
+[9:15] Lost 2000 LP
+[9:19] Viewed GY
+[9:25] Declared effect of Gizmek Taniguku, the Immobile Intellect from GY
+[9:28] Banished Gizmek Taniguku, the Immobile Intellect from GY
+[9:28] Signaled OK
+[9:30] Pointed at Superdreadnought Rail Cannon Gustav Max from GY
+[9:33] Special Summoned Superdreadnought Rail Cannon Gustav Max from GY to M-2 (DEF)
+[9:35] Stopped viewing GY
+[9:38] Viewed GY
+[9:44] Declared effect of Exceptional Schedule from GY
+[9:47] Banished Exceptional Schedule from GY
+[9:52] Pointed at Heavy Armored Knight Babeldecker from GY
+[9:52] Signaled OK
+[9:57] Sent Infinitrack Goliath from S-1 to GY
+[10:01] Special Summoned Heavy Armored Knight Babeldecker from GY to M-5 (DEF)
+[10:03] Declared effect of Infinitrack Goliath from GY
+[10:07] Admitted defeat
+[10:37] Finished siding
+[11:25] Finished siding
+----------------(Turn 1)----------------
+[11:31] Chose to go first
+[11:31] Drew D.D. Crow
+[11:31] Drew Solemn Accusation
+[11:31] Drew Artmage Finmel
+[11:31] Drew Harpie's Feather Duster
+[11:31] Drew Artmage Graflare
+[11:31] Drew Droll & Lock Bird
+[11:31] Drew Heavy Forward
+[11:31] Drew Heavy Freight Train Derricrane
+[11:31] Drew Lightning Storm
+[11:31] Drew Ancient Gear Box
+[11:40] Entered Standby Phase
+[11:42] Entered Main Phase 1
+[11:44] Signaled OK
+[11:46] Sent Artmage Finmel from hand (3/5) to GY
+[11:48] Sent Harpie's Feather Duster from hand (3/4) to GY
+[11:49] Viewed Extra Deck
+[11:51] Stopped viewing Extra Deck
+[11:51] Special Summoned Artmage Non-Finito from Extra Deck to M-2 (DEF)
+[11:53] Declared effect of Artmage Non-Finito in M-2
+[12:01] Pointed at Artmage Non-Finito in M-2
+[12:10] Signaled OK
+[12:12] Viewed deck
+[12:17] Placed Artmage Impasto -Recapture- from Deck to S-2
+[12:18] Stopped viewing Deck
+[12:18] Shuffled deck
+[12:25] Declared effect of Droll & Lock Bird in hand (1/5)
+[12:25] Set Artmage Impasto -Recapture- in S-2
+[12:28] Sent Droll & Lock Bird from hand (1/5) to GY
+[12:30] "???"
+[12:34] Viewed GY
+[12:34] "eu nao add nada"
+[12:36] Returned Droll & Lock Bird from GY to hand
+[12:41] "true"
+[12:42] Declared effect of Artmage Graflare in hand (3/3)
+[12:45] "eu li add"
+[12:56] "e fiquei na cabeça de usar"
+[12:58] Stopped viewing GY
+[13:00] Special Summoned Artmage Graflare from hand (3/3) to M-1 (ATK)
+[13:02] Viewed deck
+[13:08] Placed Artmage Vandalism -Assault- from Deck to S-3
+[13:09] Stopped viewing Deck
+[13:09] Shuffled deck
+[13:10] Set Artmage Vandalism -Assault- in S-3
+[13:12] Activated Set Artmage Vandalism -Assault- in S-3
+[13:13] Declared effect of Artmage Vandalism -Assault- in S-3
+[13:14] Pointed at Artmage Vandalism -Assault- in S-3
+[13:20] Signaled OK
+[13:20] Viewed deck
+[13:22] Added Medius the Pure from Deck to hand
+[13:22] Stopped viewing Deck
+[13:22] Shuffled deck
+[13:22] Declared effect of Droll & Lock Bird in hand (1/5)
+[13:22] Activated Set Artmage Impasto -Recapture- in S-2
+[13:22] Banished Artmage Non-Finito from M-2
+[13:22] Sent Droll & Lock Bird from hand (1/5) to GY
+[13:22] Sent Artmage Impasto -Recapture- from S-2 to GY
+[13:22] Signaled OK
+[13:24] Normal Summoned Medius the Pure from hand (2/3) to M-2
+[13:26] Declared effect of Medius the Pure in M-2
+[13:32] Viewed deck
+[13:37] Special Summoned Nervedo the Shadebeast Power Patron from Deck to M-3 (ATK)
+[13:39] Stopped viewing Deck
+[13:39] Shuffled deck
+[13:40] Signaled OK
+[13:41] Declared effect of Nervedo the Shadebeast Power Patron in M-3
+[13:43] Banished Medius the Pure from top of Deck face-down
+[13:44] Banished Prohibited Power Patron Portal - Terminus from top of Deck face-down
+[13:45] Banished Called by the Grave from top of Deck face-down
+[13:48] Returned Nervedo the Shadebeast Power Patron from M-3 to Extra Deck
+[13:49] Viewed Banished
+[13:51] Stopped viewing Banished
+[13:53] Viewed Extra Deck
+[13:56] Stopped viewing Extra Deck
+[13:57] Special Summoned Nerva the Power Patron of Creation from Extra Deck to M-4 (DEF)
+[13:59] Viewed Extra Deck
+[14:00] Pointed at Nerva the Power Patron of Creation in M-4
+[14:02] Declared effect of Nervedo the Shadebeast Power Patron from Extra Deck
+[14:04] Stopped viewing Extra Deck
+[14:13] Signaled OK
+[14:14] Viewed deck
+[14:19] Special Summoned Jupredo the Shademachine Power Patron from Deck to M-5 (ATK)
+[14:21] Stopped viewing Deck
+[14:21] Shuffled deck
+[14:24] Viewed GY
+[14:25] Stopped viewing GY
+[14:27] Returned Jupredo the Shademachine Power Patron from M-5 to Extra Deck
+[14:29] Sent Medius the Pure from M-2 to GY
+[14:30] Viewed Extra Deck
+[14:32] Stopped viewing Extra Deck
+[14:33] Special Summoned Beyond the Pendulum from Extra Deck to Right EMZ (ATK)
+[14:34] Declared effect of Beyond the Pendulum in Right Extra Monster Zone
+[14:36] Viewed Extra Deck
+[14:38] Declared effect of Jupredo the Shademachine Power Patron from Extra Deck
+[14:39] Stopped viewing Extra Deck
+[14:41] Signaled OK
+[14:42] "jupredo 1"
+[14:46] Lost 1200 LP
+[14:48] Viewed deck
+[14:52] Added Prohibited Power Patron Portal - Terminus from Deck to hand
+[14:55] Added Nervedo the Shadebeast Power Patron from Deck to hand
+[14:56] Stopped viewing Deck
+[14:56] Shuffled deck
+[15:00] Activated Nervedo the Shadebeast Power Patron from hand (4/4) to S-1
+[15:03] Activated Prohibited Power Patron Portal - Terminus from hand (1/3) to S-2
+[15:05] Viewed deck
+[15:06] Signaled OK
+[15:06] Sent Artmage Power Patron from Deck to GY
+[15:07] Added Vidolium the Unstable Power Patron of Unity from Deck to hand
+[15:08] Stopped viewing Deck
+[15:08] Shuffled deck
+[15:09] Sent Prohibited Power Patron Portal - Terminus from S-2 to GY
+[15:12] Activated Vidolium the Unstable Power Patron of Unity from hand (2/3) to Right Pendulum Zone
+[15:15] Viewed Extra Deck
+[15:16] Stopped viewing Extra Deck
+[15:18] Special Summoned Nervedo the Shadebeast Power Patron from Extra Deck to M-3 (DEF)
+[15:19] Viewed Extra Deck
+[15:21] Stopped viewing Extra Deck
+[15:22] Special Summoned Jupredo the Shademachine Power Patron from Extra Deck to M-5 (DEF)
+[15:25] Overlayed Nervedo the Shadebeast Power Patron in M-3 onto Jupredo the Shademachine Power Patron in M-5
+[15:26] Viewed Extra Deck
+[15:28] Stopped viewing Extra Deck
+[15:29] Special Summoned Varudras, the Final Bringer of the End Times from Extra Deck onto Nervedo the Shadebeast Power Patron in M-5 (DEF)
+[15:34] Declared effect of Vidolium the Unstable Power Patron of Unity in Right Pendulum Zone
+[15:36] Returned Vidolium the Unstable Power Patron of Unity from Right Pendulum Zone to Extra Deck
+[15:37] Viewed GY
+[15:39] Special Summoned Artmage Power Patron from GY to M-3 (ATK)
+[15:40] Stopped viewing GY
+[15:40] Viewed Extra Deck
+[15:42] Declared effect of Vidolium the Unstable Power Patron of Unity from Extra Deck
+[15:43] Stopped viewing Extra Deck
+[15:45] Viewed deck
+[15:48] Added Prohibited Power Patron Portal - Terminus from Deck to hand
+[15:50] Stopped viewing Deck
+[15:50] Shuffled deck
+[15:51] Viewed GY
+[15:53] Declared effect of Medius the Pure from GY
+[15:58] Thinking
+[16:15] Returned Artmage Graflare from M-1 to top of deck
+[16:19] Special Summoned Medius the Pure from GY to M-1 (ATK)
+[16:20] Stopped viewing GY
+[16:24] Declared effect of Artmage Power Patron in M-3
+[16:26] Banished Medius the Pure from M-1
+[16:27] Sent Artmage Power Patron from M-3 to GY
+[16:28] Viewed Extra Deck
+[16:30] Stopped viewing Extra Deck
+[16:31] Special Summoned Artmage Diactorus from Extra Deck to M-1 (DEF)
+[16:32] Viewed GY
+[16:32] Declared effect of Artmage Power Patron from GY
+[16:34] Stopped viewing GY
+[16:35] Viewed deck
+[16:38] Added Artmage Academic Arcane Arts Acropolis from Deck to hand
+[16:39] Stopped viewing Deck
+[16:39] Shuffled deck
+[16:41] Activated Field Spell Artmage Academic Arcane Arts Acropolis from hand (2/4)
+[16:44] Declared effect of Artmage Academic Arcane Arts Acropolis in Field Spell Zone
+[16:45] Sent Prohibited Power Patron Portal - Terminus from hand (2/3) to GY
+[16:48] "litera"
+[16:50] Viewed deck
+[16:53] Added Artmage Litera from Deck to hand
+[16:54] Stopped viewing Deck
+[16:54] Shuffled deck
+[16:58] Declared effect of Artmage Litera in hand (2/3)
+[17:01] Special Summoned Artmage Litera from hand (2/3) to M-2 (DEF)
+[17:03] Viewed GY
+[17:06] Returned Artmage Impasto -Recapture- from GY to hand
+[17:08] Stopped viewing GY
+[17:10] Thinking
+[17:12] Viewed GY
+[17:13] Stopped viewing GY
+[17:26] Sent Artmage Litera from M-2 to GY
+[17:28] Viewed GY
+[17:31] Special Summoned Artmage Litera from GY to M-2 (DEF)
+[17:33] Stopped viewing GY
+[17:35] Declared effect of Artmage Academic Arcane Arts Acropolis in Field Spell Zone
+[17:36] Sent Artmage Impasto -Recapture- from hand (1/3) to GY
+[17:38] "finmel"
+[17:40] Viewed deck
+[17:41] Signaled OK
+[17:42] Added Artmage Finmel from Deck to hand
+[17:43] Stopped viewing Deck
+[17:43] Shuffled deck
+[17:47] Declared effect of Artmage Finmel in hand (1/3)
+[17:49] Special Summoned Artmage Finmel from hand (1/3) to M-3 (DEF)
+[17:50] Shuffled deck
+[17:52] Drew The Fallen & The Virtuous
+[17:53] Shuffled hand
+[17:53] Sent Artmage Finmel from M-3 to GY
+[17:53] Sent Artmage Litera from M-2 to GY
+[17:54] Viewed Extra Deck
+[17:56] Stopped viewing Extra Deck
+[17:56] Special Summoned Purification Power Patron from Extra Deck to M-3 (ATK)
+[17:58] Declared effect of Purification Power Patron in M-3
+[17:59] Viewed deck
+[18:02] Added Theorealize Past Lull from Deck to hand
+[18:03] Stopped viewing Deck
+[18:03] Shuffled deck
+[18:11] Declared effect of Artmage Academic Arcane Arts Acropolis in Field Spell Zone
+[18:13] Sent Theorealize Past Lull from hand (1/4) to GY
+[18:15] "graflare"
+[18:17] Viewed deck
+[18:18] Signaled OK
+[18:19] Added Artmage Graflare from Deck to hand
+[18:21] Stopped viewing Deck
+[18:21] Shuffled deck
+[18:21] Sent Beyond the Pendulum from Right Extra Monster Zone to GY
+[18:22] Sent Purification Power Patron from M-3 to GY
+[18:23] Viewed Extra Deck
+[18:24] Stopped viewing Extra Deck
+[18:25] Special Summoned Charmer Quartet in Bloom from Extra Deck to Left EMZ (ATK)
+[18:26] Declared effect of Charmer Quartet in Bloom in Left Extra Monster Zone
+[18:27] Viewed GY
+[18:30] Special Summoned Artmage Finmel from GY to M-3 (DEF)
+[18:32] Special Summoned Artmage Litera from GY to M-2 (DEF)
+[18:33] Stopped viewing GY
+[18:34] Set The Fallen & The Virtuous from hand (3/4) to S-4
+[18:37] Set Solemn Accusation from hand (3/3) to S-2
+[18:38] Ended turn
+[18:47] Pointed at Charmer Quartet in Bloom in Left Extra Monster Zone
+----------------(Turn 2)----------------
+[18:48] Entered Draw Phase
+[18:48] Drew Infinitrack Harvester
+[18:54] Signaled OK
+[18:55] Entered Main Phase 1
+[18:55] Viewed Banished
+[18:57] Sent banished Artmage Non-Finito (5/5) to GY
+[18:58] Stopped viewing Banished
+[19:07] Activated Lightning Storm from hand (2/5) to S-3
+[19:11] "s/t"
+[19:15] Activated Set Solemn Accusation in S-2
+[19:19] Lost 1500 LP
+[19:22] Sent Lightning Storm from S-3 to GY
+[19:23] Lost 1500 LP
+[19:25] Sent Solemn Accusation from S-2 to GY
+[19:31] Viewed Opponent's Graveyard
+[19:38] Stopped viewing Opponent's GY
+[19:38] Viewed GY
+[19:40] Banished Lightning Storm from GY
+[19:41] Stopped viewing GY
+[19:43] Viewed deck
+[19:48] Banished Lightning Storm from Deck
+[19:52] Stopped viewing Deck
+[19:52] Shuffled deck
+[20:07] Normal Summoned Infinitrack Harvester from hand (4/4) to M-3
+[20:11] Declared effect of Infinitrack Harvester in M-3
+[20:13] Signaled OK
+[20:14] Declared effect of Heavy Freight Train Derricrane in hand (3/3)
+[20:18] Special Summoned Heavy Freight Train Derricrane from hand (3/3) to M-2 (DEF)
+[20:19] Signaled OK
+[20:21] Viewed deck
+[20:25] Added Infinitrack Brutal Dozer from Deck to hand
+[20:28] Thinking
+[20:29] Stopped viewing Deck
+[20:29] Shuffled deck
+[20:34] "dxa eu le o add"
+[20:35] "pf"
+[20:38] Revealed Infinitrack Brutal Dozer from hand (3/3)
+[20:44] Signaled OK
+[20:50] Viewed Extra Deck
+[20:54] Stopped viewing Extra Deck
+[21:12] Activated Heavy Forward from hand (3/3) to S-3
+[21:16] Thinking
+[21:26] Activated Set The Fallen & The Virtuous in S-4
+[21:28] Viewed Extra Deck
+[21:30] Sent Albion the Branded Dragon from Extra Deck to GY
+[21:30] Stopped viewing Extra Deck
+[21:31] Pointed at Heavy Forward in S-3
+[21:33] Sent Heavy Forward from S-3 to GY
+[21:34] Sent The Fallen & The Virtuous from S-4 to GY
+[21:39] Viewed GY
+[21:41] Stopped viewing GY
+[21:46] Viewed GY
+[21:47] Stopped viewing GY
+[21:51] Declared effect of Infinitrack Brutal Dozer in hand (2/2)
+[21:53] Sent Infinitrack Harvester from M-3 to GY
+[21:54] Signaled OK
+[21:57] Special Summoned Infinitrack Brutal Dozer from hand (2/2) to M-3 (DEF)
+[21:59] Declared effect of Infinitrack Brutal Dozer in M-3
+[22:01] Signaled OK
+[22:03] Viewed deck
+[22:12] Special Summoned Infinitrack Trencher from Deck to M-4 (DEF)
+[22:14] Stopped viewing Deck
+[22:14] Shuffled deck
+[22:14] Thinking
+[22:16] Thinking
+[22:27] Thinking
+[22:39] Viewed Opponent's Graveyard
+[22:43] Stopped viewing Opponent's GY
+[22:49] Declared effect of Artmage Finmel in M-3
+[22:55] Pointed at Artmage Finmel in M-3
+[23:19] "negate?"
+[23:22] "sim"
+[23:25] "alguma resposta?"
+[23:33] "nop"
+[23:33] Declared effect of Nerva the Power Patron of Creation in M-4
+[23:46] Signaled OK
+[23:52] Sent Heavy Freight Train Derricrane from M-2 to GY
+[23:54] Sent Infinitrack Brutal Dozer from M-3 to GY
+[23:55] Sent Infinitrack Trencher from M-4 to GY
+[23:57] Thinking
+[23:58] Viewed GY
+[24:07] Stopped viewing GY
+[24:09] Admitted defeat
+[24:57] Finished siding
+[25:12] Finished siding
+----------------(Turn 1)----------------
+[25:13] Chose to go first
+[25:13] Drew Ash Blossom & Joyous Spring
+[25:13] Drew Artmage Finmel
+[25:13] Drew Pot of Sloth
+[25:13] Drew Vidolium the Unstable Power Patron of Unity
+[25:13] Drew Pot of Sloth
+[25:13] Drew Night Train Blue Traveler
+[25:13] Drew Exceptional Schedule
+[25:13] Drew Heavy Freight Train Derricrane
+[25:13] Drew Revolving Switchyard
+[25:13] Drew Night Train Blue Traveler
+[25:21] Entered Standby Phase
+[25:24] Entered Main Phase 1
+[25:24] Signaled OK
+[25:34] Activated Exceptional Schedule from hand (2/5) to S-3
+[25:39] Thinking
+[25:49] Declared effect of Ash Blossom & Joyous Spring in hand (1/5)
+[25:51] Sent Ash Blossom & Joyous Spring from hand (1/5) to GY
+[25:55] Signaled OK
+[25:56] Sent Exceptional Schedule from S-3 to GY
+[25:59] Activated Field Spell Revolving Switchyard from hand (3/4)
+[26:09] Signaled OK
+[26:10] Declared effect of Revolving Switchyard in Field Spell Zone
+[26:13] Sent Night Train Blue Traveler from hand (3/3) to GY
+[26:16] Signaled OK
+[26:19] Viewed deck
+[26:24] Added Heavy Armored Knight Babeldecker from Deck to hand
+[26:27] Stopped viewing Deck
+[26:27] Shuffled deck
+[26:33] Signaled OK
+[26:38] Normal Summoned Heavy Armored Knight Babeldecker from hand (3/3) to M-3
+[26:40] Declared effect of Heavy Armored Knight Babeldecker in M-3
+[26:42] Declared effect of Heavy Freight Train Derricrane in hand (2/2)
+[26:44] Signaled OK
+[26:48] Special Summoned Heavy Freight Train Derricrane from hand (2/2) to M-2 (DEF)
+[26:51] Special Summoned Night Train Blue Traveler from hand (1/1) to M-1 (DEF)
+[27:02] Declared effect of Heavy Armored Knight Babeldecker in M-3
+[27:07] Signaled OK
+[27:08] Viewed Extra Deck
+[27:14] Special Summoned Superdreadnought Rail Cannon Flying Launcher from Extra Deck onto Heavy Armored Knight Babeldecker in M-3 (ATK)
+[27:17] Declared effect of Superdreadnought Rail Cannon Flying Launcher in M-3
+[27:18] Stopped viewing Extra Deck
+[27:20] Signaled OK
+[27:23] Viewed deck
+[27:29] Added Flying Pegasus Railroad Stampede from Deck to hand
+[27:31] Stopped viewing Deck
+[27:31] Shuffled deck
+[27:41] Normal Summoned Flying Pegasus Railroad Stampede from hand (1/1) to M-4
+[27:43] Declared effect of Flying Pegasus Railroad Stampede in M-4
+[27:49] Signaled OK
+[27:50] Viewed GY
+[27:53] Pointed at Night Train Blue Traveler from GY
+[27:56] Special Summoned Night Train Blue Traveler from GY to M-5 (DEF)
+[27:57] Stopped viewing GY
+[27:59] Declared effect of Flying Pegasus Railroad Stampede in M-4
+[28:01] Pointed at Night Train Blue Traveler in M-5
+[28:02] Signaled OK
+[28:06] Viewed Extra Deck
+[28:11] Overlayed Flying Pegasus Railroad Stampede in M-4 onto Night Train Blue Traveler in M-5
+[28:14] Special Summoned Superdreadnought Rail Cannon Gustav Max from Extra Deck onto Flying Pegasus Railroad Stampede in M-5 (ATK)
+[28:18] Stopped viewing Extra Deck
+[28:20] Declared effect of Superdreadnought Rail Cannon Gustav Max in M-5
+[28:21] Lost 2000 LP
+[28:22] Detached Xyz Material Night Train Blue Traveler from Superdreadnought Rail Cannon Gustav Max in M-5
+[28:31] Viewed Extra Deck
+[28:47] Stopped viewing Extra Deck
+[28:49] Special Summoned Ancient Gear Ballista from Extra Deck to Right EMZ (ATK)
+[28:50] Sent Superdreadnought Rail Cannon Gustav Max from M-5 to GY
+[28:52] Sent Superdreadnought Rail Cannon Flying Launcher from M-3 to GY
+[28:53] Declared effect of Ancient Gear Ballista in Right Extra Monster Zone
+[28:55] Signaled OK
+[28:57] Viewed deck
+[29:03] Added Ancient Gear Box from Deck to hand
+[29:06] Stopped viewing Deck
+[29:06] Shuffled deck
+[29:08] Declared effect of Ancient Gear Box in hand (1/1)
+[29:10] Signaled OK
+[29:11] Viewed deck
+[29:11] Viewed Opponent's Graveyard
+[29:14] Stopped viewing Opponent's GY
+[29:16] Added Convex Knight from Deck to hand
+[29:19] Stopped viewing Deck
+[29:19] Shuffled deck
+[29:28] Declared effect of Convex Knight in hand (2/2)
+[29:30] Signaled OK
+[29:31] Special Summoned Convex Knight from hand (2/2) to M-3 (DEF)
+[29:35] Declared effect of Convex Knight in M-3
+[29:37] Viewed deck
+[29:37] Signaled OK
+[29:40] Sent Gizmek Taniguku, the Immobile Intellect from Deck to GY
+[29:42] Stopped viewing Deck
+[29:42] Shuffled deck
+[29:49] Viewed Extra Deck
+[29:56] Stopped viewing Extra Deck
+[30:02] Overlayed Night Train Blue Traveler in M-1 onto Convex Knight in M-3
+[30:04] Viewed Extra Deck
+[30:06] Stopped viewing Extra Deck
+[30:07] Special Summoned Superdreadnought Rail Cannon Gustav Max from Extra Deck onto Night Train Blue Traveler in M-3 (ATK)
+[30:11] Declared effect of Superdreadnought Rail Cannon Gustav Max in M-3
+[30:13] Lost 2000 LP
+[30:13] Detached Xyz Material Convex Knight from Superdreadnought Rail Cannon Gustav Max in M-3
+[30:18] Shuffled hand
+[30:19] Viewed Extra Deck
+[30:25] Stopped viewing Extra Deck
+[30:30] Special Summoned Superdreadnought Rail Cannon Gustav Rocket from Extra Deck onto Superdreadnought Rail Cannon Gustav Max in M-3 (ATK)
+[30:31] Moved Superdreadnought Rail Cannon Gustav Rocket from M-3 to M-1
+[30:34] Sent Ancient Gear Box from hand (1/1) to GY
+[30:40] Viewed GY
+[30:51] Declared effect of Exceptional Schedule from GY
+[30:53] Banished Exceptional Schedule from GY
+[30:57] Pointed at Heavy Armored Knight Babeldecker from GY
+[30:59] Signaled OK
+[31:04] Special Summoned Heavy Armored Knight Babeldecker from GY to M-3 (DEF)
+[31:07] Sent Revolving Switchyard from Field Spell Zone to GY
+[31:08] Stopped viewing GY
+[31:11] Viewed Extra Deck
+[31:15] Stopped viewing Extra Deck
+[31:15] Overlayed Heavy Freight Train Derricrane in M-2 onto Heavy Armored Knight Babeldecker in M-3
+[31:15] Viewed Opponent's Graveyard
+[31:17] Stopped viewing Opponent's GY
+[31:20] Viewed Extra Deck
+[31:22] Stopped viewing Extra Deck
+[31:23] Special Summoned Superdreadnought Rail Cannon Gustav Max from Extra Deck onto Heavy Freight Train Derricrane in M-3 (ATK)
+[31:26] Declared effect of Superdreadnought Rail Cannon Gustav Max in M-3
+[31:27] Lost 2000 LP
+[31:27] Detached Xyz Material Heavy Armored Knight Babeldecker from Superdreadnought Rail Cannon Gustav Max in M-3
+[31:30] Viewed Extra Deck
+[31:33] Sent Superdreadnought Rail Cannon Gustav Max from M-3 to GY
+[31:34] Stopped viewing Extra Deck
+[31:35] Sent Ancient Gear Ballista from Right Extra Monster Zone to GY
+[31:36] Viewed Extra Deck
+[31:39] Stopped viewing Extra Deck
+[31:39] Special Summoned Qliphort Genius from Extra Deck to Right EMZ (ATK)
+[31:41] Viewed Opponent's Graveyard
+[31:44] Stopped viewing Opponent's GY
+[31:44] Viewed GY
+[31:50] Declared effect of Night Train Blue Traveler from GY
+[31:53] Pointed at Heavy Armored Knight Babeldecker from GY
+[31:53] Signaled OK
+[31:57] Special Summoned Heavy Armored Knight Babeldecker from GY to M-3 (DEF)
+[31:59] Special Summoned Night Train Blue Traveler from GY to M-5 (DEF)
+[32:00] Stopped viewing GY
+[32:03] Declared effect of Qliphort Genius in Right Extra Monster Zone
+[32:07] Signaled OK
+[32:10] Viewed deck
+[32:13] Added Infinitrack Brutal Dozer from Deck to hand
+[32:14] Stopped viewing Deck
+[32:14] Shuffled deck
+[32:14] Declared effect of Infinitrack Brutal Dozer in hand (1/1)
+[32:14] Sent Qliphort Genius from Right Extra Monster Zone to GY
+[32:14] Signaled OK
+[32:16] Special Summoned Infinitrack Brutal Dozer from hand (1/1) to M-2 (DEF)
+[32:17] Declared effect of Infinitrack Brutal Dozer in M-2
+[32:19] Signaled OK
+[32:21] Viewed Opponent's Graveyard
+[32:22] Viewed deck
+[32:28] Stopped viewing Opponent's GY
+[32:29] Viewed Opponent's Graveyard
+[32:31] Stopped viewing Opponent's GY
+[32:31] Special Summoned Infinitrack Tunneller from Deck to M-4 (DEF)
+[32:33] Stopped viewing Deck
+[32:33] Shuffled deck
+[32:39] Overlayed Infinitrack Brutal Dozer in M-2 onto Infinitrack Tunneller in M-4
+[32:41] Viewed Extra Deck
+[32:44] Special Summoned Infinitrack River Stormer from Extra Deck onto Infinitrack Brutal Dozer in M-4 (ATK)
+[32:45] Stopped viewing Extra Deck
+[32:48] Declared effect of Infinitrack River Stormer in M-4
+[32:50] Signaled OK
+[32:50] Detached Xyz Material Infinitrack Tunneller from Infinitrack River Stormer in M-4
+[32:55] Viewed deck
+[33:01] Added Therion "King" Regulus from Deck to hand
+[33:02] Stopped viewing Deck
+[33:02] Shuffled deck
+[33:10] Declared effect of Therion "King" Regulus in hand (1/1)
+[33:12] Viewed GY
+[33:12] Signaled OK
+[33:22] Placed Qliphort Genius from GY to S-2
+[33:26] Special Summoned Therion "King" Regulus from hand (1/1) to M-2 (ATK)
+[33:27] Stopped viewing GY
+[33:30] Viewed GY
+[33:34] Declared effect of Infinitrack Tunneller from GY
+[33:36] Banished Infinitrack Tunneller from GY
+[33:37] Signaled OK
+[33:38] Pointed at Superdreadnought Rail Cannon Gustav Max from GY
+[33:40] Pointed at Superdreadnought Rail Cannon Gustav Max from GY
+[33:42] Pointed at Ancient Gear Ballista from GY
+[33:45] Pointed at Ancient Gear Box from GY
+[33:48] Signaled OK
+[33:50] Pointed at Convex Knight from GY
+[33:54] Returned Convex Knight from GY to top of deck
+[33:56] Returned Ancient Gear Box from GY to top of deck
+[34:00] Returned Superdreadnought Rail Cannon Gustav Max from GY to Extra Deck
+[34:03] Returned Superdreadnought Rail Cannon Gustav Max from GY to Extra Deck
+[34:06] Returned Ancient Gear Ballista from GY to Extra Deck
+[34:07] Stopped viewing GY
+[34:09] Shuffled deck
+[34:12] Drew Triple Tactics Thrust
+[34:14] Drew Dominus Purge
+[34:17] Viewed Extra Deck
+[34:20] Overlayed Heavy Armored Knight Babeldecker in M-3 onto Night Train Blue Traveler in M-5
+[34:23] Special Summoned Superdreadnought Rail Cannon Gustav Max from Extra Deck onto Heavy Armored Knight Babeldecker in M-5 (ATK)
+[34:24] Left duel
+[34:24] Lost Duel
+[34:32] Stopped viewing Extra Deck
+[36:01] Lost connection
