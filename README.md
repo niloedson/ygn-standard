@@ -31,7 +31,9 @@ For 25 years, digital Yu-Gi-Oh! has been fragmented:
 
 ---
 
-## Active RFC Status
+## Active RFC Status & Governance
+
+The YGN Standard follows an open, community-driven RFC process. See the **[RFC Registry & Parity Index](rfcs/README.md)** for full details and the **[Revisor & Governance Playbook](docs/RFC_GOVERNANCE.md)** for lifecycle guidelines.
 
 | RFC | Title | Status | Link |
 | :---: | :--- | :---: | :--- |

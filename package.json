@@ -10,7 +10,9 @@
     "test": "tsx test/converter.test.ts && tsx test/lua_emitter.test.ts",
     "test:ts": "tsx test/converter.test.ts",
     "test:lua": "tsx test/lua_emitter.test.ts",
-    "test:py": "python python/tests/test_converter.py"
+    "test:py": "python python/tests/test_converter.py",
+    "rfc:lint": "node scripts/lint-rfcs.mjs",
+    "labels:sync": "node scripts/sync-labels.mjs"
   },
   "keywords": [
     "yugioh",

@@ -1,0 +1,73 @@
+# GitHub Labels Configuration for ygn-standard
+# Synced via scripts/sync-labels.mjs or .github/workflows/labels.yml
+
+# RFC Lifecycle States
+- name: "rfc:draft"
+  color: "D4C5F9"
+  description: "RFC is currently being drafted by author"
+
+- name: "rfc:in-review"
+  color: "0075CA"
+  description: "Active community and revisor review"
+
+- name: "rfc:fcp"
+  color: "FBCA04"
+  description: "Final Comment Period (14 days before merge/close)"
+
+- name: "rfc:accepted"
+  color: "0E8A16"
+  description: "RFC approved and merged into specification"
+
+- name: "rfc:implemented"
+  color: "5319E7"
+  description: "Supported across TypeScript, Python, and Lua parsers"
+
+- name: "rfc:rejected"
+  color: "E11D48"
+  description: "RFC closed or rejected with rationale"
+
+- name: "rfc:needs-fixtures"
+  color: "D93F0B"
+  description: "Blocked awaiting real-world sample match data / transcripts"
+
+# Proposal & Issue Types
+- name: "type:rfc"
+  color: "1D76DB"
+  description: "Formal RFC specification proposal"
+
+- name: "type:spec"
+  color: "0052CC"
+  description: "Changes or clarifications to the core living specification"
+
+- name: "type:bug"
+  color: "D73A4A"
+  description: "Something is not working or deviating from the specification"
+
+- name: "type:enhancement"
+  color: "A2EEEF"
+  description: "New feature or request"
+
+- name: "type:documentation"
+  color: "0075CA"
+  description: "Improvements or additions to documentation"
+
+# Implementation Runtimes & Subsystems
+- name: "area:core-spec"
+  color: "BFD4F2"
+  description: "Grammar, EBNF syntax, and algebraic rules"
+
+- name: "area:ts"
+  color: "3178C6"
+  description: "TypeScript reference implementation, types, and compiler"
+
+- name: "area:python"
+  color: "3572A5"
+  description: "Python reference implementation and test suite"
+
+- name: "area:lua"
+  color: "000080"
+  description: "Lua replay emitter and simulator hooks"
+
+- name: "area:converter"
+  color: "F9D0C4"
+  description: "Dueling Book / YRP converters and adapters"
