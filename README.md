@@ -9,8 +9,8 @@ T1: nedsonbr vs THE WORLD
 @SP
   [C1: A(o.H)[#o1:Purulia]>o.GY // R1: OK ~LING(o.+H<D on S<H>)]
 @M1
-  [C1: A(H)[#1:Exceptional]>S3 // R1: S[Token]>M3, +H[#2:Urgent]<D, [#1]>GY]
-  [C1: A(H)[#2:Urgent]>S3 // R1: S[#3:NightTrain](def)>M4<D, S[#4:Harvester](def)>M3<D, [#2]>GY]
+  [C1: A(H)[#1:Exceptional]>S3 // R1: +H[#2:Urgent]<D, S[Token]>o.M3, [#1]>GY]
+  [C1: A(H)[#2:Urgent]>S3 // R1: S[#3:Blue Traveler](def)>M4<D, S[#4:Harvester](def)>M3<D, [#2]>GY]
   L[#4:M3 + #3:M4]>ER[#e1:Genius](atk)<ED
 ```
 

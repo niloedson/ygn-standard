@@ -389,13 +389,13 @@ T1: nedsonbr vs THE WORLD
 @SP
   [C1: A(o.H)[#o1:Purulia]>o.GY // R1: OK ~LING(o.+H<D on S<H>)]
 @M1
-  [C1: A(H)[#1:Exceptional]>S3 // R1: S[Token]>M3, +H[#2:Urgent]<D, [#1]>GY]
-  [C1: A(H)[#2:Urgent]>S3 // R1: S[#3:NightTrain](def)>M4<D, S[#4:Harvester](def)>M3<D, [#2]>GY]
+  [C1: A(H)[#1:Exceptional]>S3 // R1: +H[#2:Urgent]<D, S[Token]>o.M3, [#1]>GY]
+  [C1: A(H)[#2:Urgent]>S3 // R1: S[#3:Blue Traveler](def)>M4<D, S[#4:Harvester](def)>M3<D, [#2]>GY]
   L[#4:M3 + #3:M4]>ER[#e1:Genius](atk)<ED
-  [C1: A(GY)[#3:NightTrain] T>GY[#4:Harvester] // R1: S[#4:Harvester](def)>M3<GY, S[#3:NightTrain](def)>M5<GY]
-  [C1: A(M3)[#4:Harvester] > C2: A(ER)[#e1:Genius] // R2: +H[#6:Regulus]<D > R1: +H[#5:Dozer]<D]
-  [C1: A(H)[#3:NightTrain]>GY // R1: +H[#7:Switchyard]<D]
-  [C1: A(H)[#5:Dozer] ~[#e1:Genius:ER]>GY // R1: S[#5:Dozer](def)>M2<H, o.+H[#o4:Nervedo]<o.D]
+  [C1: A(GY)[#3:Blue Traveler] T>GY[#4:Harvester] // R1: S[#4](def)>M3<GY, S[#3](def)>M5<GY]
+  [C1: A(M3)[#4:Harvester] > C2: A(ER)[#e1:Genius] // R2: +H[#5:Regulus]<D > R1: +H[#6:Dozer]<D]
+  [C1: A(H)[#3:Blue Traveler]>GY // R1: +H[#7:Switchyard]<D]
+  [C1: A(H)[#6:Dozer] ~[#e1:Genius:ER]>GY // R1: S[#6:Dozer](def)>M2<H, o.+H[#o2:Nervedo]<o.D]
 ```
 
 ### 5.3. Mechanical Proof: Mulcharmy Purulia Zone Origin Handling
