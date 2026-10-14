@@ -107,6 +107,15 @@ print(emitter:get_transcript())
 
 ---
 
+## Community & Production Adopters
+
+The YGN & YBN specifications are implemented by reference in production tooling across the ecosystem:
+
+* **[`obsidian-ygo-suite`](https://github.com/niloedson/obsidian-ygo-suite) (`ygo-notary`):** Official match notary and algebraic transcriber parsing live simulator logs, constructing `#1..#40` deck alias registries, and recording tournament games in RFC 0001 notation.
+* **[`ygo-sim-core`](https://github.com/niloedson/ygo-sim-core):** High-performance deterministic combo simulation and multi-layer valuation engine implementing bidirectional RFC 0001 YBN board state serialization, xxHash64 canonical hashing, and algebraic YGN path generation.
+
+---
+
 ## Repository Structure
 
 * `rfcs/`: The formal Requests for Comments proposing and refining standards.
