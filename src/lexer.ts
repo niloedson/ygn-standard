@@ -42,8 +42,8 @@ export function parseYgn(text: string): YgnDocument {
     const line = rawLine.trim();
     if (!line) continue;
 
-    // Header Tags: [TagName "TagValue"]
-    const tagMatch = line.match(/^\[([A-Za-z0-9_]+)\s+"([^"]*)"\]$/);
+    // Header Tags: [TagName "TagValue" ...]
+    const tagMatch = line.match(/^\[([A-Za-z0-9_]+)\s+"([^"]*)"(?:\s+[^\]]*)?\]$/);
     if (tagMatch) {
       headers[tagMatch[1]] = tagMatch[2];
       continue;
@@ -62,9 +62,14 @@ export function parseYgn(text: string): YgnDocument {
     }
 
     if (inDeck1Aliases || inDeck2Aliases) {
-      if (line.startsWith("[")) {
+      if (line.startsWith("[") || /^T\d+:/i.test(line)) {
         inDeck1Aliases = false;
         inDeck2Aliases = false;
+        if (!line.startsWith("[")) {
+          // Fall through to turnMatch below
+        } else {
+          continue;
+        }
       } else {
         const aliasMatch = line.match(/^([a-z0-9#]+):(?:(\d+):)?(.+)$/i);
         if (aliasMatch) {
