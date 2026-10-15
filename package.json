@@ -25,7 +25,7 @@
     "parser",
     "mcp"
   ],
-  "author": "Yu-Gi-Oh! Open Tooling Working Group",
+  "author": "Haunted Labs & Yu-Gi-Oh! Open Tooling Working Group",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.13.5",
