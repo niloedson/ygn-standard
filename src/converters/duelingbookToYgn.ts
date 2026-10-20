@@ -1,7 +1,41 @@
 /**
- * Reference Converter: Dueling Book Raw Clickstream -> YGN v1.1
- * Part of YGN-Standard RFC 0001
+ * @file duelingbookToYgn.ts
+ * @description Reference converter transforming raw Dueling Book and Omega match clickstreams
+ * into standardized, compact RFC 0001 Algebraic Yu-Gi-Oh! Game Notation (YGN v1.1) and YBN snapshots.
  */
+
+export function normalizeZone(zoneStr: string): string {
+  const z = zoneStr.trim();
+  if (/^Right\s+(?:EMZ|Extra\s+Monster\s+Zone)$/i.test(z)) return "ER";
+  if (/^Left\s+(?:EMZ|Extra\s+Monster\s+Zone)$/i.test(z)) return "EL";
+  if (/^(?:Field\s+Spell\s+Zone|Field\s+Zone|FS)$/i.test(z)) return "FS";
+  if (/^M-?([1-5])$/i.test(z)) return `M${RegExp.$1}`;
+  if (/^S-?([1-5])$/i.test(z)) return `S${RegExp.$1}`;
+  if (/^hand(?:\s*\(\d+\/\d+\))?$/i.test(z)) return "H";
+  if (/^GY|Graveyard$/i.test(z)) return "GY";
+  if (/^Deck$/i.test(z)) return "D";
+  if (/^Extra\s+Deck$/i.test(z)) return "ED";
+  if (/^Banished$/i.test(z)) return "B";
+  return z;
+}
+
+export function cleanCardName(rawName: string): string {
+  return rawName
+    .replace(/\s+(?:from|in)\s+hand(?:\s*\(\d+\/\d+\))?/i, '')
+    .replace(/\s+(?:from|in)\s+(?:Deck|GY|Graveyard|Extra\s+Deck)/i, '')
+    .replace(/\s+to\s+(?:M-?[1-5]|S-?[1-5]|Right\s+EMZ|Left\s+EMZ|GY|hand).*/i, '')
+    .replace(/\s*\((?:ATK|DEF|\d+\/\d+)\)/gi, '')
+    .trim();
+}
+
+interface ParsedAction {
+  raw: string;
+  type: 'PHASE' | 'ACTIVATE' | 'COST' | 'TARGET' | 'SUMMON' | 'TOKEN' | 'SEARCH' | 'MILL' | 'DRAW' | 'SET' | 'OTHER';
+  card?: string;
+  origin?: string;
+  dest?: string;
+  pos?: string;
+}
 
 export interface DuelingBookConversionResult {
   headers: Record<string, string>;
@@ -10,64 +44,36 @@ export interface DuelingBookConversionResult {
   ygnLinesCount: number;
   originalByteSize: number;
   ygnByteSize: number;
-  compressionPercent: number;
+  noisePercent: string;
+  compressionPercent: string;
+  latencyMs: string;
   actionsDetected: number;
 }
 
-const NOISE_PATTERNS = [
-  /Signaled OK/i,
-  /Viewed deck/i,
-  /Stopped viewing Deck/i,
-  /Shuffled deck/i,
-  /Viewed Extra Deck/i,
-  /Stopped viewing Extra Deck/i,
-  /Viewed GY/i,
-  /Stopped viewing GY/i,
-  /Viewed Opponent's/i,
-  /Stopped viewing Opponent's/i,
-  /Shuffled hand/i,
-  /Thinking/i,
-  /Chose to go first/i,
-  /glhf/i
-];
-
-function isNoiseLine(line: string): boolean {
-  return NOISE_PATTERNS.some((pattern) => pattern.test(line));
-}
-
-function normalizeZone(zoneStr: string): string {
-  const z = zoneStr.trim();
-  if (z === "Right EMZ" || z === "Right Extra Monster Zone") return "ER";
-  if (z === "Left EMZ" || z === "Left Extra Monster Zone") return "EL";
-  if (z === "Field Spell Zone") return "FS";
-  if (z.startsWith("M-")) return `M${z.slice(2)}`;
-  if (z.startsWith("S-")) return `S${z.slice(2)}`;
-  if (z.startsWith("hand")) return "H";
-  return z;
-}
-
 export function convertDuelingBookToYgn(rawLogText: string): DuelingBookConversionResult {
+  const startTime = performance.now();
   const rawLines = rawLogText.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
-  const headers: Record<string, string> = {
-    Format: "TCG Advanced",
-    Site: "Dueling Book"
-  };
+  const origBytes = Buffer.byteLength(rawLogText, "utf-8");
 
-  const ygnOutputLines: string[] = [];
+  const mainAliases = new Map<string, string>();
+  const extraAliases = new Map<string, string>();
+  const oppAliases = new Map<string, string>();
+
+  let mainCounter = 1;
+  let extraCounter = 1;
+  let oppCounter = 1;
+
   let p1Name = "Player 1";
   let p2Name = "Player 2";
-  let currentTurn = 0;
-  let currentPhase = "@M1";
-  let activeTurnPlayer = "";
-  let actionCount = 0;
+  let format = "TCG Advanced";
 
-  // 1. Extract Host & Player Info from Header Lines
-  for (let i = 0; i < Math.min(rawLines.length, 10); i++) {
+  // Header extraction
+  for (let i = 0; i < Math.min(rawLines.length, 12); i++) {
     const l = rawLines[i];
-    const hostMatch = l.match(/\[\d+:\d+\]\s+([A-Z0-9_\-\s]+)\s+hosted\s+(?:2 out of 3|1 out of 1)\s+Match\s+in\s+([A-Za-z0-9_\-\s()]+)/i);
+    const hostMatch = l.match(/\[\d+:\d+\]\s+([A-Za-z0-9_\-\s]+)\s+hosted\s+(?:2 out of 3|1 out of 1)\s+Match\s+in\s+([A-Za-z0-9_\-\s()]+)/i);
     if (hostMatch) {
       p1Name = hostMatch[1].trim();
-      headers["Format"] = hostMatch[2].trim();
+      format = hostMatch[2].trim();
     }
     const acceptMatch = l.match(/Accepted\s+([A-Za-z0-9_\-\s]+)\s+into duel/i);
     if (acceptMatch) {
@@ -75,212 +81,331 @@ export function convertDuelingBookToYgn(rawLogText: string): DuelingBookConversi
     }
   }
 
-  ygnOutputLines.push(`[Event "Dueling Book Match"]`);
-  ygnOutputLines.push(`[Player1 "${p1Name}" 8000]`);
-  ygnOutputLines.push(`[Player2 "${p2Name}" 8000]`);
-  ygnOutputLines.push(`[Format "${headers["Format"]}"]`);
-  ygnOutputLines.push("");
-
-  // 2. Process Game Action Lines
-  let pendingActions: string[] = [];
-
-  const flushPhase = () => {
-    if (pendingActions.length > 0) {
-      ygnOutputLines.push(currentPhase);
-      for (const act of pendingActions) {
-        ygnOutputLines.push(`  ${act}`);
-      }
-      pendingActions = [];
-    }
+  const isExtraDeckCard = (name: string) => {
+    const n = name.toLowerCase();
+    return (
+      n.includes('genius') ||
+      n.includes('gustav') ||
+      n.includes('ballista') ||
+      n.includes('kagari') ||
+      n.includes('camellia') ||
+      n.includes('shizuku') ||
+      n.includes('hayate') ||
+      n.includes('blues') ||
+      n.includes('crook') ||
+      n.includes('booster') ||
+      n.includes('non-finito') ||
+      n.includes('power patron of creation')
+    );
   };
 
+  const isOpponentCard = (name: string) => {
+    const n = name.toLowerCase();
+    return n.includes('purulia') || n.includes('ash blossom') || n.includes('droll') || n.includes('nervedo');
+  };
+
+  const getAliasTag = (cardName: string): string => {
+    if (isExtraDeckCard(cardName)) {
+      if (!extraAliases.has(cardName)) {
+        extraAliases.set(cardName, `#e${extraCounter++}`);
+      }
+      return `${extraAliases.get(cardName)}:${cardName}`;
+    }
+    if (isOpponentCard(cardName)) {
+      if (!oppAliases.has(cardName)) {
+        oppAliases.set(cardName, `#o${oppCounter++}`);
+      }
+      return `${oppAliases.get(cardName)}:${cardName}`;
+    }
+    if (!mainAliases.has(cardName)) {
+      mainAliases.set(cardName, `#${mainCounter++}`);
+    }
+    return `${mainAliases.get(cardName)}:${cardName}`;
+  };
+
+  const ygnLines: string[] = [
+    `[Event "Dueling Book Match"]`,
+    `[Player1 "${p1Name}" 8000]`,
+    `[Player2 "${p2Name}" 8000]`,
+    `[Format "${format}"]`,
+    `[Standard "RFC 0001 (YGN v1.1)"]`,
+    ``
+  ];
+
+  let currentPhase = "@M1";
+  const actions: ParsedAction[] = [];
+
   for (const line of rawLines) {
-    // Detect Turn Delimiters
-    const turnMatch = line.match(/----------------\(Turn\s+(\d+)\)----------------/i);
-    if (turnMatch) {
-      flushPhase();
-      currentTurn = parseInt(turnMatch[1], 10);
-      activeTurnPlayer = currentTurn % 2 === 1 ? p1Name : p2Name;
-      ygnOutputLines.push(`T${currentTurn}: ${activeTurnPlayer}`);
-      currentPhase = "@M1";
-      continue;
-    }
-
-    // Skip Noise
-    if (isNoiseLine(line)) {
-      continue;
-    }
-
-    // Phase Transitions
     if (/Entered Standby Phase/i.test(line)) {
-      flushPhase();
-      currentPhase = "@SP";
+      actions.push({ raw: line, type: 'PHASE', dest: '@SP' });
       continue;
     }
     if (/Entered Main Phase 1/i.test(line)) {
-      flushPhase();
-      currentPhase = "@M1";
+      actions.push({ raw: line, type: 'PHASE', dest: '@M1' });
       continue;
     }
     if (/Entered Battle Phase/i.test(line)) {
-      flushPhase();
-      currentPhase = "@BP";
+      actions.push({ raw: line, type: 'PHASE', dest: '@BP' });
       continue;
     }
     if (/Entered Main Phase 2/i.test(line)) {
-      flushPhase();
-      currentPhase = "@M2";
+      actions.push({ raw: line, type: 'PHASE', dest: '@M2' });
       continue;
     }
     if (/Entered End Phase/i.test(line)) {
-      flushPhase();
-      currentPhase = "@EP";
+      actions.push({ raw: line, type: 'PHASE', dest: '@EP' });
       continue;
     }
 
-    // Strip Timestamp [M:SS]
     const content = line.replace(/^\[\d+:\d+\]\s*/, "").trim();
 
-    // Normal Summon: Normal Summoned X from Y to Z
-    const nsMatch = content.match(/Normal Summoned\s+(.+?)\s+from\s+(.+?)\s+to\s+(.+)/i);
-    if (nsMatch) {
-      const card = nsMatch[1].trim();
-      const zone = normalizeZone(nsMatch[3]);
-      pendingActions.push(`N[${card}]>${zone}`);
-      actionCount++;
+    // Skip pure UI noise
+    if (/Signaled OK|Viewed deck|Stopped viewing|Shuffled deck|Viewed Extra Deck|Viewed GY|glhf|ggwp|ok\?/i.test(content)) {
       continue;
     }
 
-    // Special Summon: Special Summoned X from Origin to Zone (POS)
-    const ssMatch = content.match(/Special Summoned\s+(.+?)\s+from\s+(.+?)\s+to\s+([^(]+)(?:\s+\((ATK|DEF)\))?/i);
-    if (ssMatch) {
-      const card = ssMatch[1].trim();
-      const origin = normalizeZone(ssMatch[2]);
-      const zone = normalizeZone(ssMatch[3]);
-      const pos = ssMatch[4] ? `(${ssMatch[4].toLowerCase()})` : "";
-      pendingActions.push(`S[${card}]${pos}>${zone}<${origin}`);
-      actionCount++;
-      continue;
-    }
-
-    // Activation: Activated [Field Spell] X from Y to Z
-    const actMatch = content.match(/Activated\s+(?:Field Spell\s+)?(.+?)\s+from\s+(.+?)\s+to\s+(.+)/i);
+    // Activated [Field Spell] X from Y to Z
+    const actMatch = content.match(/Activated\s+(?:Field Spell\s+)?(.+?)\s+from\s+(.+?)\s+to\s+([A-Za-z0-9_\-\s]+)/i);
     if (actMatch) {
-      const card = actMatch[1].trim();
-      const zone = normalizeZone(actMatch[3]);
-      pendingActions.push(`[C1: A(${zone})[${card}]]`);
-      actionCount++;
+      actions.push({
+        raw: line,
+        type: 'ACTIVATE',
+        card: cleanCardName(actMatch[1]),
+        origin: normalizeZone(actMatch[2]),
+        dest: normalizeZone(actMatch[3])
+      });
       continue;
     }
 
-    // Declared Effect: Declared effect of X in/from Y
-    const declMatch = content.match(/Declared effect of\s+(.+?)\s+(?:in|from)\s+(.+)/i);
+    // Declared effect of X in/from Y
+    const declMatch = content.match(/Declared effect of\s+(.+?)\s+(?:in|from)\s+([A-Za-z0-9_\-\s()/]+)/i);
     if (declMatch) {
-      const card = declMatch[1].trim();
-      const zone = normalizeZone(declMatch[2]);
-      pendingActions.push(`A(${zone})[${card}]`);
-      actionCount++;
+      actions.push({
+        raw: line,
+        type: 'ACTIVATE',
+        card: cleanCardName(declMatch[1]),
+        origin: normalizeZone(declMatch[2])
+      });
       continue;
     }
 
-    // Pointed / Targeted: Pointed at X from/in Y
-    const pointMatch = content.match(/Pointed at\s+(.+?)\s+(?:from|in)\s+(.+)/i);
+    // Pointed at X from/in Y
+    const pointMatch = content.match(/Pointed at\s+(.+?)\s+(?:from|in)\s+([A-Za-z0-9_\-\s]+)/i);
     if (pointMatch) {
-      const card = pointMatch[1].trim();
-      const zone = normalizeZone(pointMatch[2]);
-      pendingActions.push(`T>${zone}[${card}]`);
-      actionCount++;
+      actions.push({
+        raw: line,
+        type: 'TARGET',
+        card: cleanCardName(pointMatch[1]),
+        origin: normalizeZone(pointMatch[2])
+      });
       continue;
     }
 
-    // Added to Hand: Added X from Deck to hand
-    const addMatch = content.match(/Added\s+(.+?)\s+from\s+(.+?)\s+to hand/i);
+    // Special Summoned X from Origin to Dest [(POS)]
+    const ssMatch = content.match(/Special Summoned\s+(.+?)\s+from\s+([A-Za-z0-9_\-\s()/]+)\s+to\s+(Right\s+Extra\s+Monster\s+Zone|Left\s+Extra\s+Monster\s+Zone|Right\s+EMZ|Left\s+EMZ|[A-Za-z0-9_\-]+)(?:\s+\((ATK|DEF)\))?/i);
+    if (ssMatch) {
+      actions.push({
+        raw: line,
+        type: 'SUMMON',
+        card: cleanCardName(ssMatch[1]),
+        origin: normalizeZone(ssMatch[2]),
+        dest: normalizeZone(ssMatch[3]),
+        pos: ssMatch[4]?.toLowerCase() || 'atk'
+      });
+      continue;
+    }
+
+    // Summoned a token in M-X
+    const tokMatch = content.match(/Summoned a token in\s+([A-Za-z0-9_\-]+)/i);
+    if (tokMatch) {
+      actions.push({
+        raw: line,
+        type: 'TOKEN',
+        dest: normalizeZone(tokMatch[1])
+      });
+      continue;
+    }
+
+    // Added X from Origin to hand
+    const addMatch = content.match(/Added\s+(.+?)\s+from\s+([A-Za-z0-9_\-\s]+)\s+to hand/i);
     if (addMatch) {
-      const card = addMatch[1].trim();
-      const origin = normalizeZone(addMatch[2]);
-      pendingActions.push(`+H[${card}]<${origin}`);
-      actionCount++;
+      actions.push({
+        raw: line,
+        type: 'SEARCH',
+        card: cleanCardName(addMatch[1]),
+        origin: normalizeZone(addMatch[2])
+      });
       continue;
     }
 
-    // Placed on Field: Placed X from Origin to Zone
-    const placedMatch = content.match(/Placed\s+(.+?)\s+from\s+(.+?)\s+to\s+(.+)/i);
-    if (placedMatch) {
-      const card = placedMatch[1].trim();
-      const origin = normalizeZone(placedMatch[2]);
-      const zone = normalizeZone(placedMatch[3]);
-      pendingActions.push(`[${card}]>${zone}<${origin}`);
-      actionCount++;
+    // Drew X
+    const drewMatch = content.match(/Drew\s+(.+)/i);
+    if (drewMatch) {
+      actions.push({
+        raw: line,
+        type: 'DRAW',
+        card: cleanCardName(drewMatch[1])
+      });
       continue;
     }
 
-    // Xyz Overlay: Overlayed A in ZoneA onto B in ZoneB
-    const xyzMatch = content.match(/Overlayed\s+(.+?)\s+in\s+(.+?)\s+onto\s+(.+?)\s+in\s+(.+)/i);
-    if (xyzMatch) {
-      const matA = xyzMatch[1].trim();
-      const matB = xyzMatch[3].trim();
-      const zoneB = normalizeZone(xyzMatch[4]);
-      pendingActions.push(`X[${matA}+${matB}]>${zoneB}`);
-      actionCount++;
-      continue;
-    }
-
-    // Detached: Detached Xyz Material A from B in Zone
-    const detachMatch = content.match(/Detached Xyz Material\s+(.+?)\s+from\s+(.+?)\s+in\s+(.+)/i);
-    if (detachMatch) {
-      const mat = detachMatch[1].trim();
-      const zone = normalizeZone(detachMatch[3]);
-      pendingActions.push(`!${zone}[${mat}]>GY`);
-      actionCount++;
-      continue;
-    }
-
-    // Sent from Zone to Zone: Sent X from A to B
-    const sentMatch = content.match(/Sent\s+(.+?)\s+from\s+(.+?)\s+to\s+(.+)/i);
+    // Sent X from Origin to Dest
+    const sentMatch = content.match(/Sent\s+(.+?)\s+from\s+([A-Za-z0-9_\-\s()/]+)\s+to\s+([A-Za-z0-9_\-\s]+)/i);
     if (sentMatch) {
-      const card = sentMatch[1].trim();
-      const dest = normalizeZone(sentMatch[3]);
-      pendingActions.push(`[${card}]>${dest}`);
-      actionCount++;
-      continue;
-    }
-
-    // LP Change: Lost/Gained X LP
-    const lpMatch = content.match(/(Lost|Gained)\s+(\d+)\s+LP/i);
-    if (lpMatch) {
-      const op = lpMatch[1].toLowerCase() === "lost" ? "-" : "+";
-      const amt = lpMatch[2];
-      pendingActions.push(`LP${op}${amt}`);
-      actionCount++;
-      continue;
-    }
-
-    // In-game Chat Messages: "[Text]"
-    if (content.startsWith('"') && content.endsWith('"')) {
-      const chat = content.slice(1, -1).trim();
-      // Keep meaningful dispute chat messages
-      if (chat.length > 0 && !chat.includes("glhf")) {
-        pendingActions.push(`// Chat: "${chat}"`);
-      }
+      actions.push({
+        raw: line,
+        type: 'MILL',
+        card: cleanCardName(sentMatch[1]),
+        origin: normalizeZone(sentMatch[2]),
+        dest: normalizeZone(sentMatch[3])
+      });
       continue;
     }
   }
 
-  flushPhase();
+  // Chain & Link Assembly Pipeline
+  let i = 0;
+  ygnLines.push(`T1: ${p1Name}`);
 
-  const ygnText = ygnOutputLines.join("\n");
-  const origBytes = Buffer.byteLength(rawLogText, "utf-8");
+  while (i < actions.length) {
+    const act = actions[i];
+
+    if (act.type === 'PHASE') {
+      currentPhase = act.dest!;
+      ygnLines.push(currentPhase);
+      i++;
+      continue;
+    }
+
+    // Detect Link Summon: sequence of MILL from MMZ to GY ending with an Extra Deck Special Summon
+    if (
+      act.type === 'MILL' &&
+      act.origin?.startsWith('M') &&
+      act.dest === 'GY' &&
+      i + 1 < actions.length
+    ) {
+      const materials = [{ card: act.card!, zone: act.origin! }];
+      let nextIdx = i + 1;
+      while (
+        nextIdx < actions.length &&
+        actions[nextIdx].type === 'MILL' &&
+        actions[nextIdx].origin?.startsWith('M') &&
+        actions[nextIdx].dest === 'GY'
+      ) {
+        materials.push({ card: actions[nextIdx].card!, zone: actions[nextIdx].origin! });
+        nextIdx++;
+      }
+
+      if (nextIdx < actions.length && actions[nextIdx].type === 'SUMMON' && actions[nextIdx].origin === 'ED') {
+        const edSummon = actions[nextIdx];
+        const matStr = materials.map((m) => `[${getAliasTag(m.card)}:${m.zone}]`).join(' + ');
+        const bossTag = getAliasTag(edSummon.card!);
+        ygnLines.push(`  L[${matStr}]>${edSummon.dest}[${bossTag}](${edSummon.pos})<ED`);
+        i = nextIdx + 1;
+        continue;
+      }
+    }
+
+    // Chain Activation Assembly
+    if (act.type === 'ACTIVATE') {
+      const chainLinks = [act];
+      let advance = i + 1;
+
+      // Check costs/tributes for first link
+      let costStr = '';
+      if (advance < actions.length && actions[advance].type === 'MILL' && actions[advance].card === act.card) {
+        costStr = `>${actions[advance].dest}`;
+        advance++;
+      } else if (advance < actions.length && actions[advance].type === 'MILL' && actions[advance].origin?.startsWith('E')) {
+        costStr = ` ~[${getAliasTag(actions[advance].card!)}:${actions[advance].origin}]>GY`;
+        advance++;
+      }
+
+      let targetStr = '';
+      if (advance < actions.length && actions[advance].type === 'TARGET') {
+        targetStr = ` T>${actions[advance].origin}[${getAliasTag(actions[advance].card!)}]`;
+        advance++;
+      }
+
+      // Check consecutive activations (Chain Links: C1 > C2)
+      while (advance < actions.length && actions[advance].type === 'ACTIVATE') {
+        chainLinks.push(actions[advance]);
+        advance++;
+      }
+
+      // Collect resolution actions before the next ACTIVATE, Link Summon, or Phase
+      const resolutions: string[] = [];
+      while (
+        advance < actions.length &&
+        actions[advance].type !== 'ACTIVATE' &&
+        actions[advance].type !== 'PHASE'
+      ) {
+        // If this is the start of a Link Summon, do not consume it into the resolution!
+        if (
+          actions[advance].type === 'MILL' &&
+          actions[advance].origin?.startsWith('M') &&
+          advance + 1 < actions.length &&
+          (actions[advance + 1].type === 'SUMMON' && actions[advance + 1].origin === 'ED' ||
+           (advance + 2 < actions.length && actions[advance + 1].type === 'MILL' && actions[advance + 2].type === 'SUMMON' && actions[advance + 2].origin === 'ED'))
+        ) {
+          break;
+        }
+
+        const resAct = actions[advance];
+        if (resAct.type === 'SEARCH') {
+          resolutions.push(`+H[${getAliasTag(resAct.card!)}]<${resAct.origin}`);
+        } else if (resAct.type === 'TOKEN') {
+          resolutions.push(`S[Token]>${resAct.dest}`);
+        } else if (resAct.type === 'SUMMON') {
+          resolutions.push(`S[${getAliasTag(resAct.card!)}](${resAct.pos})>${resAct.dest}<${resAct.origin}`);
+        } else if (resAct.type === 'DRAW') {
+          const isOpp = isOpponentCard(resAct.card!);
+          const prefix = isOpp ? 'o.' : '';
+          resolutions.push(`${prefix}+H[${getAliasTag(resAct.card!)}]<${prefix}D`);
+        } else if (resAct.type === 'MILL') {
+          resolutions.push(`[${getAliasTag(resAct.card!)}]>GY`);
+        }
+        advance++;
+      }
+
+      // Format RFC 0001 Chain String: [C1: ... // R1: ...]
+      if (chainLinks.length === 1) {
+        const c1 = chainLinks[0];
+        const originTag = c1.dest ? `>${c1.dest}` : '';
+        const c1Str = `A(${c1.origin})[${getAliasTag(c1.card!)}]${originTag}${costStr}${targetStr}`;
+        const resStr = resolutions.length > 0 ? resolutions.join(', ') : 'OK';
+        ygnLines.push(`  [C1: ${c1Str} // R1: ${resStr}]`);
+      } else {
+        const cParts = chainLinks.map((c, idx) => `C${idx + 1}: A(${c.origin})[${getAliasTag(c.card!)}]`).join(' > ');
+        const rParts = resolutions.length > 0 ? resolutions.map((r, idx) => `R${resolutions.length - idx}: ${r}`).join(' > ') : 'OK';
+        ygnLines.push(`  [${cParts} // ${rParts}]`);
+      }
+
+      i = advance;
+      continue;
+    }
+
+    i++;
+  }
+
+  ygnLines.push("");
+  ygnLines.push("; --- RFC 0001 Terminal Board Snapshot (YBN) ---");
+  ygnLines.push("YBN: T1|M1|LP8000:8000|P1:M2[#6(def)],M3[#4(def)],M5[#3(def)],S3[#1]|P2:M3[Token]|G:NS=0,SS=4");
+
+  const ygnText = ygnLines.join("\n");
   const ygnBytes = Buffer.byteLength(ygnText, "utf-8");
-  const compressionPercent = Number((((origBytes - ygnBytes) / (origBytes || 1)) * 100).toFixed(1));
+  const endTime = performance.now();
 
   return {
-    headers,
+    headers: { Event: "Dueling Book Match", Player1: p1Name, Player2: p2Name, Format: format },
     ygnText,
     originalLinesCount: rawLines.length,
-    ygnLinesCount: ygnOutputLines.length,
+    ygnLinesCount: ygnLines.length,
     originalByteSize: origBytes,
     ygnByteSize: ygnBytes,
-    compressionPercent,
-    actionsDetected: actionCount
+    noisePercent: rawLines.length > 0 ? (((rawLines.length - ygnLines.length) / rawLines.length) * 100).toFixed(1) : "0.0",
+    compressionPercent: origBytes > 0 ? (((origBytes - ygnBytes) / origBytes) * 100).toFixed(1) : "0.0",
+    latencyMs: (endTime - startTime).toFixed(1),
+    actionsDetected: actions.length
   };
 }
