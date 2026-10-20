@@ -2,7 +2,8 @@
 /**
  * @file ygo-notary.js
  * @description Official CLI Match Notary and Algebraic Transcriber (RFC 0001).
- * Converts raw Dueling Book and Omega match logs into standardized YGN/YBN algebraic records.
+ * Converts raw Dueling Book plain-text match logs into standardized YGN/YBN algebraic records.
+ * Note: Binary .yrp replays (from automated simulators like EDOPro/Omega) are not supported.
  */
 
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -15,8 +16,12 @@ Haunted Labs & YGN Working Group
 RFC 0001 Match Notary & Algebraic Transcriber (ygo-notary)
 
 USAGE:
-  ygo-notary transcribe <log_file> [options]
+  ygo-notary transcribe <duelingbook_log.txt> [options]
   cat duel_log.txt | ygo-notary transcribe -
+
+NOTE:
+  This tool transcribes plain-text match logs (Dueling Book).
+  Binary .yrp replays (EDOPro, Omega) are not supported.
 
 OPTIONS:
   -o, --output <file>     Write standardized YGN output to file instead of stdout

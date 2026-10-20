@@ -1,6 +1,6 @@
 /**
  * @file duelingbookToYgn.ts
- * @description Reference converter transforming raw Dueling Book and Omega match clickstreams
+ * @description Reference converter transforming raw Dueling Book plain-text match clickstreams
  * into standardized, compact RFC 0001 Algebraic Yu-Gi-Oh! Game Notation (YGN v1.1) and YBN snapshots.
  */
 export declare function normalizeZone(zoneStr: string): string;
