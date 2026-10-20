@@ -5,6 +5,10 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "ygo-notary": "bin/ygo-notary.js",
+    "ygn-transcribe": "bin/ygo-notary.js"
+  },
   "scripts": {
     "build": "tsc",
     "test": "tsx test/converter.test.ts && tsx test/lua_emitter.test.ts",
