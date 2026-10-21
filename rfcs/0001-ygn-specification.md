@@ -169,26 +169,40 @@ Field zones are strictly encoded as 2-character identifiers from the perspective
 
 ### 3.4. The LIFO Chain Block Protocol
 
-Chains represent non-linear, reverse-resolving execution. YGN mandates that every chain be wrapped in an atomic, bracketed LIFO block:
+Chains represent non-linear, reverse-resolving execution. YGN specifies two complementary representations for chain execution stacks: **Compact Inline Format** and **Indented LIFO Stack Block (Expanded Format)**.
+
+#### Representation A: Compact Inline Format (Recommended for $N = 1$ or Token-Dense Payloads)
+Used when a chain consists of a single link or when maximizing token density:
 
 $$\mathbf{[} \underbrace{C_1: \text{Action}_1 > C_2: \text{Action}_2 > \dots}_{\text{Declaration Phase (Chronological)}} \mathbf{\quad//\quad} \underbrace{R_n: \text{Result}_n > \dots > R_1: \text{Result}_1}_{\text{Resolution Phase (Reverse LIFO Order)}} \mathbf{]}$$
 
-#### Chain Syntax Rules:
-1. `C1, C2, ...`: Records activated effects in declaration order.
-2. `//`: **The Resolution Barrier.** Marks the moment both players pass priority without further chain links.
-3. `Rn, ..., R1`: Records effect resolutions in reverse order.
-4. **Implicit Priority Consent:** The presence of `//` eliminates the need to record redundant `"Signaled OK"` tokens.
-
-#### Canonical Chain Example:
 ```text
-[C1: A(FS)[Switchyard]
- > C2: A(o.H)[#o2:Ash]>o.GY
- > C3: A(S2)[Called by the Grave] T>o.GY[#o2:Ash]
- //
- R3: o.GY[#o2:Ash]>o.BX, Negate(o.[Ash Blossom])
- > R2: Negated
- > R1: +H[#3:Derricrane]<D, H[Discard]>GY]
+[C1: A(H)[#1:Exceptional]>S3 // R1: +H[#2:Urgent]<D, S[Token]>o.M3, [#1]>GY]
 ```
+
+#### Representation B: Indented LIFO Stack Block (Recommended for Multi-Link Chains $N \ge 2$)
+Yu-Gi-Oh! chains operate as a pure pushdown automaton (call stack). When multiple activations build a chain, each subsequent link ($C_2, C_3, \dots$) indents deeper, representing stack frames being pushed. At resolution, the stack unwinds in reverse (LIFO), with each resolution ($R_n, \dots, R_1$) matching the **exact indentation depth** of its corresponding activation ($C_k$):
+
+```text
+C1: A(FS)[Switchyard]
+    C2: A(o.H)[#o2:Ash]>o.GY -> #1
+        C3: A(S2)[Called by the Grave] -> o.GY[#o2:Ash]
+        R3: o.GY[#o2:Ash]>o.BX, !NEG(EFF)[#o2:Ash]
+    R2: !NEG(EFF)
+R1: +H[#3:Derricrane]<D, H[#4:Express]>GY
+```
+
+#### Visual & Architectural Advantages of Indented LIFO Stacks:
+1. **Vertical Symmetry ($C_k \leftrightarrow R_k$):** The activation $C_k$ and its resolution $R_k$ share the exact same indentation column. Readers and AI models instantly see the outcome of an effect without counting positions across a `//` barrier.
+2. **Immediate Negation & Fizzle Attribution:** When $C_3$ negates $C_2$, the resolution $R_3$ sits directly adjacent to $R_2$ at the deeper nesting level.
+3. **Elimination of Horizontal Line Overflow:** Modern multi-chain lines with complex searches and targets remain clean, structured, and readable across all viewing widths.
+
+#### Chain Syntax Rules:
+1. `C1, C2, ...`: Records activated effects in declaration order (push onto stack).
+2. `//` (in inline format) or stack transition: Marks priority pass where neither player adds further links.
+3. `Rn, ..., R1`: Records effect resolutions in reverse order (pop off stack).
+4. **Activation Cost vs Effect Resolution:** Card costs paid upon activation (actions before `;` such as discarding or paying LP) are recorded on the $C_k$ line; effect resolutions (actions after `;`) are recorded on the $R_k$ line.
+5. **Implicit Priority Consent:** The structural representation eliminates the need to record redundant `"Signaled OK"` tokens.
 
 ---
 
