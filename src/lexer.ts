@@ -197,6 +197,7 @@ function parseActionLine(line: string): YgnActionLine | null {
 function parseSingleAction(actionText: string): YgnSingleAction {
   let operator: ActionOperator = "A";
   let card: CardToken = {};
+  let cards: CardToken[] | undefined;
   let position: "atk" | "def" | undefined;
   let zone: ZoneCoordinate | undefined;
   let originZone: ZoneCoordinate | undefined;
@@ -208,7 +209,7 @@ function parseSingleAction(actionText: string): YgnSingleAction {
   else if (actionText.startsWith("S")) operator = "S";
   else if (actionText.startsWith("A")) operator = "A";
   else if (actionText.startsWith("#S")) operator = "#S";
-  else if (actionText.startsWith("+H")) operator = "+";
+  else if (actionText.startsWith("+H") || actionText.startsWith("o.+H")) operator = "+";
   else if (actionText.startsWith("!")) operator = "!";
   else if (actionText.startsWith("X")) operator = "X";
   else if (actionText.startsWith("L")) operator = "L";
@@ -217,13 +218,32 @@ function parseSingleAction(actionText: string): YgnSingleAction {
   else if (actionText.startsWith("R")) operator = "R";
   else if (actionText.startsWith("LP")) operator = "LP";
 
-  // Extract card token [Name] or [#Alias:Name]
-  const cardMatch = actionText.match(/\[(?:([a-z0-9#]+):)?([^\]]+)\]/i);
-  if (cardMatch) {
-    card = {
-      alias: cardMatch[1],
-      name: cardMatch[2]
-    };
+  // Extract card token [Name] or [#Alias:Name] or batch [Card1, Card2, ...]
+  const bracketMatch = actionText.match(/\[([^\]]+)\]/);
+  if (bracketMatch) {
+    const rawTokens = bracketMatch[1].split(",").map((s) => s.trim());
+    if (rawTokens.length > 1) {
+      cards = rawTokens.map((t) => {
+        if (t === "?") return { isHidden: true };
+        const m = t.match(/^(?:([a-z0-9#]+):)?(.+)$/i);
+        return {
+          alias: m ? m[1] : undefined,
+          name: m ? m[2] : t
+        };
+      });
+      card = cards[0];
+    } else {
+      const single = rawTokens[0];
+      if (single === "?") {
+        card = { isHidden: true };
+      } else {
+        const m = single.match(/^(?:([a-z0-9#]+):)?(.+)$/i);
+        card = {
+          alias: m ? m[1] : undefined,
+          name: m ? m[2] : single
+        };
+      }
+    }
   }
 
   // Extract Position (atk) or (def)

@@ -50,6 +50,7 @@ export interface YgnSingleAction {
   type: "single";
   operator: ActionOperator;
   card: CardToken;
+  cards?: CardToken[];
   position?: "atk" | "def";
   zone?: ZoneCoordinate;
   originZone?: ZoneCoordinate;

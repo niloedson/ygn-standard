@@ -2,41 +2,45 @@
 [Player1 "nedson_br" 8000]
 [Player2 "0-0-11 formation" 8000]
 [Format "Advanced (Unrated) with duel note"]
+[Visibility "Omniscient"]
 [Standard "RFC 0001 (YGN v1.1)"]
 
 [Round "Game 1"]
 T1: nedson_br vs 0-0-11 formation
-  C1: A(H)[#o1:Mulcharmy Fuwalos]>GY
-      C2: A(H)[#1:Called by the Grave]>S3
-      R2: >BX[#o1:Mulcharmy Fuwalos]<GY, !NEG(EFF)[Mulcharmy Fuwalos], [#1:Called by the Grave]>GY
+@DP
+  +H[#1:Night Train Blue Traveler, #2:Crossout Designator, #3:Revolving Switchyard, #4:Called by the Grave, #5:Exceptional Schedule]<D
+  o.+H[#o1:Ash Blossom & Joyous Spring, #o2:Ghost Belle & Haunted Mansion, #o3:Mulcharmy Fuwalos, #o4:Kewl Tune Cue, #o5:Fydraulis Harmonia]<o.D
+  C1: A(H)[#o3:Mulcharmy Fuwalos]>GY
+      C2: A(H)[#4:Called by the Grave]>S3
+      R2: >BX[#o3:Mulcharmy Fuwalos]<GY, !NEG(EFF)[Mulcharmy Fuwalos], [#4:Called by the Grave]>GY
   R1: !NEG(EFF)
 @SP
 @M1
-  C1: A(H)[#4:Exceptional Schedule]>S3
-      C2: A(H)[#o2:Ash Blossom & Joyous Spring]>GY
-          C3: A(H)[#3:Crossout Designator]>S4
-          R3: >BX[#o2:Ash Blossom & Joyous Spring]<D, !NEG(EFF)[Ash Blossom & Joyous Spring]
+  C1: A(H)[#5:Exceptional Schedule]>S3
+      C2: A(H)[#o1:Ash Blossom & Joyous Spring]>GY
+          C3: A(H)[#2:Crossout Designator]>S4
+          R3: >BX[#o1:Ash Blossom & Joyous Spring]<D, !NEG(EFF)[Ash Blossom & Joyous Spring]
       R2: !NEG(EFF)
-  R1: +H[#2:Urgent Schedule]<D, S[Token]>M3, [#3:Crossout Designator]>GY, [#4:Exceptional Schedule]>GY
-  [C1: A(H)[#2:Urgent Schedule]>S3 // R1: S[#5:Night Train Blue Traveler](def)>M3<D, S[#6:Scrap Recycler](def)>M2<D, [#2:Urgent Schedule]>GY]
-  L[[#6:Scrap Recycler:M2]]>ER[#7:Clockwork Knight](atk)<ED
-  C1: A(ER)[#7:Clockwork Knight] T>GY[#6:Scrap Recycler]
-      C2: A(H)[#o3:Fydraulis Harmonia]
+  R1: +H[#6:Urgent Schedule]<D, S[Token]>M3, [#2:Crossout Designator]>GY, [#5:Exceptional Schedule]>GY
+  [C1: A(H)[#6:Urgent Schedule]>S3 // R1: S[#1:Night Train Blue Traveler](def)>M3<D, S[#7:Scrap Recycler](def)>M2<D, [#6:Urgent Schedule]>GY]
+  L[[#7:Scrap Recycler:M2]]>ER[#8:Clockwork Knight](atk)<ED
+  C1: A(ER)[#8:Clockwork Knight] T>GY[#7:Scrap Recycler]
+      C2: A(H)[#o5:Fydraulis Harmonia]
       R2: OK
-  R1: [#e1:Golden Cloud Beast - Malong]>GY, S[#o3:Fydraulis Harmonia](atk)>M1<H, [#5:Night Train Blue Traveler]>GY
-  [C1: A(GY)[#e1:Golden Cloud Beast - Malong] T>ER[#7:Clockwork Knight] // R1: [#7:Clockwork Knight]>GY]
-  C1: A(GY)[#5:Night Train Blue Traveler] T>GY[#6:Scrap Recycler]
-      C2: A(H)[#o4:Ghost Belle & Haunted Mansion]>GY
+  R1: [#e1:Golden Cloud Beast - Malong]>GY, S[#o5:Fydraulis Harmonia](atk)>M1<H, [#1:Night Train Blue Traveler]>GY
+  [C1: A(GY)[#e1:Golden Cloud Beast - Malong] T>ER[#8:Clockwork Knight] // R1: [#8:Clockwork Knight]>GY]
+  C1: A(GY)[#1:Night Train Blue Traveler] T>GY[#7:Scrap Recycler]
+      C2: A(H)[#o2:Ghost Belle & Haunted Mansion]>GY
       R2: !NEG(EFF)[Night Train Blue Traveler]
   R1: !NEG(EFF)
-  [C1: A(H)[#8:Revolving Switchyard]>FS // R1: OK]
-  [C1: A(FS)[#8:Revolving Switchyard] // R1: [#5:Night Train Blue Traveler]>GY, +H[#9:Heavy Armored Knight Babeldecker]<D, S[#9:Heavy Armored Knight Babeldecker](atk)>M3<H]
-  [C1: A(GY)[#4:Exceptional Schedule] // R1: >BX[#4:Exceptional Schedule]<GY, [#8:Revolving Switchyard]>GY, S[#5:Night Train Blue Traveler](def)>M2<GY]
-  L[[#9:Heavy Armored Knight Babeldecker:M3] + [#5:Night Train Blue Traveler:M2]]>ER[#e2:R.B. VALCan Booster](atk)<ED
+  [C1: A(H)[#3:Revolving Switchyard]>FS // R1: OK]
+  [C1: A(FS)[#3:Revolving Switchyard] // R1: [#1:Night Train Blue Traveler]>GY, +H[#9:Heavy Armored Knight Babeldecker]<D, S[#9:Heavy Armored Knight Babeldecker](atk)>M3<H]
+  [C1: A(GY)[#5:Exceptional Schedule] // R1: >BX[#5:Exceptional Schedule]<GY, [#3:Revolving Switchyard]>GY, S[#1:Night Train Blue Traveler](def)>M2<GY]
+  L[[#9:Heavy Armored Knight Babeldecker:M3] + [#1:Night Train Blue Traveler:M2]]>ER[#e2:R.B. VALCan Booster](atk)<ED
   [C1: A(ER)[#e2:R.B. VALCan Booster] // R1: +H[#10:R.B. Funk Dock]<D]
   [C1: A(H)[#10:R.B. Funk Dock]>FS // R1: +H[#11:R.B. Stage Landing]<D]
   [C1: A(H)[#11:R.B. Stage Landing]>S3 // R1: S[#12:R.B. Lambda Cannon](def)>M4<D, [#11:R.B. Stage Landing]>GY]
-  [C1: A(M4)[#12:R.B. Lambda Cannon] // R1: S[#o5:Kewl Tune Cue](atk)>M5<H, [#12:R.B. Lambda Cannon]>GY]
+  [C1: A(M4)[#12:R.B. Lambda Cannon] // R1: S[#o4:Kewl Tune Cue](atk)>M5<H, [#12:R.B. Lambda Cannon]>GY]
   [C1: A(FS)[#10:R.B. Funk Dock] // R1: S[#13:R.B. Lambda Blade](def)>M4<D]
   [C1: A(M4)[#13:R.B. Lambda Blade] // R1: [#14:R.B. Ga10 Cutter]>GY]
   [C1: A(ER)[#e2:R.B. VALCan Booster] // R1: S[#12:R.B. Lambda Cannon](def)>M3<GY]
@@ -65,56 +69,62 @@ YBN: T2|M1|LP8000:8000|P1:M2[#6(def)],M3[#4(def)],M5[#3(def)],S3[#1]|P2:M3[Token
 
 [Round "Game 2"]
 T1: nedson_br vs 0-0-11 formation
+@DP
+  +H[#17:Jizukiru, the Star Destroying Kaiju, #11:R.B. Stage Landing, #5:Exceptional Schedule, #1:Night Train Blue Traveler, #10:R.B. Funk Dock]<D
+  o.+H[#o6:Droll & Lock Bird, #4:Called by the Grave, #o7:Ghost Ogre & Snow Rabbit, #o4:Kewl Tune Cue, #18:Kewl Tune Rotary]<o.D
 @M1
-  N[#o5:Kewl Tune Cue](atk)>M3
-  [C1: A(M3)[#o5:Kewl Tune Cue] // R1: S[#17:Kewl Tune Mix](def)>M5<D]
-  [C1: A(M5)[#17:Kewl Tune Mix] // R1: +H[#18:Kewl Tune Reco]<D]
+  N[#o4:Kewl Tune Cue](atk)>M3
+  [C1: A(M3)[#o4:Kewl Tune Cue] // R1: S[#19:Kewl Tune Mix](def)>M5<D]
+  [C1: A(M5)[#19:Kewl Tune Mix] // R1: +H[#20:Kewl Tune Reco]<D]
   C1: A(M3)[#e6:Kewl Tune Track Maker]
-      C2: A(GY)[#o5:Kewl Tune Cue]
-          C3: A(GY)[#22:Kewl Tune Rotary]
+      C2: A(GY)[#o4:Kewl Tune Cue]
+          C3: A(GY)[#18:Kewl Tune Rotary]
           R3: OK
       R2: OK
-  R1: +H[#19:Kewl Tune Synchro]<D, >BX[#20:Lightning Storm]<top of Deck, >BX[#o6:Mulcharmy Purulia]<top of Deck, +H[#21:JJ "Kewl Tune]<D
-  [C1: A(H)[#21:JJ "Kewl Tune]>FS // R1: S[#18:Kewl Tune Reco](atk)>M1<H]
-  [C1: A(M1)[#18:Kewl Tune Reco] // R1: +H[#23:Kewl Tune Clip]<D, [#23:Kewl Tune Clip]>GY]
-  L[[#18:Kewl Tune Reco:M1]]>M1[#e7:Kewl Tune Crackle](def)<ED
-  [C1: A(GY)[#23:Kewl Tune Clip] // R1: >BX[#24:Superdreadnought Rail Cannon Flying Launcher]<ED]
-  [C1: A(FS)[#21:JJ "Kewl Tune] // R1: [#e7:Kewl Tune Crackle]>GY, S[#18:Kewl Tune Reco](def)>M1<D]
+  R1: +H[#21:Kewl Tune Synchro]<D, >BX[#22:Lightning Storm]<top of Deck, >BX[#o8:Mulcharmy Purulia]<top of Deck, +H[#23:JJ "Kewl Tune]<D
+  [C1: A(H)[#23:JJ "Kewl Tune]>FS // R1: S[#20:Kewl Tune Reco](atk)>M1<H]
+  [C1: A(M1)[#20:Kewl Tune Reco] // R1: +H[#24:Kewl Tune Clip]<D, [#24:Kewl Tune Clip]>GY]
+  L[[#20:Kewl Tune Reco:M1]]>M1[#e7:Kewl Tune Crackle](def)<ED
+  [C1: A(GY)[#24:Kewl Tune Clip] // R1: >BX[#25:Superdreadnought Rail Cannon Flying Launcher]<ED]
+  [C1: A(FS)[#23:JJ "Kewl Tune] // R1: [#e7:Kewl Tune Crackle]>GY, S[#20:Kewl Tune Reco](def)>M1<D]
   [C1: A(GY)[#e7:Kewl Tune Crackle] // R1: S[#e7:Kewl Tune Crackle](def)>M2<GY]
   C1: A(M2)[#e7:Kewl Tune Crackle]
-      C2: A(GY)[#23:Kewl Tune Clip]
+      C2: A(GY)[#24:Kewl Tune Clip]
       R2: OK
   R1: OK
-  L[[#e7:Kewl Tune Crackle:M2] + [#18:Kewl Tune Reco:M1]]>M4[#e8:Visas Amritara](atk)<ED
-  [C1: A(M4)[#e8:Visas Amritara] // R1: +H[#25:Mannadium Reframing]<D, [#17:Kewl Tune Mix]>GY]
+  L[[#e7:Kewl Tune Crackle:M2] + [#20:Kewl Tune Reco:M1]]>M4[#e8:Visas Amritara](atk)<ED
+  [C1: A(M4)[#e8:Visas Amritara] // R1: +H[#26:Mannadium Reframing]<D, [#19:Kewl Tune Mix]>GY]
   [C1: A(H)[#o7:Ghost Ogre & Snow Rabbit]>GY // R1: S[#e9:Kewl Tune Remix](def)>M1<ED]
-  #S[#25:Mannadium Reframing]>S2
-  #S[#1:Called by the Grave]>S3
-  #S[#19:Kewl Tune Synchro]>S4
+  #S[#26:Mannadium Reframing]>S2
+  #S[#4:Called by the Grave]>S3
+  #S[#21:Kewl Tune Synchro]>S4
 T2: 0-0-11 formation vs nedson_br
 @DP
 @SP
 @M1
-  [C1: A(H)[#4:Exceptional Schedule]>S3 // R1: +H[#2:Urgent Schedule]<D, S[Token]>M3, [#4:Exceptional Schedule]>GY]
-  C1: A(H)[#o8:Droll & Lock Bird]>GY
-      C2: A(H)[#2:Urgent Schedule]>S3
-          C3: A(S2)[#25:Mannadium Reframing]
+  [C1: A(H)[#5:Exceptional Schedule]>S3 // R1: +H[#6:Urgent Schedule]<D, S[Token]>M3, [#5:Exceptional Schedule]>GY]
+  C1: A(H)[#o6:Droll & Lock Bird]>GY
+      C2: A(H)[#6:Urgent Schedule]>S3
+          C3: A(S2)[#26:Mannadium Reframing]
           R3: !NEG(EFF)[Urgent Schedule]
       R2: !NEG(EFF)
-  R1: [#2:Urgent Schedule]>GY, [#25:Mannadium Reframing]>GY
+  R1: [#6:Urgent Schedule]>GY, [#26:Mannadium Reframing]>GY
 
 ; --- RFC 0001 Terminal Board Snapshot (YBN - Game 2) ---
 YBN: T2|M1|LP8000:8000|P1:M2[#6(def)],M3[#4(def)],M5[#3(def)],S3[#1]|P2:M3[Token]|G:NS=0,SS=4
 
 [Round "Game 3"]
 T1: nedson_br vs 0-0-11 formation
-  [C1: A(H)[#o6:Mulcharmy Purulia]>GY // R1: OK]
+@DP
+  +H[#1:Night Train Blue Traveler, #o7:Ghost Ogre & Snow Rabbit, #27:Forbidden Droplet, #28:Magical Hound, #o6:Droll & Lock Bird]<D
+  o.+H[#o1:Ash Blossom & Joyous Spring, #o4:Kewl Tune Cue, #o9:Skull Meister, #o10:Effect Veiler, #o8:Mulcharmy Purulia]<o.D
+  [C1: A(H)[#o8:Mulcharmy Purulia]>GY // R1: OK]
 @SP
 @M1
-  [C1: A(H)[#5:Night Train Blue Traveler]>GY // R1: +H[#8:Revolving Switchyard]<D]
-  [C1: A(H)[#8:Revolving Switchyard]>FS // R1: OK]
-  [C1: A(FS)[#8:Revolving Switchyard] // R1: [#26:Magical Hound]>GY, +H[#9:Heavy Armored Knight Babeldecker]<D]
-  C1: A(GY)[#5:Night Train Blue Traveler]
+  [C1: A(H)[#1:Night Train Blue Traveler]>GY // R1: +H[#3:Revolving Switchyard]<D]
+  [C1: A(H)[#3:Revolving Switchyard]>FS // R1: OK]
+  [C1: A(FS)[#3:Revolving Switchyard] // R1: [#28:Magical Hound]>GY, +H[#9:Heavy Armored Knight Babeldecker]<D]
+  C1: A(GY)[#1:Night Train Blue Traveler]
       C2: A(H)[#o9:Skull Meister]>GY
       R2: !NEG(EFF)[Night Train Blue Traveler]
   R1: !NEG(EFF)
@@ -123,11 +133,11 @@ T1: nedson_br vs 0-0-11 formation
 T2: 0-0-11 formation vs nedson_br
 @DP
 @M1
-  N[#o5:Kewl Tune Cue](atk)>M1
-  [C1: A(M1)[#o5:Kewl Tune Cue] // R1: S[#18:Kewl Tune Reco](atk)>M5<D]
-  [C1: A(M5)[#18:Kewl Tune Reco] // R1: +H[#17:Kewl Tune Mix]<D]
-  [C1: A(H)[#o8:Droll & Lock Bird]>GY // R1: OK]
-  C1: A(GY)[#18:Kewl Tune Reco] T>S3[#28:Set Forbidden Droplet]
+  N[#o4:Kewl Tune Cue](atk)>M1
+  [C1: A(M1)[#o4:Kewl Tune Cue] // R1: S[#20:Kewl Tune Reco](atk)>M5<D]
+  [C1: A(M5)[#20:Kewl Tune Reco] // R1: +H[#19:Kewl Tune Mix]<D]
+  [C1: A(H)[#o6:Droll & Lock Bird]>GY // R1: OK]
+  C1: A(GY)[#20:Kewl Tune Reco] T>S3[#29:Set Forbidden Droplet]
       C2: A(S3)[#27:Forbidden Droplet]
       R2: OK
   R1: [#o7:Ghost Ogre & Snow Rabbit]>GY, [#27:Forbidden Droplet]>GY
@@ -137,8 +147,8 @@ T2: 0-0-11 formation vs nedson_br
   LP-750
   LP-900
 @M2
-  [C1: A(H)[#o2:Ash Blossom & Joyous Spring]>GY // R1: S[#e10:Kewl Tune Loudness War](def)>M1<ED]
-  [C1: A(GY)[#o5:Kewl Tune Cue] T>M1[#e10:Kewl Tune Loudness War] // R1: >BX[#o2:Ash Blossom & Joyous Spring]<top of Deck, >BX[#o2:Ash Blossom & Joyous Spring]<top of Deck]
+  [C1: A(H)[#o1:Ash Blossom & Joyous Spring]>GY // R1: S[#e10:Kewl Tune Loudness War](def)>M1<ED]
+  [C1: A(GY)[#o4:Kewl Tune Cue] T>M1[#e10:Kewl Tune Loudness War] // R1: >BX[#o1:Ash Blossom & Joyous Spring]<top of Deck, >BX[#o1:Ash Blossom & Joyous Spring]<top of Deck]
 T3: nedson_br vs 0-0-11 formation
 @DP
 @SP
@@ -146,7 +156,7 @@ T3: nedson_br vs 0-0-11 formation
 @SP
 @DP
   [C1: A(M4)[#e9:Kewl Tune Remix]>GY // R1: S[#e11:Kewl Tune RS](atk)>M3<ED]
-  [C1: A(GY)[#18:Kewl Tune Reco] T>FS[#8:Revolving Switchyard] // R1: [#8:Revolving Switchyard]>GY]
+  [C1: A(GY)[#20:Kewl Tune Reco] T>FS[#3:Revolving Switchyard] // R1: [#3:Revolving Switchyard]>GY]
 
 ; --- RFC 0001 Terminal Board Snapshot (YBN - Game 3) ---
 YBN: T3|M1|LP8000:8000|P1:M2[#6(def)],M3[#4(def)],M5[#3(def)],S3[#1]|P2:M3[Token]|G:NS=0,SS=4

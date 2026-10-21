@@ -100,6 +100,7 @@ export interface DuelingBookConversionResult {
 
 export interface DuelingBookConverterOptions {
   chainFormat?: "inline" | "indented";
+  visibility?: "omniscient" | "pilot" | "spectator";
 }
 
 /**
@@ -337,11 +338,16 @@ export function convertDuelingBookToYgn(
     return `${mainAliases.get(cardName)}:${cardName}`;
   };
 
+  const visibility = options.visibility || "omniscient";
+  const visHeader =
+    visibility === "pilot" ? "Pilot_P1" : visibility === "spectator" ? "Spectator" : "Omniscient";
+
   const ygnLines: string[] = [
     `[Event "Dueling Book Match"]`,
     `[Player1 "${p1Name}" 8000]`,
     `[Player2 "${p2Name}" 8000]`,
     `[Format "${format}"]`,
+    `[Visibility "${visHeader}"]`,
     `[Standard "RFC 0001 (YGN v1.1)"]`,
     ``
   ];
@@ -358,6 +364,24 @@ export function convertDuelingBookToYgn(
 
     const actions: ParsedAction[] = [];
     let startingPlayer = p1Name;
+
+    // Scan opening 5-card hands for P1 and P2 in this game
+    const p1OpeningCards: string[] = [];
+    const p2OpeningCards: string[] = [];
+    let gameDrawCount = 0;
+    for (const line of gameLines) {
+      const drewMatch = line.match(/\[\d+:\d+\]\s+Drew\s+(.+)/i);
+      if (drewMatch) {
+        const card = cleanCardName(drewMatch[1]);
+        gameDrawCount++;
+        if (gameDrawCount <= 5) {
+          p1OpeningCards.push(card);
+        } else if (gameDrawCount <= 10) {
+          p2OpeningCards.push(card);
+        }
+      }
+      if (gameDrawCount >= 10) break;
+    }
 
     // Scan for starting player in this game
     for (const line of gameLines) {
@@ -697,11 +721,41 @@ export function convertDuelingBookToYgn(
         const turnPlayer = isTurnOdd ? startingPlayer : (startingPlayer === p1Name ? p2Name : p1Name);
         const opponent = isTurnOdd ? (startingPlayer === p1Name ? p2Name : p1Name) : startingPlayer;
         ygnLines.push(`T${turnCount}: ${turnPlayer} vs ${opponent}`);
+
+        // On Turn 1 of each Game, emit @DP with initial 5-card opening hand plies
+        if (turnCount === 1) {
+          ygnLines.push(`@DP`);
+          let p1HandStr = "";
+          let p2HandStr = "";
+
+          if (visibility === "omniscient") {
+            p1HandStr = p1OpeningCards.map((c) => getAliasTag(c)).join(", ");
+            p2HandStr = p2OpeningCards.length > 0 ? p2OpeningCards.map((c) => getAliasTag(c)).join(", ") : "?, ?, ?, ?, ?";
+          } else if (visibility === "pilot") {
+            p1HandStr = p1OpeningCards.map((c) => getAliasTag(c)).join(", ");
+            p2HandStr = "?, ?, ?, ?, ?";
+          } else {
+            p1HandStr = "?, ?, ?, ?, ?";
+            p2HandStr = "?, ?, ?, ?, ?";
+          }
+
+          if (p1HandStr) {
+            ygnLines.push(`  +H[${p1HandStr}]<D`);
+          }
+          if (p2HandStr) {
+            ygnLines.push(`  o.+H[${p2HandStr}]<o.D`);
+          }
+        }
+
         i++;
         continue;
       }
 
       if (act.type === 'PHASE') {
+        if (act.dest === '@DP' && turnCount === 1) {
+          i++;
+          continue;
+        }
         ygnLines.push(act.dest!);
         i++;
         continue;
