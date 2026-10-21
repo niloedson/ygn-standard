@@ -1,0 +1,649 @@
+[0:00] nedson_br hosted 2 out of 3 Match in Advanced (Unrated) with duel note "boh vagner"
+[0:00] Accepted 0-0-11 formation into duel
+[0:07] "fala man"
+[0:10] "boa sorte"
+[0:11] "fala man"
+[0:13] "bom jogo"
+----------------(Turn 1)----------------
+[0:15] Chose to go first
+[0:15] Drew Night Train Blue Traveler
+[0:15] Drew Crossout Designator
+[0:15] Drew Revolving Switchyard
+[0:15] Drew Called by the Grave
+[0:15] Drew Exceptional Schedule
+[0:15] Drew Ash Blossom & Joyous Spring
+[0:15] Drew Ghost Belle & Haunted Mansion
+[0:15] Drew Mulcharmy Fuwalos
+[0:15] Drew Kewl Tune Cue
+[0:15] Drew Fydraulis Harmonia
+[0:28] "m1?"
+[0:31] "penso"
+[0:35] Sent Mulcharmy Fuwalos from hand (3/5) to GY
+[0:42] Thinking
+[0:45] Activated Called by the Grave from hand (4/5) to S-3
+[0:46] Viewed Opponent's Graveyard
+[0:48] Pointed at Mulcharmy Fuwalos from GY
+[0:49] Viewed GY
+[0:51] Banished Mulcharmy Fuwalos from GY
+[0:51] Stopped viewing Opponent's GY
+[0:52] Stopped viewing GY
+[0:53] Sent Called by the Grave from S-3 to GY
+[1:00] Entered Standby Phase
+[1:03] Entered Main Phase 1
+[1:14] Activated Exceptional Schedule from hand (4/4) to S-3
+[1:20] "lendo"
+[1:41] Sent Ash Blossom & Joyous Spring from hand (1/4) to GY
+[1:48] Thinking
+[1:52] Activated Crossout Designator from hand (2/3) to S-4
+[1:57] "ash"
+[2:03] "ta certo ne kkkkk"
+[2:05] "pensando"
+[2:08] "kkk"
+[2:13] Signaled OK
+[2:16] Viewed deck
+[2:19] Banished Ash Blossom & Joyous Spring from Deck
+[2:19] Stopped viewing Deck
+[2:19] Shuffled deck
+[2:27] Viewed deck
+[2:32] Added Urgent Schedule from Deck to hand
+[2:32] Stopped viewing Deck
+[2:32] Shuffled deck
+[2:34] Summoned a token in M-3
+[2:36] Moved "Token" from M-3 to M2-3
+[2:40] Sent Crossout Designator from S-4 to GY
+[2:41] Sent Exceptional Schedule from S-3 to GY
+[2:56] "res?"
+[2:56] "posso ler a sepl"
+[3:04] Revealed Urgent Schedule from hand (1/3)
+[3:16] Signaled OK
+[3:22] Activated Urgent Schedule from hand (2/3) to S-3
+[3:27] Signaled OK
+[3:30] Viewed deck
+[3:44] Special Summoned Night Train Blue Traveler from Deck to M-3 (DEF)
+[3:44] Special Summoned Scrap Recycler from Deck to M-2 (DEF)
+[3:46] Stopped viewing Deck
+[3:46] Shuffled deck
+[3:48] Sent Urgent Schedule from S-3 to GY
+[4:12] "ok?"
+[4:13] Signaled OK
+[4:14] Sent Scrap Recycler from M-2 to GY
+[4:16] Viewed Extra Deck
+[4:18] Stopped viewing Extra Deck
+[4:19] Special Summoned Clockwork Knight from Extra Deck to Right EMZ (ATK)
+[4:29] Declared effect of Clockwork Knight in Right Extra Monster Zone
+[4:32] Thinking
+[4:33] Viewed GY
+[4:35] Pointed at Scrap Recycler from GY
+[4:51] Thinking
+[4:58] Stopped viewing GY
+[5:00] Viewed GY
+[5:01] Stopped viewing GY
+[5:03] "penso"
+[5:07] Declared effect of Fydraulis Harmonia in hand (3/3)
+[5:09] Viewed Extra Deck
+[5:09] Revealed Golden Cloud Beast - Malong from Extra Deck
+[5:11] Revealed Ecclesia and the Dark Dragon from Extra Deck
+[5:14] Revealed Zalen the Shackled Dragon from Extra Deck
+[5:15] Revealed Wind Pegasus @Ignister from Extra Deck
+[5:18] Revealed Visas Amritara from Extra Deck
+[5:19] Stopped viewing Extra Deck
+[5:25] Signaled OK
+[5:27] Viewed Extra Deck
+[5:29] Sent Golden Cloud Beast - Malong from Extra Deck to GY
+[5:30] Stopped viewing Extra Deck
+[5:32] Special Summoned Fydraulis Harmonia from hand (3/3) to M-1 (ATK)
+[5:33] Pointed at Night Train Blue Traveler in M-3
+[5:37] Sent Night Train Blue Traveler from M-3 to GY
+[5:38] Viewed GY
+[5:40] "res"
+[5:46] Declared effect of Golden Cloud Beast - Malong from GY
+[5:47] Stopped viewing GY
+[5:48] Pointed at Clockwork Knight in Right Extra Monster Zone
+[5:53] Returned Clockwork Knight from Right Extra Monster Zone to Extra Deck
+[6:03] "ok?"
+[6:05] Signaled OK
+[6:07] Viewed GY
+[6:19] Declared effect of Night Train Blue Traveler from GY
+[6:21] Pointed at Scrap Recycler from GY
+[6:22] Sent Ghost Belle & Haunted Mansion from hand (1/2) to GY
+[6:25] Stopped viewing GY
+[6:34] Thinking
+[6:36] Activated Field Spell Revolving Switchyard from hand (1/2)
+[6:47] Declared effect of Revolving Switchyard in Field Spell Zone
+[6:49] Sent Night Train Blue Traveler from hand (1/1) to GY
+[6:51] Signaled OK
+[6:53] Viewed deck
+[6:56] Added Heavy Armored Knight Babeldecker from Deck to hand
+[6:58] Stopped viewing Deck
+[6:58] Shuffled deck
+[7:11] Normal Summoned Heavy Armored Knight Babeldecker from hand (1/1) to M-3
+[7:17] Viewed GY
+[7:21] Viewed Opponent's Graveyard
+[7:22] Declared effect of Exceptional Schedule from GY
+[7:25] Banished Exceptional Schedule from GY
+[7:26] Pointed at Night Train Blue Traveler from GY
+[7:31] Stopped viewing Opponent's GY
+[7:32] Signaled OK
+[7:34] Sent Revolving Switchyard from Field Spell Zone to GY
+[7:37] Special Summoned Night Train Blue Traveler from GY to M-2 (DEF)
+[7:39] Stopped viewing GY
+[7:47] Sent Heavy Armored Knight Babeldecker from M-3 to GY
+[7:48] Sent Night Train Blue Traveler from M-2 to GY
+[7:49] Viewed Extra Deck
+[7:51] Stopped viewing Extra Deck
+[7:52] Special Summoned R.B. VALCan Booster from Extra Deck to Right EMZ (ATK)
+[7:54] Declared effect of R.B. VALCan Booster in Right Extra Monster Zone
+[7:59] Signaled OK
+[8:04] Viewed deck
+[8:07] Viewed Opponent's Graveyard
+[8:12] Added R.B. Funk Dock from Deck to hand
+[8:14] Stopped viewing Deck
+[8:14] Shuffled deck
+[8:14] Stopped viewing Opponent's GY
+[8:20] Activated Field Spell R.B. Funk Dock from hand (1/1)
+[8:33] "ok?"
+[8:34] Signaled OK
+[8:37] Viewed deck
+[8:40] Added R.B. Stage Landing from Deck to hand
+[8:42] Stopped viewing Deck
+[8:42] Shuffled deck
+[8:46] Activated R.B. Stage Landing from hand (1/1) to S-3
+[8:48] Signaled OK
+[8:51] Viewed deck
+[8:56] Special Summoned R.B. Lambda Cannon from Deck to M-4 (DEF)
+[8:58] Sent R.B. Stage Landing from S-3 to GY
+[8:59] Stopped viewing Deck
+[8:59] Shuffled deck
+[9:01] Declared effect of R.B. Lambda Cannon in M-4
+[9:08] Lost 1200 LP
+[9:14] "ver minha mao ?"
+[9:18] "yep"
+[9:24] Special Summoned Kewl Tune Cue from hand (1/1) to M-5 (ATK)
+[9:34] "invoca com efeito negado"
+[9:37] Signaled OK
+[9:38] Sent R.B. Lambda Cannon from M-4 to GY
+[9:40] Declared effect of R.B. Funk Dock in Field Spell Zone
+[9:46] Signaled OK
+[9:49] Viewed deck
+[9:53] Special Summoned R.B. Lambda Blade from Deck to M-4 (DEF)
+[9:54] Stopped viewing Deck
+[9:54] Shuffled deck
+[9:56] Declared effect of R.B. Lambda Blade in M-4
+[10:00] "pera ai"
+[10:16] "pq seu bicho saiu ?"
+[10:22] "ele se destroi"
+[10:29] Signaled OK
+[10:29] "paga lp e se destroi"
+[10:41] Viewed deck
+[10:45] Sent R.B. Ga10 Cutter from Deck to GY
+[10:46] Stopped viewing Deck
+[10:46] Shuffled deck
+[10:48] Declared effect of R.B. VALCan Booster in Right Extra Monster Zone
+[10:49] Viewed GY
+[10:53] Special Summoned R.B. Lambda Cannon from GY to M-3 (DEF)
+[10:55] Declared effect of R.B. Lambda Cannon in M-3
+[11:00] Signaled OK
+[11:00] Returned R.B. Ga10 Cutter from GY to hand
+[11:03] Stopped viewing GY
+[11:05] Special Summoned R.B. Ga10 Cutter from hand (1/1) to M-5 (DEF)
+[11:07] Viewed Extra Deck
+[11:12] Stopped viewing Extra Deck
+[11:13] Sent R.B. VALCan Booster from Right Extra Monster Zone to GY
+[11:14] Sent R.B. Lambda Cannon from M-3 to GY
+[11:16] Viewed Extra Deck
+[11:17] Stopped viewing Extra Deck
+[11:18] Special Summoned R.B. The Brute Blues from Extra Deck to Right EMZ (ATK)
+[11:20] Declared effect of R.B. The Brute Blues in Right Extra Monster Zone
+[11:22] Viewed deck
+[11:25] Added R.B. Stage Landing from Deck to hand
+[11:27] Stopped viewing Deck
+[11:27] Shuffled deck
+[11:30] Activated R.B. Stage Landing from hand (1/1) to S-3
+[11:31] Viewed Extra Deck
+[11:32] Stopped viewing Extra Deck
+[11:33] Special Summoned R.B. Shepherd's Crook from Extra Deck to M-3 (ATK)
+[11:35] Sent R.B. Stage Landing from S-3 to GY
+[11:37] Declared effect of R.B. Shepherd's Crook in M-3
+[11:40] Signaled OK
+[11:40] Viewed deck
+[11:50] Placed R.B. Next Phase from Deck to S-3
+[11:53] Set R.B. Next Phase in S-3
+[11:55] Stopped viewing Deck
+[11:55] Shuffled deck
+[12:02] Entered End Phase
+[12:03] Viewed GY
+[12:05] Stopped viewing GY
+[12:09] Ended turn
+----------------(Turn 2)----------------
+[12:13] Entered Draw Phase
+[12:13] Drew Infinite Impermanence
+[12:17] "e"
+[12:19] "m1"
+[12:23] Signaled OK
+[12:36] Entered Main Phase 1
+[12:41] Changed "Token" in M-3 to ATK
+[12:44] "bp"
+[12:50] "efeito"
+[12:52] Declared effect of R.B. Lambda Blade in M-4
+[12:56] Lost 1400 LP
+[13:01] Pointed at Fydraulis Harmonia in M-1
+[13:04] Signaled OK
+[13:09] Moved Fydraulis Harmonia from M-1 to M2-2
+[13:09] Sent R.B. Lambda Blade from M-4 to GY
+[13:14] Moved Fydraulis Harmonia from M-2 to M-1
+[13:17] Declared effect of R.B. Funk Dock in Field Spell Zone
+[13:22] Thinking
+[13:27] Signaled OK
+[13:30] Viewed deck
+[13:34] Special Summoned R.B. Ga10 Driller from Deck to M-4 (DEF)
+[13:36] Stopped viewing Deck
+[13:36] Shuffled deck
+[13:38] Declared effect of R.B. Ga10 Driller in M-4
+[13:42] Lost 500 LP
+[13:45] Pointed at "Token" in M-3
+[13:47] Removed "Token" from M-3
+[13:49] Sent R.B. Ga10 Driller from M-4 to GY
+[13:56] Thinking
+[14:09] "efeito da trap dnv"
+[14:17] "?"
+[14:21] "pode mandar "
+[14:27] "ah"
+[14:31] Activated Set R.B. Next Phase in S-3
+[14:34] "leia"
+[14:39] "counter "
+[14:42] "ok"
+[14:45] "nega bicho e destroi"
+[14:49] Set R.B. Next Phase in S-3
+[14:52] Viewed Extra Deck
+[14:54] Special Summoned Super Starslayer TY-PHON - Sky Crisis from Extra Deck onto Kewl Tune Cue in M-5 (ATK)
+[14:56] Stopped viewing Extra Deck
+[15:01] "bp"
+[15:11] Declared effect of R.B. Shepherd's Crook in M-3
+[15:13] Viewed GY
+[15:28] "ele nao ativa"
+[15:31] Stopped viewing GY
+[15:39] "ah e"
+[15:40] "ganha 500 pra cada ai"
+[15:41] "vdd"
+[15:59] "bp"
+[16:02] Signaled OK
+[16:03] Entered Battle Phase
+[16:17] "penso"
+[16:25] Signaled OK
+[16:37] Attacked R.B. Ga10 Cutter in M-5 with Super Starslayer TY-PHON - Sky Crisis in M-5
+[16:41] Viewed GY
+[16:43] Banished R.B. Stage Landing from GY
+[16:46] Stopped viewing GY
+[16:47] Admitted defeat
+[17:12] Finished siding
+[18:21] Finished siding
+----------------(Turn 1)----------------
+[18:23] Chose to go first
+[18:23] Drew Jizukiru, the Star Destroying Kaiju
+[18:23] Drew R.B. Stage Landing
+[18:23] Drew Exceptional Schedule
+[18:23] Drew Night Train Blue Traveler
+[18:23] Drew R.B. Funk Dock
+[18:23] Drew Droll & Lock Bird
+[18:23] Drew Called by the Grave
+[18:23] Drew Ghost Ogre & Snow Rabbit
+[18:23] Drew Kewl Tune Cue
+[18:23] Drew Kewl Tune Rotary
+[18:32] "m1"
+[18:34] Signaled OK
+[18:35] Entered Main Phase 1
+[18:36] Normal Summoned Kewl Tune Cue from hand (4/5) to M-3
+[18:38] Declared effect of Kewl Tune Cue in M-3
+[18:42] Thinking
+[18:46] Signaled OK
+[18:48] Viewed deck
+[18:50] Special Summoned Kewl Tune Mix from Deck to M-5 (DEF)
+[18:51] Stopped viewing Deck
+[18:51] Shuffled deck
+[18:52] Declared effect of Kewl Tune Mix in M-5
+[18:55] Signaled OK
+[18:58] Viewed deck
+[19:04] Added Kewl Tune Reco from Deck to hand
+[19:05] Stopped viewing Deck
+[19:05] Shuffled deck
+[19:10] Signaled OK
+[19:13] Signaled OK
+[19:14] Sent Kewl Tune Cue from M-3 to GY
+[19:16] Sent Kewl Tune Rotary from hand (3/5) to GY
+[19:17] Viewed Extra Deck
+[19:21] Stopped viewing Extra Deck
+[19:22] Special Summoned Kewl Tune Track Maker from Extra Deck to M-3 (DEF)
+[19:24] Declared effect of Kewl Tune Track Maker in M-3
+[19:24] Viewed GY
+[19:26] Declared effect of Kewl Tune Cue from GY
+[19:27] Declared effect of Kewl Tune Rotary from GY
+[19:28] Stopped viewing GY
+[19:31] Signaled OK
+[19:37] Pointed at R.B. Stage Landing in opponent's hand (2/5)
+[19:38] Showed hand
+[20:03] Stopped viewing Opponent's Hand
+[20:03] Shuffled hand
+[20:04] Viewed deck
+[20:09] Added Kewl Tune Synchro from Deck to hand
+[20:10] Stopped viewing Deck
+[20:10] Shuffled deck
+[20:12] "top"
+[20:17] Banished Lightning Storm from top of Deck
+[20:19] Banished Mulcharmy Purulia from top of Deck
+[20:35] "purulia top"
+[20:38] Viewed Banished
+[20:40] Returned banished Mulcharmy Purulia (1/2) to top of deck
+[20:41] Viewed deck
+[20:43] Stopped viewing Banished
+[20:44] Added JJ "Kewl Tune" from Deck to hand
+[20:45] Stopped viewing Deck
+[20:45] Shuffled deck
+[20:49] Activated Field Spell JJ "Kewl Tune" from hand (3/6)
+[20:53] Normal Summoned Kewl Tune Reco from hand (1/5) to M-1
+[20:55] Declared effect of Kewl Tune Reco in M-1
+[20:58] Viewed deck
+[21:03] Added Kewl Tune Clip from Deck to hand
+[21:04] Stopped viewing Deck
+[21:04] Shuffled deck
+[21:07] Sent Kewl Tune Clip from hand (4/5) to GY
+[21:09] Sent Kewl Tune Reco from M-1 to GY
+[21:10] Viewed Extra Deck
+[21:12] Stopped viewing Extra Deck
+[21:13] Special Summoned Kewl Tune Crackle from Extra Deck to M-1 (DEF)
+[21:14] Viewed GY
+[21:18] Declared effect of Kewl Tune Clip from GY
+[21:20] Requested permission to resolve Kewl Tune Clip
+[21:25] Granted permission
+[21:25] Randomly banished Superdreadnought Rail Cannon Flying Launcher from Extra Deck
+[21:26] Stopped viewing GY
+[21:29] Declared effect of JJ "Kewl Tune" in Field Spell Zone
+[21:30] Sent Kewl Tune Crackle from M-1 to GY
+[21:34] Viewed deck
+[21:40] Special Summoned Kewl Tune Reco from Deck to M-1 (DEF)
+[21:42] Stopped viewing Deck
+[21:42] Shuffled deck
+[21:42] Viewed GY
+[21:44] Declared effect of Kewl Tune Crackle from GY
+[21:55] Special Summoned Kewl Tune Crackle from GY to M-2 (DEF)
+[22:00] "so vou olhar seu extra "
+[22:02] Stopped viewing GY
+[22:08] Signaled OK
+[22:14] "banir volta na end mesmo "
+[22:20] Viewed Banished
+[22:26] "o trem volta?"
+[22:28] Stopped viewing Banished
+[22:29] "nao "
+[22:30] Declared effect of Kewl Tune Crackle in M-2
+[22:39] "esse aqui vai banir 2 e voltam na end"
+[22:45] "ah blz"
+[22:51] "mas vou so olhar pra nao dar trabalho pra voltar depois"
+[22:53] "o trem baniu por quem?"
+[22:56] "me perdi"
+[22:59] Viewed GY
+[23:00] Declared effect of Kewl Tune Clip from GY
+[23:01] Stopped viewing GY
+[23:04] Viewed Opponent's Graveyard
+[23:09] Stopped viewing Opponent's GY
+[23:10] "ah blz"
+[23:22] "pra mostrar o extra ne"
+[23:26] "isso"
+[23:29] Showed Extra Deck
+[23:37] Stopped viewing Opponent's Extra Deck
+[23:38] Signaled OK
+[23:39] Sent Kewl Tune Crackle from M-2 to GY
+[23:40] Sent Kewl Tune Reco from M-1 to GY
+[23:41] Viewed Extra Deck
+[23:43] Stopped viewing Extra Deck
+[23:44] Special Summoned Visas Amritara from Extra Deck to M-4 (ATK)
+[23:45] Declared effect of Visas Amritara in M-4
+[23:48] Viewed deck
+[23:51] Added Mannadium Reframing from Deck to hand
+[23:52] Stopped viewing Deck
+[23:52] Shuffled deck
+[23:55] Thinking
+[24:08] Viewed GY
+[24:12] Stopped viewing GY
+[24:14] "penso"
+[24:18] Viewed GY
+[24:18] Stopped viewing GY
+[24:29] Sent Kewl Tune Mix from M-5 to GY
+[24:31] Sent Ghost Ogre & Snow Rabbit from hand (4/5) to GY
+[24:33] Viewed Extra Deck
+[24:37] Stopped viewing Extra Deck
+[24:37] Special Summoned Kewl Tune Remix from Extra Deck to M-1 (DEF)
+[24:40] Set Mannadium Reframing from hand (1/4) to S-2
+[24:42] Set Called by the Grave from hand (2/3) to S-3
+[24:44] Set Kewl Tune Synchro from hand (2/2) to S-4
+[24:45] Ended turn
+----------------(Turn 2)----------------
+[24:49] Entered Draw Phase
+[24:49] Drew Mulcharmy Purulia
+[24:51] Viewed GY
+[24:53] Stopped viewing GY
+[24:55] "m1?"
+[24:58] "penso"
+[25:01] Viewed GY
+[25:18] Stopped viewing GY
+[25:19] Signaled OK
+[25:25] Entered Standby Phase
+[25:27] Entered Main Phase 1
+[25:36] Thinking
+[26:03] Thinking
+[26:17] "kaiju na remix"
+[26:18] Pointed at Kewl Tune Remix in M-1
+[26:20] Sent Kewl Tune Remix from M-1 to GY
+[26:24] Special Summoned Jizukiru, the Star Destroying Kaiju from hand (3/6) to M-3 (ATK)
+[26:29] Moved Jizukiru, the Star Destroying Kaiju from M-3 to M2-2
+[26:38] Thinking
+[26:48] Activated Exceptional Schedule from hand (3/5) to S-3
+[26:53] Signaled OK
+[26:56] Viewed deck
+[27:02] Added Urgent Schedule from Deck to hand
+[27:03] Stopped viewing Deck
+[27:03] Shuffled deck
+[27:08] Summoned a token in M-3
+[27:10] Changed "Token" in M-3 to ATK
+[27:13] Moved "Token" from M-3 to M2-5
+[27:15] Sent Exceptional Schedule from S-3 to GY
+[27:17] Thinking
+[27:24] Sent Droll & Lock Bird from hand (1/1) to GY
+[27:48] Activated Urgent Schedule from hand (4/5) to S-3
+[28:00] Thinking
+[28:05] Activated Set Mannadium Reframing in S-2
+[28:13] Sent Urgent Schedule from S-3 to GY
+[28:14] Sent Mannadium Reframing from S-2 to GY
+[28:23] "droll doído"
+[28:37] Admitted defeat
+[29:20] Finished siding
+[30:34] Finished siding
+[31:22] "travou?"
+----------------(Turn 1)----------------
+[31:25] Chose to go first
+[31:25] Drew Night Train Blue Traveler
+[31:25] Drew Ghost Ogre & Snow Rabbit
+[31:25] Drew Forbidden Droplet
+[31:25] Drew Magical Hound
+[31:25] Drew Droll & Lock Bird
+[31:25] Drew Ash Blossom & Joyous Spring
+[31:25] Drew Kewl Tune Cue
+[31:25] Drew Skull Meister
+[31:25] Drew Effect Veiler
+[31:25] Drew Mulcharmy Purulia
+[31:27] "deu lag sim"
+[31:32] "ah"
+[31:34] "blz"
+[31:45] "m1?"
+[31:47] Sent Mulcharmy Purulia from hand (5/5) to GY
+[31:48] "dp"
+[31:54] Signaled OK
+[31:57] Entered Standby Phase
+[32:00] Entered Main Phase 1
+[32:14] Declared effect of Night Train Blue Traveler in hand (1/5)
+[32:16] Sent Night Train Blue Traveler from hand (1/5) to GY
+[32:24] Signaled OK
+[32:27] Viewed deck
+[32:31] Added Revolving Switchyard from Deck to hand
+[32:33] Stopped viewing Deck
+[32:33] Shuffled deck
+[32:46] Activated Field Spell Revolving Switchyard from hand (1/5)
+[32:57] Declared effect of Revolving Switchyard in Field Spell Zone
+[33:00] Sent Magical Hound from hand (1/4) to GY
+[33:11] "lendo o discarte"
+[33:18] "ok"
+[33:34] Signaled OK
+[33:36] Viewed deck
+[33:41] Added Heavy Armored Knight Babeldecker from Deck to hand
+[33:45] Stopped viewing Deck
+[33:45] Shuffled deck
+[33:49] Viewed GY
+[33:56] Declared effect of Night Train Blue Traveler from GY
+[33:58] Viewed Opponent's Graveyard
+[34:01] Stopped viewing GY
+[34:03] Stopped viewing Opponent's GY
+[34:05] Sent Skull Meister from hand (3/4) to GY
+[34:17] "inCREDITAVEL"
+[34:38] Thinking
+[34:47] Set Forbidden Droplet from hand (4/4) to S-3
+[34:50] Entered End Phase
+[34:52] Viewed GY
+[34:53] Stopped viewing GY
+[34:55] Ended turn
+----------------(Turn 2)----------------
+[34:58] Entered Draw Phase
+[34:58] Drew Duelist Genesis
+[35:03] "m1"
+[35:07] Signaled OK
+[35:08] Entered Main Phase 1
+[35:09] Viewed GY
+[35:10] Stopped viewing GY
+[35:11] Viewed Opponent's Graveyard
+[35:12] Stopped viewing Opponent's GY
+[35:16] Normal Summoned Kewl Tune Cue from hand (2/4) to M-1
+[35:17] Declared effect of Kewl Tune Cue in M-1
+[35:22] Thinking
+[35:35] Signaled OK
+[35:39] Viewed deck
+[35:43] Special Summoned Kewl Tune Reco from Deck to M-5 (ATK)
+[35:44] Stopped viewing Deck
+[35:44] Shuffled deck
+[35:46] Declared effect of Kewl Tune Reco in M-5
+[35:52] Thinking
+[36:03] Signaled OK
+[36:04] Viewed deck
+[36:21] Added Kewl Tune Mix from Deck to hand
+[36:22] Stopped viewing Deck
+[36:22] Shuffled deck
+[36:28] Signaled OK
+[36:28] "res"
+[36:31] Sent Droll & Lock Bird from hand (3/3) to GY
+[36:34] Signaled OK
+[36:41] "penso agora"
+[37:12] Viewed GY
+[37:13] Stopped viewing GY
+[37:45] Viewed Extra Deck
+[37:51] Stopped viewing Extra Deck
+[37:57] Sent Kewl Tune Reco from M-5 to GY
+[37:58] Sent Kewl Tune Mix from hand (3/4) to GY
+[37:59] Viewed Extra Deck
+[38:01] Stopped viewing Extra Deck
+[38:01] Special Summoned Kewl Tune Remix from Extra Deck to M-4 (ATK)
+[38:04] Viewed GY
+[38:05] Declared effect of Kewl Tune Reco from GY
+[38:06] Stopped viewing GY
+[38:07] Pointed at Set Forbidden Droplet in S-3
+[38:16] Thinking
+[38:30] Activated Set Forbidden Droplet in S-3
+[38:34] Sent Ghost Ogre & Snow Rabbit from hand (2/2) to GY
+[38:35] Pointed at Kewl Tune Remix in M-4
+[38:40] Signaled OK
+[38:45] Sent Forbidden Droplet from S-3 to GY
+[38:56] "bp"
+[39:00] Signaled OK
+[39:03] Entered Battle Phase
+[39:06] Attacked directly with Kewl Tune Remix in M-4
+[39:07] Attacked directly with Kewl Tune Cue in M-1
+[39:09] Lost 750 LP
+[39:14] Lost 900 LP
+[39:15] Entered Main Phase 2
+[39:19] "penso"
+[39:21] Viewed Opponent's Graveyard
+[39:26] Stopped viewing Opponent's GY
+[39:27] Viewed GY
+[39:30] Stopped viewing GY
+[39:37] Viewed GY
+[39:57] Stopped viewing GY
+[40:02] "pensando"
+[40:05] Viewed Opponent's Graveyard
+[40:07] "ok"
+[40:16] Stopped viewing Opponent's GY
+[40:37] Viewed Extra Deck
+[40:44] Stopped viewing Extra Deck
+[40:44] Viewed GY
+[40:46] Stopped viewing GY
+[40:48] Viewed Extra Deck
+[40:51] Stopped viewing Extra Deck
+[40:53] Sent Kewl Tune Cue from M-1 to GY
+[40:54] Sent Ash Blossom & Joyous Spring from hand (1/3) to GY
+[40:55] Viewed Extra Deck
+[40:58] Stopped viewing Extra Deck
+[40:59] Special Summoned Kewl Tune Loudness War from Extra Deck to M-1 (DEF)
+[41:00] Viewed GY
+[41:02] Declared effect of Kewl Tune Cue from GY
+[41:03] Stopped viewing GY
+[41:05] Pointed at Kewl Tune Loudness War in M-1
+[41:17] Signaled OK
+[41:20] Banished Ash Blossom & Joyous Spring from top of Deck
+[41:22] Banished Ash Blossom & Joyous Spring from top of Deck
+[41:26] "kkkkkkk"
+[41:31] "kkkkkk"
+[41:37] "ash top"
+[41:39] Viewed Banished
+[41:41] Returned banished Ash Blossom & Joyous Spring (2/2) to top of deck
+[41:43] Stopped viewing Banished
+[41:51] "ep"
+[41:53] Ended turn
+----------------(Turn 3)----------------
+[41:57] Entered Draw Phase
+[41:57] Drew Ash Blossom & Joyous Spring
+[42:00] Thinking
+[42:04] "m1"
+[42:09] Signaled OK
+[42:11] Entered Standby Phase
+[42:12] Entered Main Phase 1
+[42:17] "penso"
+[42:21] "na verdade"
+[42:24] Entered Standby Phase
+[42:25] Viewed GY
+[42:26] Entered Draw Phase again
+[42:33] Stopped viewing GY
+[42:34] Declared effect of Kewl Tune Remix in M-4
+[42:36] Sent Kewl Tune Remix from M-4 to GY
+[42:47] Signaled OK
+[42:52] "mix e reco"
+[42:54] Viewed Extra Deck
+[42:56] Stopped viewing Extra Deck
+[42:56] Special Summoned Kewl Tune RS from Extra Deck to M-3 (ATK)
+[42:58] Viewed GY
+[43:00] Declared effect of Kewl Tune Reco from GY
+[43:01] Stopped viewing GY
+[43:01] Pointed at Revolving Switchyard in Field Spell Zone
+[43:06] Sent Revolving Switchyard from Field Spell Zone to GY
+[43:14] Viewed GY
+[43:16] Stopped viewing GY
+[43:17] Viewed Opponent's Graveyard
+[43:17] Viewed GY
+[43:19] Stopped viewing GY
+[43:23] Pointed at Kewl Tune RS in M-3
+[43:32] Viewed GY
+[43:34] Stopped viewing Opponent's GY
+[43:35] Stopped viewing GY
+[43:39] Admitted defeat
+[43:46] "gg"
+[43:46] "gg"
+[44:38] Viewed Opponent's Graveyard
+[44:41] Stopped viewing Opponent's GY
+[44:42] Viewed Opponent's Graveyard
+[44:44] Stopped viewing Opponent's GY
+[44:51] "tinha play nao ?"
+[46:32] Left duel
+[49:44] Went offline
