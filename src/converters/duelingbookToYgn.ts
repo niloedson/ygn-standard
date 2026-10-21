@@ -50,7 +50,15 @@ export interface DuelingBookConversionResult {
   actionsDetected: number;
 }
 
-export function convertDuelingBookToYgn(rawLogText: string): DuelingBookConversionResult {
+export interface DuelingBookConverterOptions {
+  chainFormat?: "inline" | "indented";
+}
+
+export function convertDuelingBookToYgn(
+  rawLogText: string,
+  options: DuelingBookConverterOptions = {}
+): YgnConversionResult {
+  const chainFormat = options.chainFormat || "inline";
   const startTime = performance.now();
   const rawLines = rawLogText.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
   const origBytes = Buffer.byteLength(rawLogText, "utf-8");
@@ -368,7 +376,7 @@ export function convertDuelingBookToYgn(rawLogText: string): DuelingBookConversi
         advance++;
       }
 
-      // Format RFC 0001 Chain String: [C1: ... // R1: ...]
+      // Format RFC 0001 Chain String: [C1: ... // R1: ...] or Indented LIFO Stack
       if (chainLinks.length === 1) {
         const c1 = chainLinks[0];
         const originTag = c1.dest ? `>${c1.dest}` : '';
@@ -376,9 +384,28 @@ export function convertDuelingBookToYgn(rawLogText: string): DuelingBookConversi
         const resStr = resolutions.length > 0 ? resolutions.join(', ') : 'OK';
         ygnLines.push(`  [C1: ${c1Str} // R1: ${resStr}]`);
       } else {
-        const cParts = chainLinks.map((c, idx) => `C${idx + 1}: A(${c.origin})[${getAliasTag(c.card!)}]`).join(' > ');
-        const rParts = resolutions.length > 0 ? resolutions.map((r, idx) => `R${resolutions.length - idx}: ${r}`).join(' > ') : 'OK';
-        ygnLines.push(`  [${cParts} // ${rParts}]`);
+        if (chainFormat === "indented") {
+          // Indented LIFO Stack (Expanded Format)
+          for (let k = 0; k < chainLinks.length; k++) {
+            const c = chainLinks[k];
+            const originTag = c.dest ? `>${c.dest}` : '';
+            const cCost = k === 0 ? costStr : '';
+            const cTarget = k === 0 ? targetStr : '';
+            const indent = '  ' + '    '.repeat(k);
+            ygnLines.push(`${indent}C${k + 1}: A(${c.origin})[${getAliasTag(c.card!)}]${originTag}${cCost}${cTarget}`);
+          }
+          const n = chainLinks.length;
+          for (let k = n - 1; k >= 0; k--) {
+            const indent = '  ' + '    '.repeat(k);
+            const resIndex = (n - 1) - k;
+            const rAction = resolutions.length > resIndex ? resolutions[resIndex] : 'OK';
+            ygnLines.push(`${indent}R${k + 1}: ${rAction}`);
+          }
+        } else {
+          const cParts = chainLinks.map((c, idx) => `C${idx + 1}: A(${c.origin})[${getAliasTag(c.card!)}]`).join(' > ');
+          const rParts = resolutions.length > 0 ? resolutions.map((r, idx) => `R${resolutions.length - idx}: ${r}`).join(' > ') : 'OK';
+          ygnLines.push(`  [${cParts} // ${rParts}]`);
+        }
       }
 
       i = advance;

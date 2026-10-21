@@ -133,11 +133,13 @@ export function parseYgn(text: string): YgnDocument {
 }
 
 function parseActionLine(line: string): YgnActionLine | null {
-  // Check if Chain Block: [C1: ... // R1: ...]
-  if (line.startsWith("[C") && line.includes("//")) {
-    const glyphMatch = line.match(/\](!|!!|\?|\?\?|!\?|\?!)$/);
+  const trimmed = line.trim();
+
+  // Check if Inline Chain Block: [C1: ... // R1: ...]
+  if (trimmed.startsWith("[C") && trimmed.includes("//")) {
+    const glyphMatch = trimmed.match(/\](!|!!|\?|\?\?|!\?|\?!)$/);
     const glyph = glyphMatch ? (glyphMatch[1] as QualityGlyph) : undefined;
-    const inner = line.replace(/^\[/, "").replace(/\](?:\S+)?$/, "");
+    const inner = trimmed.replace(/^\[/, "").replace(/\](?:\S+)?$/, "");
     const [declPart, resPart] = inner.split("//").map((s) => s.trim());
 
     const decls = declPart.split(/>(?=\s*C\d+:)/).map((chunk) => {
@@ -161,6 +163,30 @@ function parseActionLine(line: string): YgnActionLine | null {
       declarations: decls,
       resolutions: resols,
       glyph,
+      rawText: line
+    };
+  }
+
+  // Check if Indented LIFO Stack line: C<n>: ... (Activation Push)
+  if (/^C(\d+):\s*(.+)$/.test(trimmed)) {
+    const m = trimmed.match(/^C(\d+):\s*(.+)$/)!;
+    const linkNumber = parseInt(m[1], 10);
+    return {
+      type: "chain",
+      declarations: [{ linkNumber, action: parseSingleAction(m[2]) }],
+      resolutions: [],
+      rawText: line
+    };
+  }
+
+  // Check if Indented LIFO Stack line: R<n>: ... (Resolution Pop)
+  if (/^R(\d+):\s*(.+)$/.test(trimmed)) {
+    const m = trimmed.match(/^R(\d+):\s*(.+)$/)!;
+    const linkNumber = parseInt(m[1], 10);
+    return {
+      type: "chain",
+      declarations: [],
+      resolutions: [{ linkNumber, resolutionText: m[2].trim() }],
       rawText: line
     };
   }

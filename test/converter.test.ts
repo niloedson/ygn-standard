@@ -41,7 +41,20 @@ async function runTests() {
     console.log(`   Turn ${t.turnNumber}: ${t.turnPlayer} (${t.phases.length} phases, ${t.phases.reduce((acc, p) => acc + p.actions.length, 0)} actions)`);
   }
 
-  // 4. Save Golden Fixture Output
+  // 4. Test Indented LIFO Stack conversion mode
+  console.log("-> Testing Indented LIFO Stack conversion mode...");
+  const indentedResult = convertDuelingBookToYgn(rawLog, { chainFormat: "indented" });
+  assert(indentedResult.ygnText.includes("C1:"), "Should contain C1 activation marker");
+  assert(indentedResult.ygnText.includes("C2:"), "Should contain C2 activation marker");
+  assert(indentedResult.ygnText.includes("R2:"), "Should contain R2 resolution marker");
+  assert(indentedResult.ygnText.includes("R1:"), "Should contain R1 resolution marker");
+
+  // Validate AST parsing on indented YGN output
+  const indentedDoc = parseYgn(indentedResult.ygnText);
+  assert(indentedDoc.turns.length > 0, "AST should parse turns from indented YGN");
+  console.log("   Successfully parsed indented LIFO YGN with AST parser.");
+
+  // 5. Save Golden Fixture Output
   const goldenPath = path.resolve(__dirname, "../fixtures/sample_match.ygn");
   fs.writeFileSync(goldenPath, result.ygnText, "utf-8");
   console.log(`-> Saved golden YGN output to: fixtures/sample_match.ygn`);
