@@ -47,26 +47,25 @@ T1: MULCHARMY MEOWLS vs nedson_br
   #S[#17:Artmage Impasto -Recapture-]>S2
   [C1: A(H)[#o7:Droll & Lock Bird] > C2: A(H)[#18:Artmage Graflare] // R2: OK > R1: S[#18:Artmage Graflare](atk)>M1<H]
   #S[#19:Artmage Vandalism -Assault-]>S3
-  #S[#19:Artmage Vandalism -Assault-]>S3
-  [C1: A(S3)[#19:Artmage Vandalism -Assault-] T>S3[#19:Artmage Vandalism -Assault-] // R1: +H[#20:Medius the Pure]<D]
-  [C1: A(H)[#o7:Droll & Lock Bird] // R1: OK]
-  #S[#17:Artmage Impasto -Recapture-]>S2
+  [C1: A(S3)[#19:Artmage Vandalism -Assault-] > C2: A(S3)[#19:Artmage Vandalism -Assault-] // R2: OK > R1: +H[#20:Medius the Pure]<D]
+  [C1: A(H)[#o7:Droll & Lock Bird] > C2: A(S2)[#17:Artmage Impasto -Recapture-] // R2: OK > R1: >BX[#e4:Artmage Non-Finito]<M2]
   [C1: A(H)[#o7:Droll & Lock Bird]>GY // R1: [#17:Artmage Impasto -Recapture-]>GY, S[#20:Medius the Pure](atk)>M2<H]
   [C1: A(M2)[#20:Medius the Pure] // R1: S[#o4:Nervedo the Shadebeast Power Patron](atk)>M3<D]
-  [C1: A(M3)[#o4:Nervedo the Shadebeast Power Patron] // R1: >BX[#20:Medius the Pure]<top of Deck face-down, >BX[#21:Prohibited Power Patron Portal - Terminus]<top of Deck face-down, >BX[#22:Called by the Grave]<top of Deck face-down, S[#e5:Nerva the Power Patron of Creation](def)>M4<ED]
+  [C1: A(M3)[#o4:Nervedo the Shadebeast Power Patron] // R1: >BX[#20:Medius the Pure]<top of Deck face-down, >BX[#21:Prohibited Power Patron Portal - Terminus]<top of Deck face-down, >BX[#22:Called by the Grave]<top of Deck face-down]
   [C1: A(ED)[#o4:Nervedo the Shadebeast Power Patron] // R1: S[#23:Jupredo the Shademachine Power Patron](atk)>M5<D]
   L[[#20:Medius the Pure:M2]]>ER[#24:Beyond the Pendulum](atk)<ED
   [C1: A(ER)[#24:Beyond the Pendulum] > C2: A(ED)[#23:Jupredo the Shademachine Power Patron] // R2: OK > R1: +H[#21:Prohibited Power Patron Portal - Terminus]<D, +H[#o4:Nervedo the Shadebeast Power Patron]<D]
   [C1: A(H)[#o4:Nervedo the Shadebeast Power Patron] > C2: A(H)[#21:Prohibited Power Patron Portal - Terminus] // R2: OK > R1: [#25:Artmage Power Patron]>GY, +H[#26:Vidolium the Unstable Power Patron of Unity]<D, [#21:Prohibited Power Patron Portal - Terminus]>GY]
   [C1: A(H)[#26:Vidolium the Unstable Power Patron of Unity]>Right Pendulum Zone // R1: S[#o4:Nervedo the Shadebeast Power Patron](def)>M3<ED, S[#23:Jupredo the Shademachine Power Patron](def)>M5<ED, S[#27:Varudras, the Final Bringer of the End Times](def)>M5<M5]
-  [C1: A(Right Pendulum Zone)[#26:Vidolium the Unstable Power Patron of Unity] // R1: S[#25:Artmage Power Patron](atk)>M3<GY]
+  [C1: A(Right Pendulum Zone)[#26:Vidolium the Unstable Power Patron of Unity]>ED // R1: S[#25:Artmage Power Patron](atk)>M3<GY]
   [C1: A(ED)[#26:Vidolium the Unstable Power Patron of Unity] // R1: +H[#21:Prohibited Power Patron Portal - Terminus]<D]
-  [C1: A(GY)[#20:Medius the Pure] // R1: S[#20:Medius the Pure](atk)>M1<GY]
+  [C1: A(GY)[#20:Medius the Pure] // R1: [#18:Artmage Graflare]>GY, S[#20:Medius the Pure](atk)>M1<GY]
   [C1: A(M3)[#25:Artmage Power Patron] // R1: >BX[#20:Medius the Pure]<M1]
   L[[#25:Artmage Power Patron:M3]]>M1[#28:Artmage Diactorus](def)<ED
   [C1: A(GY)[#25:Artmage Power Patron] // R1: +H[#29:Artmage Academic Arcane Arts Acropolis]<D]
-  [C1: A(H)[#29:Artmage Academic Arcane Arts Acropolis] > C2: A(FS)[#29:Artmage Academic Arcane Arts Acropolis] // R2: OK > R1: [#21:Prohibited Power Patron Portal - Terminus]>GY, +H[#30:Artmage Litera]<D]
-  [C1: A(H)[#30:Artmage Litera] // R1: S[#30:Artmage Litera](def)>M2<H, [#30:Artmage Litera]>GY, S[#30:Artmage Litera](def)>M2<GY]
+  [C1: A(H)[#29:Artmage Academic Arcane Arts Acropolis]>FS // R1: OK]
+  [C1: A(FS)[#29:Artmage Academic Arcane Arts Acropolis] // R1: [#21:Prohibited Power Patron Portal - Terminus]>GY, +H[#30:Artmage Litera]<D]
+  [C1: A(H)[#30:Artmage Litera] // R1: S[#30:Artmage Litera](def)>M2<H, [#17:Artmage Impasto -Recapture-]>GY, [#30:Artmage Litera]>GY, S[#30:Artmage Litera](def)>M2<GY]
   [C1: A(FS)[#29:Artmage Academic Arcane Arts Acropolis] // R1: [#17:Artmage Impasto -Recapture-]>GY, +H[#31:Artmage Finmel]<D]
   [C1: A(H)[#31:Artmage Finmel] // R1: S[#31:Artmage Finmel](def)>M3<H, +H[#15:The Fallen & The Virtuous]<D]
   L[[#31:Artmage Finmel:M3] + [#30:Artmage Litera:M2]]>M3[#32:Purification Power Patron](atk)<ED
@@ -79,14 +78,9 @@ T1: MULCHARMY MEOWLS vs nedson_br
 T2: nedson_br vs MULCHARMY MEOWLS
 @DP
 @M1
-  [C1: A(H)[#36:Lightning Storm]>S3 // R1: OK]
-  #S[#35:Solemn Accusation]>S2
-  LP-1500
-  LP-1500
-  N[#o3:Infinitrack Harvester](atk)>M3
+  [C1: A(H)[#36:Lightning Storm] > C2: A(S2)[#35:Solemn Accusation] // R2: !NEG(EFF)[Lightning Storm], [#36:Lightning Storm]>GY, [#35:Solemn Accusation]>GY, >BX[#36:Lightning Storm]<GY, >BX[#36:Lightning Storm]<D, S[#o3:Infinitrack Harvester](atk)>M3<H > R1: !NEG(EFF)]
   [C1: A(M3)[#o3:Infinitrack Harvester] > C2: A(H)[#14:Heavy Freight Train Derricrane] // R2: OK > R1: S[#14:Heavy Freight Train Derricrane](def)>M2<H, +H[#4:Infinitrack Brutal Dozer]<D]
-  [C1: A(H)[#37:Heavy Forward]>S3 // R1: OK]
-  #S[#15:The Fallen & The Virtuous]>S4
+  [C1: A(H)[#38:Heavy Forward] > C2: A(S4)[#15:The Fallen & The Virtuous] // R2: OK > R1: [#37:Albion the Branded Dragon]>GY, [#38:Heavy Forward]>GY, [#15:The Fallen & The Virtuous]>GY]
   [C1: A(H)[#4:Infinitrack Brutal Dozer] // R1: [#o3:Infinitrack Harvester]>GY, S[#4:Infinitrack Brutal Dozer](def)>M3<H]
   [C1: A(M3)[#4:Infinitrack Brutal Dozer] // R1: S[#6:Infinitrack Trencher](def)>M4<D]
   [C1: A(M3)[#31:Artmage Finmel] > C2: A(M4)[#e5:Nerva the Power Patron of Creation] // R2: OK > R1: [#14:Heavy Freight Train Derricrane]>GY, [#4:Infinitrack Brutal Dozer]>GY, [#6:Infinitrack Trencher]>GY]
@@ -99,12 +93,13 @@ T1: MULCHARMY MEOWLS vs nedson_br
 @SP
 @M1
   [C1: A(H)[#o1:Exceptional Schedule] > C2: A(H)[#o5:Ash Blossom & Joyous Spring] // R2: OK > R1: [#o5:Ash Blossom & Joyous Spring]>GY, [#o1:Exceptional Schedule]>GY]
-  [C1: A(H)[#5:Revolving Switchyard] > C2: A(FS)[#5:Revolving Switchyard] // R2: OK > R1: [#o2:Night Train Blue Traveler]>GY, +H[#8:Heavy Armored Knight Babeldecker]<D, S[#8:Heavy Armored Knight Babeldecker](atk)>M3<H]
+  [C1: A(H)[#5:Revolving Switchyard]>FS // R1: OK]
+  [C1: A(FS)[#5:Revolving Switchyard] // R1: [#o2:Night Train Blue Traveler]>GY, +H[#8:Heavy Armored Knight Babeldecker]<D, S[#8:Heavy Armored Knight Babeldecker](atk)>M3<H]
   [C1: A(M3)[#8:Heavy Armored Knight Babeldecker] > C2: A(H)[#14:Heavy Freight Train Derricrane] // R2: OK > R1: S[#14:Heavy Freight Train Derricrane](def)>M2<H, S[#o2:Night Train Blue Traveler](def)>M1<H]
   [C1: A(M3)[#8:Heavy Armored Knight Babeldecker] // R1: S[#13:Superdreadnought Rail Cannon Flying Launcher](atk)>M3<M3]
-  [C1: A(M3)[#13:Superdreadnought Rail Cannon Flying Launcher] // R1: +H[#38:Flying Pegasus Railroad Stampede]<D, S[#38:Flying Pegasus Railroad Stampede](atk)>M4<H]
-  [C1: A(M4)[#38:Flying Pegasus Railroad Stampede] T>GY[#o2:Night Train Blue Traveler] // R1: S[#o2:Night Train Blue Traveler](def)>M5<GY]
-  [C1: A(M4)[#38:Flying Pegasus Railroad Stampede] T>M5[#o2:Night Train Blue Traveler] // R1: S[#e3:Superdreadnought Rail Cannon Gustav Max](atk)>M5<M5]
+  [C1: A(M3)[#13:Superdreadnought Rail Cannon Flying Launcher] // R1: +H[#39:Flying Pegasus Railroad Stampede]<D, S[#39:Flying Pegasus Railroad Stampede](atk)>M4<H]
+  [C1: A(M4)[#39:Flying Pegasus Railroad Stampede] T>GY[#o2:Night Train Blue Traveler] // R1: S[#o2:Night Train Blue Traveler](def)>M5<GY]
+  [C1: A(M4)[#39:Flying Pegasus Railroad Stampede] T>M5[#o2:Night Train Blue Traveler] // R1: S[#e3:Superdreadnought Rail Cannon Gustav Max](atk)>M5<M5]
   [C1: A(M5)[#e3:Superdreadnought Rail Cannon Gustav Max] // R1: S[#e2:Ancient Gear Ballista](atk)>ER<ED, [#e3:Superdreadnought Rail Cannon Gustav Max]>GY, [#13:Superdreadnought Rail Cannon Flying Launcher]>GY]
   [C1: A(ER)[#e2:Ancient Gear Ballista] // R1: +H[#10:Ancient Gear Box]<D]
   [C1: A(H)[#10:Ancient Gear Box] // R1: +H[#11:Convex Knight]<D]
@@ -116,10 +111,10 @@ T1: MULCHARMY MEOWLS vs nedson_br
   [C1: A(GY)[#o2:Night Train Blue Traveler] T>GY[#8:Heavy Armored Knight Babeldecker] // R1: S[#8:Heavy Armored Knight Babeldecker](def)>M3<GY, S[#o2:Night Train Blue Traveler](def)>M5<GY]
   [C1: A(ER)[#e1:Qliphort Genius] // R1: +H[#4:Infinitrack Brutal Dozer]<D]
   [C1: A(H)[#4:Infinitrack Brutal Dozer] ~[#e1:Qliphort Genius:ER]>GY // R1: S[#4:Infinitrack Brutal Dozer](def)>M2<H]
-  [C1: A(M2)[#4:Infinitrack Brutal Dozer] // R1: S[#39:Infinitrack Tunneller](def)>M4<D, S[#7:Infinitrack River Stormer](atk)>M4<M4]
+  [C1: A(M2)[#4:Infinitrack Brutal Dozer] // R1: S[#40:Infinitrack Tunneller](def)>M4<D, S[#7:Infinitrack River Stormer](atk)>M4<M4]
   [C1: A(M4)[#7:Infinitrack River Stormer] // R1: +H[#3:Therion "King" Regulus]<D]
   [C1: A(H)[#3:Therion "King" Regulus] // R1: S[#3:Therion "King" Regulus](atk)>M2<H]
-  [C1: A(GY)[#39:Infinitrack Tunneller] // R1: >BX[#39:Infinitrack Tunneller]<GY, +H[#40:Triple Tactics Thrust]<D, o.+H[#o8:Dominus Purge]<o.D, S[#e3:Superdreadnought Rail Cannon Gustav Max](atk)>M5<M5]
+  [C1: A(GY)[#40:Infinitrack Tunneller] // R1: >BX[#40:Infinitrack Tunneller]<GY, [#11:Convex Knight]>GY, [#10:Ancient Gear Box]>GY, [#e3:Superdreadnought Rail Cannon Gustav Max]>GY, [#e3:Superdreadnought Rail Cannon Gustav Max]>GY, [#e2:Ancient Gear Ballista]>GY, +H[#41:Triple Tactics Thrust]<D, o.+H[#o8:Dominus Purge]<o.D, S[#e3:Superdreadnought Rail Cannon Gustav Max](atk)>M5<M5]
 
 ; --- RFC 0001 Terminal Board Snapshot (YBN - Game 3) ---
 YBN: T1|M1|LP8000:8000|P1:M2[#6(def)],M3[#4(def)],M5[#3(def)],S3[#1]|P2:M3[Token]|G:NS=0,SS=4

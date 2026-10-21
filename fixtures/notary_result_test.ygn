@@ -24,18 +24,15 @@ T1: nedson_br vs 0-0-11 formation
       C2: A(H)[#o3:Fydraulis Harmonia]
       R2: OK
   R1: [#e1:Golden Cloud Beast - Malong]>GY, S[#o3:Fydraulis Harmonia](atk)>M1<H, [#5:Night Train Blue Traveler]>GY
-  C1: A(GY)[#e1:Golden Cloud Beast - Malong] T>ER[#7:Clockwork Knight]
-      C2: A(GY)[#5:Night Train Blue Traveler]
-      R2: OK
-  R1: OK
-  C1: A(H)[#o4:Ghost Belle & Haunted Mansion]>GY
-      C2: A(H)[#9:Revolving Switchyard]>FS
-          C3: A(FS)[#9:Revolving Switchyard]
-          R3: OK
-      R2: OK
-  R1: [#5:Night Train Blue Traveler]>GY, +H[#8:Heavy Armored Knight Babeldecker]<D, S[#8:Heavy Armored Knight Babeldecker](atk)>M3<H
-  [C1: A(GY)[#4:Exceptional Schedule] // R1: >BX[#4:Exceptional Schedule]<GY, [#9:Revolving Switchyard]>GY, S[#5:Night Train Blue Traveler](def)>M2<GY]
-  L[[#8:Heavy Armored Knight Babeldecker:M3] + [#5:Night Train Blue Traveler:M2]]>ER[#e2:R.B. VALCan Booster](atk)<ED
+  [C1: A(GY)[#e1:Golden Cloud Beast - Malong] T>ER[#7:Clockwork Knight] // R1: [#7:Clockwork Knight]>GY]
+  C1: A(GY)[#5:Night Train Blue Traveler] T>GY[#6:Scrap Recycler]
+      C2: A(H)[#o4:Ghost Belle & Haunted Mansion]>GY
+      R2: !NEG(EFF)[Night Train Blue Traveler]
+  R1: !NEG(EFF)
+  [C1: A(H)[#8:Revolving Switchyard]>FS // R1: OK]
+  [C1: A(FS)[#8:Revolving Switchyard] // R1: [#5:Night Train Blue Traveler]>GY, +H[#9:Heavy Armored Knight Babeldecker]<D, S[#9:Heavy Armored Knight Babeldecker](atk)>M3<H]
+  [C1: A(GY)[#4:Exceptional Schedule] // R1: >BX[#4:Exceptional Schedule]<GY, [#8:Revolving Switchyard]>GY, S[#5:Night Train Blue Traveler](def)>M2<GY]
+  L[[#9:Heavy Armored Knight Babeldecker:M3] + [#5:Night Train Blue Traveler:M2]]>ER[#e2:R.B. VALCan Booster](atk)<ED
   [C1: A(ER)[#e2:R.B. VALCan Booster] // R1: +H[#10:R.B. Funk Dock]<D]
   [C1: A(H)[#10:R.B. Funk Dock]>FS // R1: +H[#11:R.B. Stage Landing]<D]
   [C1: A(H)[#11:R.B. Stage Landing]>S3 // R1: S[#12:R.B. Lambda Cannon](def)>M4<D, [#11:R.B. Stage Landing]>GY]
@@ -43,7 +40,7 @@ T1: nedson_br vs 0-0-11 formation
   [C1: A(FS)[#10:R.B. Funk Dock] // R1: S[#13:R.B. Lambda Blade](def)>M4<D]
   [C1: A(M4)[#13:R.B. Lambda Blade] // R1: [#14:R.B. Ga10 Cutter]>GY]
   [C1: A(ER)[#e2:R.B. VALCan Booster] // R1: S[#12:R.B. Lambda Cannon](def)>M3<GY]
-  [C1: A(M3)[#12:R.B. Lambda Cannon] // R1: S[#14:R.B. Ga10 Cutter](def)>M5<H, [#e2:R.B. VALCan Booster]>GY]
+  [C1: A(M3)[#12:R.B. Lambda Cannon] // R1: [#14:R.B. Ga10 Cutter]>GY, S[#14:R.B. Ga10 Cutter](def)>M5<H, [#e2:R.B. VALCan Booster]>GY]
   L[[#12:R.B. Lambda Cannon:M3]]>ER[#e3:R.B. The Brute Blues](atk)<ED
   [C1: A(ER)[#e3:R.B. The Brute Blues] // R1: +H[#11:R.B. Stage Landing]<D]
   [C1: A(H)[#11:R.B. Stage Landing]>S3 // R1: S[#e4:R.B. Shepherd's Crook](atk)>M3<ED, [#11:R.B. Stage Landing]>GY]
@@ -56,7 +53,7 @@ T2: 0-0-11 formation vs nedson_br
   [C1: A(M4)[#13:R.B. Lambda Blade] // R1: [#13:R.B. Lambda Blade]>GY]
   [C1: A(FS)[#10:R.B. Funk Dock] // R1: S[#16:R.B. Ga10 Driller](def)>M4<D]
   [C1: A(M4)[#16:R.B. Ga10 Driller] // R1: [#16:R.B. Ga10 Driller]>GY]
-  #S[#15:R.B. Next Phase]>S3
+  [C1: A(S3)[#15:R.B. Next Phase] // R1: OK]
   #S[#15:R.B. Next Phase]>S3
   X[M5]>M5[#e5:Super Starslayer TY-PHON - Sky Crisis](atk)<ED
   [C1: A(M3)[#e4:R.B. Shepherd's Crook] // R1: OK]
@@ -101,9 +98,10 @@ T2: 0-0-11 formation vs nedson_br
   [C1: A(H)[#4:Exceptional Schedule]>S3 // R1: +H[#2:Urgent Schedule]<D, S[Token]>M3, [#4:Exceptional Schedule]>GY]
   C1: A(H)[#o8:Droll & Lock Bird]>GY
       C2: A(H)[#2:Urgent Schedule]>S3
-      R2: OK
-  R1: OK
-  #S[#25:Mannadium Reframing]>S2
+          C3: A(S2)[#25:Mannadium Reframing]
+          R3: !NEG(EFF)[Urgent Schedule]
+      R2: !NEG(EFF)
+  R1: [#2:Urgent Schedule]>GY, [#25:Mannadium Reframing]>GY
 
 ; --- RFC 0001 Terminal Board Snapshot (YBN - Game 2) ---
 YBN: T2|M1|LP8000:8000|P1:M2[#6(def)],M3[#4(def)],M5[#3(def)],S3[#1]|P2:M3[Token]|G:NS=0,SS=4
@@ -113,11 +111,9 @@ T1: nedson_br vs 0-0-11 formation
   [C1: A(H)[#o6:Mulcharmy Purulia]>GY // R1: OK]
 @SP
 @M1
-  [C1: A(H)[#5:Night Train Blue Traveler]>GY // R1: +H[#9:Revolving Switchyard]<D]
-  C1: A(H)[#9:Revolving Switchyard]>FS
-      C2: A(FS)[#9:Revolving Switchyard]
-      R2: OK
-  R1: [#26:Magical Hound]>GY, +H[#8:Heavy Armored Knight Babeldecker]<D
+  [C1: A(H)[#5:Night Train Blue Traveler]>GY // R1: +H[#8:Revolving Switchyard]<D]
+  [C1: A(H)[#8:Revolving Switchyard]>FS // R1: OK]
+  [C1: A(FS)[#8:Revolving Switchyard] // R1: [#26:Magical Hound]>GY, +H[#9:Heavy Armored Knight Babeldecker]<D]
   C1: A(GY)[#5:Night Train Blue Traveler]
       C2: A(H)[#o9:Skull Meister]>GY
       R2: !NEG(EFF)[Night Train Blue Traveler]
@@ -131,10 +127,10 @@ T2: 0-0-11 formation vs nedson_br
   [C1: A(M1)[#o5:Kewl Tune Cue] // R1: S[#18:Kewl Tune Reco](atk)>M5<D]
   [C1: A(M5)[#18:Kewl Tune Reco] // R1: +H[#17:Kewl Tune Mix]<D]
   [C1: A(H)[#o8:Droll & Lock Bird]>GY // R1: OK]
-  [C1: A(GY)[#18:Kewl Tune Reco] // R1: OK]
-  #S[#27:Forbidden Droplet]>S3
-  #S[#27:Forbidden Droplet]>S3
-  [C1: A(H)[#o7:Ghost Ogre & Snow Rabbit]>GY T>M4[#e9:Kewl Tune Remix] // R1: [#27:Forbidden Droplet]>GY]
+  C1: A(GY)[#18:Kewl Tune Reco] T>S3[#28:Set Forbidden Droplet]
+      C2: A(S3)[#27:Forbidden Droplet]
+      R2: OK
+  R1: [#o7:Ghost Ogre & Snow Rabbit]>GY, [#27:Forbidden Droplet]>GY
 @BP
   ATK(M4 -> LP)
   ATK(M1 -> LP)
@@ -150,7 +146,7 @@ T3: nedson_br vs 0-0-11 formation
 @SP
 @DP
   [C1: A(M4)[#e9:Kewl Tune Remix]>GY // R1: S[#e11:Kewl Tune RS](atk)>M3<ED]
-  [C1: A(GY)[#18:Kewl Tune Reco] T>FS[#9:Revolving Switchyard] // R1: [#9:Revolving Switchyard]>GY]
+  [C1: A(GY)[#18:Kewl Tune Reco] T>FS[#8:Revolving Switchyard] // R1: [#8:Revolving Switchyard]>GY]
 
 ; --- RFC 0001 Terminal Board Snapshot (YBN - Game 3) ---
 YBN: T3|M1|LP8000:8000|P1:M2[#6(def)],M3[#4(def)],M5[#3(def)],S3[#1]|P2:M3[Token]|G:NS=0,SS=4

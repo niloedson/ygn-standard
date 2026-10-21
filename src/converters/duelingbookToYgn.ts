@@ -477,7 +477,7 @@ export function convertDuelingBookToYgn(
       }
 
       // Set X in/to Dest
-      const setMatch = content.match(/Set\s+(.+?)\s+(?:from\s+([A-Za-z0-9_\-\s()/]+)\s+)?(?:to|in)\s+([A-Za-z0-9_\-]+)/i);
+      const setMatch = content.match(/^Set\s+(.+?)\s+(?:from\s+([A-Za-z0-9_\-\s()/]+)\s+)?(?:to|in)\s+([A-Za-z0-9_\-]+)/i);
       if (setMatch) {
         actions.push({
           raw: line,
@@ -485,6 +485,19 @@ export function convertDuelingBookToYgn(
           card: cleanCardName(setMatch[1]),
           origin: setMatch[2] ? normalizeZone(setMatch[2]) : 'H',
           dest: normalizeZone(setMatch[3])
+        });
+        continue;
+      }
+
+      // Returned X from Origin to Dest
+      const retMatch = content.match(/^Returned\s+(.+?)\s+from\s+([A-Za-z0-9_\-\s()/]+)\s+to\s+([A-Za-z0-9_\-\s]+)/i);
+      if (retMatch) {
+        actions.push({
+          raw: line,
+          type: 'MILL',
+          card: cleanCardName(retMatch[1]),
+          origin: normalizeZone(retMatch[2]),
+          dest: normalizeZone(retMatch[3])
         });
         continue;
       }
@@ -629,7 +642,11 @@ export function convertDuelingBookToYgn(
         const cardName = cleanCardName(sentHandMatch[1]);
         const isHT = HAND_TRAPS.has(cardName.toLowerCase());
         const lastAct = actions[actions.length - 1];
-        const isCostForPrevious = lastAct && lastAct.type === 'ACTIVATE' && lastAct.card === cardName;
+        const isCostForPrevious =
+          lastAct &&
+          lastAct.type === 'ACTIVATE' &&
+          (lastAct.card === cardName ||
+           (lastAct.card && (lastAct.card.includes('Droplet') || lastAct.card.includes('Switchyard'))));
 
         if (isHT && !isCostForPrevious) {
           actions.push({
@@ -777,6 +794,14 @@ export function convertDuelingBookToYgn(
 
         // Check consecutive activations (Chain Links: C1 > C2 > C3...)
         while (advance < actions.length && actions[advance].type === 'ACTIVATE') {
+          const nextAct = actions[advance];
+          const isSS1 =
+            nextAct.dest === 'FS' ||
+            nextAct.origin === 'FS' ||
+            (nextAct.card && (nextAct.card.includes('Switchyard') || nextAct.card.includes('Funk Dock')));
+          if (isSS1 && chainLinks.length > 0) {
+            break; // Spell Speed 1 cards cannot chain as CL2+
+          }
           chainLinks.push(actions[advance]);
           advance++;
         }
