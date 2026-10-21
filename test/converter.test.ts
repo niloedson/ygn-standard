@@ -59,6 +59,30 @@ async function runTests() {
   fs.writeFileSync(goldenPath, result.ygnText, "utf-8");
   console.log(`-> Saved golden YGN output to: fixtures/sample_match.ygn`);
 
+  // 6. Test Multi-Game Best-of-3 Match Fixture (duel_log_test.txt)
+  const testMatchPath = path.resolve(__dirname, "../fixtures/duel_log_test.txt");
+  if (fs.existsSync(testMatchPath)) {
+    console.log("\n=== Testing Best-of-3 Match Fixture (duel_log_test.txt) ===");
+    const matchRaw = fs.readFileSync(testMatchPath, "utf-8");
+    const matchRes = convertDuelingBookToYgn(matchRaw, { chainFormat: "indented" });
+
+    console.log(`-> Match Conversion: ${matchRes.originalLinesCount} lines -> ${matchRes.ygnLinesCount} YGN lines (${matchRes.noisePercent}% noise stripped)`);
+    assert(matchRes.ygnText.includes('[Round "Game 1"]'), "Must partition Game 1");
+    assert(matchRes.ygnText.includes('[Round "Game 2"]'), "Must partition Game 2");
+    assert(matchRes.ygnText.includes('[Round "Game 3"]'), "Must partition Game 3");
+    assert(matchRes.ygnText.includes("Mulcharmy Fuwalos"), "Must recognize Fuwalos");
+    assert(matchRes.ygnText.includes("Ash Blossom"), "Must recognize Ash Blossom");
+
+    const matchDoc = parseYgn(matchRes.ygnText);
+    assert(matchDoc.turns.length >= 5, "Match should contain at least 5 turns across 3 games");
+    console.log(`   AST parsed ${matchDoc.turns.length} turns across 3 games.`);
+
+    // Save upgraded result
+    const outTestPath = path.resolve(__dirname, "../fixtures/notary_result_test.ygn");
+    fs.writeFileSync(outTestPath, matchRes.ygnText, "utf-8");
+    console.log(`-> Updated fixtures/notary_result_test.ygn with verified transcription.`);
+  }
+
   console.log("\n>>> ALL YGN TESTS PASSED SUCCESSFULLY! <<<");
 }
 
