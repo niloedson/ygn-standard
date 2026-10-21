@@ -299,6 +299,27 @@ Yu-Gi-Oh! differs fundamentally from chess because it is a game of **asymmetric 
 +-------------------------------------------------------------------------------------------------+
 ```
 
+#### Opening Hand Batch Declaration Syntax:
+At the start of Turn 1 (under `@DP`), initial 5-card opening hands are declared using the Batch Array Draw primitive:
+* **Omniscient POV (`[Visibility "Omniscient"]`):**
+  ```text
+  @DP
+    +H[#1:Night Train, #2:Crossout, #3:Switchyard, #4:Called by the Grave, #5:Exceptional]<D
+    o.+H[#o1:Ash Blossom, #o2:Ghost Belle, #o3:Fuwalos, #o4:Kewl Tune Cue, #o5:Harmonia]<o.D
+  ```
+* **Pilot POV (`[Visibility "Pilot_P1"]`):**
+  ```text
+  @DP
+    +H[#1:Night Train, #2:Crossout, #3:Switchyard, #4:Called by the Grave, #5:Exceptional]<D
+    o.+H[?, ?, ?, ?, ?]<o.D
+  ```
+* **Spectator POV (`[Visibility "Spectator"]`):**
+  ```text
+  @DP
+    +H[?, ?, ?, ?, ?]<D
+    o.+H[?, ?, ?, ?, ?]<o.D
+  ```
+
 #### Late-Binding Resolution Syntax:
 When a masked card in Spectator or Pilot POV is subsequently activated, flipped, or revealed, YGN binds the identity using the equivalence operator `=`:
 * Initial Set (Hidden): `#S[?]>S2`
