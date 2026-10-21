@@ -133,6 +133,103 @@ export function partitionRawLinesIntoGames(rawLines: string[]): string[][] {
   return games.length > 0 ? games : [rawLines];
 }
 
+/**
+ * Distributes raw collected chain resolution actions across chain links
+ * taking into account negations (Crossout, Called by the Grave, Counter Traps, Hand Traps)
+ * and ensures that negated links resolve as !NEG(EFF) while non-negated starters receive searches/summons.
+ */
+export function attributeChainResolutions(
+  chainLinks: ParsedAction[],
+  rawResolutions: string[]
+): string[] {
+  const n = chainLinks.length;
+  const linkResolutions: string[][] = Array.from({ length: n }, () => []);
+  const negatedLinks = new Set<number>();
+  const workingResolutions = [...rawResolutions];
+
+  // 1. Trace Negation Cards across the stack (higher chain links down)
+  for (let j = n - 1; j >= 0; j--) {
+    const act = chainLinks[j];
+    const name = act.card?.toLowerCase() || '';
+
+    // Crossout Designator: banishes card from deck and negates matching activated card
+    if (name.includes('crossout')) {
+      for (let rIdx = 0; rIdx < workingResolutions.length; rIdx++) {
+        const r = workingResolutions[rIdx];
+        if (r.startsWith('>BX[') && r.includes('<D')) {
+          linkResolutions[j].push(r);
+          const banishedCard = r.replace(/^>BX\[(?:[a-z0-9#]+:)?([^\]]+)\].*$/i, '$1').toLowerCase();
+          for (let k = 0; k < j; k++) {
+            const targetCard = chainLinks[k].card?.toLowerCase() || '';
+            if (targetCard.includes(banishedCard) || banishedCard.includes(targetCard)) {
+              negatedLinks.add(k);
+              linkResolutions[j].push(`!NEG(EFF)[${chainLinks[k].card}]`);
+            }
+          }
+          workingResolutions.splice(rIdx, 1);
+          break;
+        }
+      }
+    }
+
+    // Called by the Grave: banishes card from GY and negates matching monster
+    if (name.includes('called by the grave')) {
+      for (let rIdx = 0; rIdx < workingResolutions.length; rIdx++) {
+        const r = workingResolutions[rIdx];
+        if (r.startsWith('>BX[') && r.includes('<GY')) {
+          linkResolutions[j].push(r);
+          const banishedCard = r.replace(/^>BX\[(?:[a-z0-9#]+:)?([^\]]+)\].*$/i, '$1').toLowerCase();
+          for (let k = 0; k < j; k++) {
+            const targetCard = chainLinks[k].card?.toLowerCase() || '';
+            if (targetCard.includes(banishedCard) || banishedCard.includes(targetCard)) {
+              negatedLinks.add(k);
+              linkResolutions[j].push(`!NEG(EFF)[${chainLinks[k].card}]`);
+            }
+          }
+          workingResolutions.splice(rIdx, 1);
+          break;
+        }
+      }
+    }
+
+    // Direct Negation Cards (Reframing, Skull Meister, Ghost Belle, Solemn)
+    if (
+      name.includes('reframing') ||
+      name.includes('skull meister') ||
+      name.includes('ghost belle') ||
+      name.includes('solemn')
+    ) {
+      if (!negatedLinks.has(j) && j > 0) {
+        negatedLinks.add(j - 1);
+        linkResolutions[j].push(`!NEG(EFF)[${chainLinks[j - 1].card}]`);
+      }
+    }
+  }
+
+  // 2. Mark explicitly negated links with !NEG(EFF) if not already populated
+  for (const negIdx of negatedLinks) {
+    if (linkResolutions[negIdx].length === 0) {
+      linkResolutions[negIdx].push('!NEG(EFF)');
+    }
+  }
+
+  // 3. Assign remaining resolution actions to non-negated links
+  // In YGO, CL1 is the core effect resolving (searches, tokens, summons)
+  if (!negatedLinks.has(0) && workingResolutions.length > 0) {
+    linkResolutions[0].push(...workingResolutions);
+    workingResolutions.length = 0;
+  } else if (workingResolutions.length > 0) {
+    for (let k = n - 1; k >= 0; k--) {
+      if (!negatedLinks.has(k)) {
+        linkResolutions[k].push(...workingResolutions);
+        break;
+      }
+    }
+  }
+
+  return linkResolutions.map((resList) => (resList.length > 0 ? resList.join(', ') : 'OK'));
+}
+
 export function convertDuelingBookToYgn(
   rawLogText: string,
   options: DuelingBookConverterOptions = {}
@@ -723,16 +820,20 @@ export function convertDuelingBookToYgn(
           advance++;
         }
 
+        // Attribute resolutions across chain links (taking negations and effects into account)
+        const attributedResolutions = attributeChainResolutions(chainLinks, resolutions);
+
         // Format RFC 0001 Chain String: [C1: ... // R1: ...] or Indented LIFO Stack
         if (chainLinks.length === 1) {
           const c1 = chainLinks[0];
           const originTag = c1.dest ? `>${c1.dest}` : '';
           const c1Str = `A(${c1.origin})[${getAliasTag(c1.card!)}]${originTag}${costStr}${targetStr}`;
-          const resStr = resolutions.length > 0 ? resolutions.join(', ') : 'OK';
+          const resStr = attributedResolutions[0] || 'OK';
           ygnLines.push(`  [C1: ${c1Str} // R1: ${resStr}]`);
         } else {
           if (chainFormat === "indented") {
             // Indented LIFO Stack (Expanded Format)
+            // Activations push onto stack (C1..Cn)
             for (let k = 0; k < chainLinks.length; k++) {
               const c = chainLinks[k];
               const originTag = c.dest ? `>${c.dest}` : '';
@@ -741,17 +842,19 @@ export function convertDuelingBookToYgn(
               const indent = '  ' + '    '.repeat(k);
               ygnLines.push(`${indent}C${k + 1}: A(${c.origin})[${getAliasTag(c.card!)}]${originTag}${cCost}${cTarget}`);
             }
+            // Resolutions unwind in reverse LIFO order (Rn..R1) with matching indentation
             const n = chainLinks.length;
             for (let k = n - 1; k >= 0; k--) {
               const indent = '  ' + '    '.repeat(k);
-              const resIndex = (n - 1) - k;
-              const rAction = resolutions.length > resIndex ? resolutions[resIndex] : 'OK';
-              ygnLines.push(`${indent}R${k + 1}: ${rAction}`);
+              ygnLines.push(`${indent}R${k + 1}: ${attributedResolutions[k]}`);
             }
           } else {
             const cParts = chainLinks.map((c, idx) => `C${idx + 1}: A(${c.origin})[${getAliasTag(c.card!)}]`).join(' > ');
-            const rParts = resolutions.length > 0 ? resolutions.map((r, idx) => `R${resolutions.length - idx}: ${r}`).join(' > ') : 'OK';
-            ygnLines.push(`  [${cParts} // ${rParts}]`);
+            const rParts: string[] = [];
+            for (let k = chainLinks.length - 1; k >= 0; k--) {
+              rParts.push(`R${k + 1}: ${attributedResolutions[k]}`);
+            }
+            ygnLines.push(`  [${cParts} // ${rParts.join(' > ')}]`);
           }
         }
 
