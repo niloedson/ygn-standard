@@ -30,7 +30,10 @@ jobs:
       - name: Build TypeScript reference implementation
         run: npm run build
 
-      - name: Run TypeScript & Lua emitter test suite
+      - name: Package Manifest V3 WebExtension
+        run: npm run package:extension
+
+      - name: Run Test Suite (TS, Lua, Userscript, Extension)
         run: npm test
 
       - name: Setup Python 3.11
@@ -40,3 +43,8 @@ jobs:
 
       - name: Run Python reference test suite
         run: python python/tests/test_converter.py
+
+      - name: Verify Python Package Build
+        run: |
+          pip install build
+          python -m build python/

@@ -22,6 +22,7 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: npm ci
@@ -32,7 +33,10 @@ jobs:
       - name: Build TypeScript distribution
         run: npm run build
 
-      - name: Run TypeScript & Lua tests
+      - name: Package Manifest V3 WebExtension
+        run: npm run package:extension
+
+      - name: Run Test Suite (TS, Lua, Userscript, Extension)
         run: npm test
 
       - name: Setup Python 3.11
@@ -43,11 +47,34 @@ jobs:
       - name: Run Python tests
         run: python python/tests/test_converter.py
 
-      - name: Create GitHub Release
+      - name: Build Python distribution
+        run: |
+          pip install build
+          python -m build python/
+
+      - name: Create GitHub Release with Assets
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release create "${{ github.ref_name }}" \
             --title "${{ github.ref_name }}" \
             --generate-notes \
-            --verify-tag
+            --verify-tag \
+            dist/ygn-db-helper.zip \
+            userscripts/ygn-duelingbook.user.js \
+            python/dist/*
+
+      - name: Publish to npm
+        if: env.NODE_AUTH_TOKEN != ''
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public
+
+      - name: Publish to PyPI
+        if: env.TWINE_PASSWORD != ''
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: |
+          pip install twine
+          twine upload --skip-existing python/dist/*

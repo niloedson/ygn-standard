@@ -5,6 +5,15 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "bin",
+    "userscripts",
+    "extensions",
+    "rfcs",
+    "README.md",
+    "LICENSE"
+  ],
   "bin": {
     "ygo-notary": "bin/ygo-notary.js",
     "ygn-transcribe": "bin/ygo-notary.js"
