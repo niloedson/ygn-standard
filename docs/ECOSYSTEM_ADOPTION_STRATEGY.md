@@ -58,27 +58,28 @@ This document details the **5 strategic pillars**, providing a step-by-step impl
 ### 1.1. Strategic Objective
 Reduce match export friction from **4 manual steps** (export log $\to$ select text $\to$ open `notary.html` $\to$ paste) to **a single click (`[📋 Copy as YGN]`) directly on Dueling Book**.
 
-### 1.2. Architecture
+### 1.2. Architecture & Cloudflare Turnstile Resilience
 * Single-file **Tampermonkey Userscript** (`ygn-duelingbook.user.js`) for instant power-user install.
 * Zero-dependency **Chrome/Firefox WebExtension (Manifest V3)** for one-click Web Store installation.
 * Inlines the lightweight client-side `duelingbookToYgn` engine (<22KB unminified).
+* **Cloudflare Turnstile Resilience:** Dueling Book replay pages (`/replay?id=...`) protect replay data behind a Cloudflare Turnstile challenge (`loadTurnstile()` issuing a POST to `view-replay`). Automated external scrapers fail, but the Userscript / WebExtension executes **client-side inside the authenticated browser session after Turnstile verification completes**. This bypasses Cloudflare completely with zero CAPTCHA solving overhead.
 
 ### 1.3. Step-by-Step Implementation Guide
-1. **DOM Injection Point Mapping:**
-   * Target the post-duel modal or the main chat command toolbar (`#chat_tools` or `#duel_log_button`).
-   * Inject a branded Haunted Labs button: `<button id="btnYgnCopy" class="ygn-btn">⚡ Copy as YGN</button>`.
+1. **Targeting & Dual-Context Injection:**
+   * Match rules: `@match https://www.duelingbook.com/duel*`, `@match https://www.duelingbook.com/replay*`, and `@match https://www.duelingbook.com/`.
+   * **Live Match Room:** Target `#chat_tools` or `#duel_log .chat_top_bg` and inject `<button id="btnYgnCopy" class="ygn-btn">⚡ Copy as YGN</button>`.
+   * **Replay Room:** Observe post-Turnstile completion (`#turnstile_bg` hidden or `updateDuelLog` calls). Inject `[⚡ Copy as YGN]` into the replay transport bar (next to `#pause_replay_btn`) and in `#duel_log .log_tools`.
 2. **Event Interception & Extraction:**
-   * Read the duel log directly from memory or simulate the native export event without opening a popup window:
-     ```javascript
-     const rawLog = window.duel_log || document.querySelector('#log_content')?.innerText;
-     ```
+   * **DOM Extraction:** Read `#duel_log .log_txt` or simulate native export text extraction.
+   * **Memory Interception:** Read in-memory arrays `window.duel_logs` or intercept the `view-replay` JSON payload (`data.logs`) directly upon `loadReplayComplete`.
 3. **Background Transcription:**
    * Pass the extracted string into the inlined `convertDuelingBookToYgn(rawLog, { chainFormat: 'indented', visibility: 'omniscient' })`.
 4. **Clipboard Handshake & Visual Feedback:**
    * Copy the formatted YGN string using `navigator.clipboard.writeText(result.ygnText)`.
    * Display an animated on-screen HUD toast: `✓ Transcribed (83% noise stripped) — Copied to Clipboard!`.
 5. **Distribution & Release:**
-   * Host `ygn-duelingbook.user.js` on GitHub with automatic update headers (`@updateURL`).
+   * Host `ygn-duelingbook.user.js` in `userscripts/` with automatic update headers (`@updateURL`, `@downloadURL`).
+   * Provide a 1-click install button on `niloedson.github.io/tools/notary.html`.
    * Submit to the Chrome Web Store and Firefox Add-ons repository under *Haunted Labs Open Commons*.
 
 ### 1.4. Key Metric
@@ -131,8 +132,12 @@ Establish undeniable competitive credibility by publishing an empirical meta-ana
 ### 3.3. Step-by-Step Implementation Guide
 1. **Engine Synchronization (`python/ygn/converter.py`):**
    * Port the recent TypeScript updates to Python: multi-game match partitioning, implicit hand trap inference, and negation attribution (`attributeChainResolutions`).
-2. **Corpus Assembly:**
-   * Collect and curate 1,000+ public Dueling Book transcripts from high-rated tournament tables (YCS, National Championships, Regional top cuts).
+2. **Cloudflare-Resilient Corpus Assembly:**
+   * *Anti-Scraping Constraint:* Naive HTTP requests (`urllib`, `requests`) against Dueling Book replay URLs fail due to Cloudflare Turnstile verification.
+   * *Three-Tier Sourcing Model:*
+     1. **Crowdsourced Telemetry via Match Notary & Userscript:** Enable an opt-in checkbox on `notary.html` and `ygn-duelingbook.user.js` (*"Contribute anonymous YGN record to Open Research Corpus"*).
+     2. **Tournament Organizer (TO) Archives:** Ingest offline `duel_log.txt` logs collected by judges during Remote YCS and Discord tournament top cuts.
+     3. **Local Browser Harvester:** When batching replay IDs, run a local Playwright script with persistent user profile cookies to allow Turnstile verification rather than unauthenticated server-side requests.
    * Batch transcribe into `.ygn` records using `ygn transcribe --stats`.
 3. **Feature Engineering & DataFrame Ingestion:**
    * Extract key metrics into tabular form:
