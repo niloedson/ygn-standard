@@ -6,14 +6,14 @@ build-backend = "setuptools.build_meta"
 name = "ygn"
 version = "1.0.0"
 authors = [
-  { name = "Yu-Gi-Oh! Open Tooling Working Group" }
+  { name = "Yu-Gi-Oh! Open Tooling Working Group & Haunted Labs" }
 ]
 description = "Reference Python parser, AST, and converter for YGN (Yu-Gi-Oh! Game Notation) - RFC 0001"
 readme = "README.md"
+license = { text = "MIT" }
 requires-python = ">=3.9"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Topic :: Games/Entertainment :: Board Games"
 ]
