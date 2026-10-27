@@ -128,6 +128,16 @@ def parse_ygn(text: str) -> YgnDocument:
         if not line:
             continue
 
+        # Single-line comments (; Comment)
+        if line.startswith(";"):
+            continue
+
+        # YBN Board State Keyframe (YBN: or @YBN:)
+        if line.startswith("YBN:") or line.startswith("@YBN:"):
+            if current_turn:
+                current_turn.keyframe_ybn = line
+            continue
+
         tag_match = re.match(r'^\[([A-Za-z0-9_]+)\s+"([^"]*)"\]$', line)
         if tag_match:
             headers[tag_match.group(1)] = tag_match.group(2)

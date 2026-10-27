@@ -42,6 +42,17 @@ export function parseYgn(text: string): YgnDocument {
     const line = rawLine.trim();
     if (!line) continue;
 
+    // Single-line comments (; Comment)
+    if (line.startsWith(";")) continue;
+
+    // YBN Board State Keyframe (YBN: or @YBN:)
+    if (line.startsWith("YBN:") || line.startsWith("@YBN:")) {
+      if (currentTurn) {
+        currentTurn.keyframeYbn = line;
+      }
+      continue;
+    }
+
     // Header Tags: [TagName "TagValue" ...]
     const tagMatch = line.match(/^\[([A-Za-z0-9_]+)\s+"([^"]*)"(?:\s+[^\]]*)?\]$/);
     if (tagMatch) {
