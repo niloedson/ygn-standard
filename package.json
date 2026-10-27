@@ -11,10 +11,12 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "tsx test/converter.test.ts && tsx test/lua_emitter.test.ts && tsx test/userscript.test.ts",
+    "test": "tsx test/converter.test.ts && tsx test/lua_emitter.test.ts && tsx test/userscript.test.ts && tsx test/webextension.test.ts",
     "test:ts": "tsx test/converter.test.ts",
     "test:lua": "tsx test/lua_emitter.test.ts",
     "test:userscript": "tsx test/userscript.test.ts",
+    "test:extension": "tsx test/webextension.test.ts",
+    "package:extension": "node scripts/generate-icons.mjs && node scripts/package-extension.mjs",
     "test:py": "python python/tests/test_converter.py",
     "rfc:lint": "node scripts/lint-rfcs.mjs",
     "labels:sync": "node scripts/sync-labels.mjs"
