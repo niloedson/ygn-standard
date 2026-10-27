@@ -1,8 +1,25 @@
-node_modules/
-dist/
-build/
-*.egg-info/
+# Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[cod]
+*$py.class
 *.pyc
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# OS & Editor
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
