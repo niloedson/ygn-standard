@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YGN Helper</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #121824;
+      --border: rgba(255, 255, 255, 0.1);
+      --accent: #7c3aed;
+      --accent-grad: linear-gradient(135deg, #7c3aed, #4f46e5);
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 320px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      padding: 14px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .badge {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(124, 58, 237, 0.2);
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      color: #c4b5fd;
+      font-weight: 600;
+    }
+
+    .status-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 6px #10b981;
+    }
+
+    .btn-main {
+      width: 100%;
+      background: var(--accent-grad);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 9px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+      transition: all 0.15s ease;
+      margin-bottom: 12px;
+    }
+
+    .btn-main:hover {
+      filter: brightness(1.15);
+      transform: translateY(-1px);
+    }
+
+    .section-title {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .options-group {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 10px;
+      margin-bottom: 12px;
+    }
+
+    .option-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-size: 11px;
+    }
+
+    .option-row:last-child {
+      margin-bottom: 0;
+    }
+
+    select {
+      background: #0b0f19;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+      padding: 3px 6px;
+      font-size: 11px;
+      outline: none;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+
+    .link-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      border-radius: 4px;
+      padding: 6px 8px;
+      font-size: 10px;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      font-weight: 600;
+    }
+
+    .link-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .footer {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 9px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="brand">
+      <span>⚡</span> YGN Dueling Book Helper
+    </div>
+    <span class="badge">RFC 0001</span>
+  </div>
+
+  <div class="status-card">
+    <div class="status-indicator">
+      <div class="dot"></div>
+      <span id="statusText">Active on Dueling Book</span>
+    </div>
+    <span style="font-size: 10px; color: #a5b4fc;">v1.0.0</span>
+  </div>
+
+  <button id="btnExport" class="btn-main">
+    <span>📋</span> Copy Match as YGN
+  </button>
+
+  <div class="section-title">Transcription Options</div>
+  <div class="options-group">
+    <div class="option-row">
+      <span>Chain Format</span>
+      <select id="chainFormatSelect">
+        <option value="indented">Indented LIFO</option>
+        <option value="inline">Inline Bracket</option>
+      </select>
+    </div>
+    <div class="option-row">
+      <span>Opening Hands</span>
+      <select id="visibilitySelect">
+        <option value="omniscient">Omniscient</option>
+        <option value="pilot">Pilot (P1)</option>
+        <option value="spectator">Spectator</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="section-title">Haunted Labs Tooling</div>
+  <div class="links">
+    <a href="https://niloedson.github.io/tools/notary.html" target="_blank" class="link-btn">
+      Match Notary
+    </a>
+    <a href="https://niloedson.github.io/tools/submit-archetype-theory.html" target="_blank" class="link-btn">
+      Submit Theory
+    </a>
+  </div>
+
+  <div class="footer">
+    Haunted Labs &bull; Turnstile-Resilient Native Hook
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
