@@ -1,6 +1,6 @@
 {
   "name": "ygn-standard",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Official reference implementation, grammar specifications, and tooling for YGN (Yu-Gi-Oh! Game Notation) and YBN (Yu-Gi-Oh! Board Notation).",
   "type": "module",
   "main": "dist/index.js",
