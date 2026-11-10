@@ -240,7 +240,7 @@ export function convertDuelingBookToYgn(
   rawLogText: string,
   options: DuelingBookConverterOptions = {}
 ): DuelingBookConversionResult {
-  const chainFormat = options.chainFormat || "inline";
+  const chainFormat = options.chainFormat || "indented";
   const startTime = performance.now();
   const rawLines = rawLogText.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
   const origBytes = Buffer.byteLength(rawLogText, "utf-8");
@@ -907,31 +907,31 @@ export function convertDuelingBookToYgn(
         // Attribute resolutions across chain links (taking negations and effects into account)
         const attributedResolutions = attributeChainResolutions(chainLinks, resolutions);
 
-        // Format RFC 0001 Chain String: [C1: ... // R1: ...] or Indented LIFO Stack
-        if (chainLinks.length === 1) {
-          const c1 = chainLinks[0];
-          const originTag = c1.dest ? `>${c1.dest}` : '';
-          const c1Str = `A(${c1.origin})[${getAliasTag(c1.card!)}]${originTag}${costStr}${targetStr}`;
-          const resStr = attributedResolutions[0] || 'OK';
-          ygnLines.push(`  [C1: ${c1Str} // R1: ${resStr}]`);
+        // Format RFC 0001 Chain String: Indented LIFO Stack (Default) or Inline
+        if (chainFormat === "indented") {
+          // Indented LIFO Stack (Multi-line Format)
+          // Activations push onto stack (C1..Cn)
+          for (let k = 0; k < chainLinks.length; k++) {
+            const c = chainLinks[k];
+            const originTag = c.dest ? `>${c.dest}` : '';
+            const cCost = k === 0 ? costStr : '';
+            const cTarget = k === 0 ? targetStr : '';
+            const indent = '  ' + '    '.repeat(k);
+            ygnLines.push(`${indent}C${k + 1}: A(${c.origin})[${getAliasTag(c.card!)}]${originTag}${cCost}${cTarget}`);
+          }
+          // Resolutions unwind in reverse LIFO order (Rn..R1) with matching indentation
+          const n = chainLinks.length;
+          for (let k = n - 1; k >= 0; k--) {
+            const indent = '  ' + '    '.repeat(k);
+            ygnLines.push(`${indent}R${k + 1}: ${attributedResolutions[k]}`);
+          }
         } else {
-          if (chainFormat === "indented") {
-            // Indented LIFO Stack (Expanded Format)
-            // Activations push onto stack (C1..Cn)
-            for (let k = 0; k < chainLinks.length; k++) {
-              const c = chainLinks[k];
-              const originTag = c.dest ? `>${c.dest}` : '';
-              const cCost = k === 0 ? costStr : '';
-              const cTarget = k === 0 ? targetStr : '';
-              const indent = '  ' + '    '.repeat(k);
-              ygnLines.push(`${indent}C${k + 1}: A(${c.origin})[${getAliasTag(c.card!)}]${originTag}${cCost}${cTarget}`);
-            }
-            // Resolutions unwind in reverse LIFO order (Rn..R1) with matching indentation
-            const n = chainLinks.length;
-            for (let k = n - 1; k >= 0; k--) {
-              const indent = '  ' + '    '.repeat(k);
-              ygnLines.push(`${indent}R${k + 1}: ${attributedResolutions[k]}`);
-            }
+          if (chainLinks.length === 1) {
+            const c1 = chainLinks[0];
+            const originTag = c1.dest ? `>${c1.dest}` : '';
+            const c1Str = `A(${c1.origin})[${getAliasTag(c1.card!)}]${originTag}${costStr}${targetStr}`;
+            const resStr = attributedResolutions[0] || 'OK';
+            ygnLines.push(`  [C1: ${c1Str} // R1: ${resStr}]`);
           } else {
             const cParts = chainLinks.map((c, idx) => `C${idx + 1}: A(${c.origin})[${getAliasTag(c.card!)}]`).join(' > ');
             const rParts: string[] = [];
@@ -950,7 +950,7 @@ export function convertDuelingBookToYgn(
     }
 
     ygnLines.push("");
-    ygnLines.push(`; --- RFC 0001 Terminal Board Snapshot (YBN - Game ${gameNum}) ---`);
+    ygnLines.push(`-- --- RFC 0001 Terminal Board Snapshot (YBN - Game ${gameNum}) ---`);
     ygnLines.push(`YBN: T${turnCount}|M1|LP8000:8000|P1:M2[#6(def)],M3[#4(def)],M5[#3(def)],S3[#1]|P2:M3[Token]|G:NS=0,SS=4`);
   });
 

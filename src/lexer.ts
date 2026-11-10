@@ -42,8 +42,8 @@ export function parseYgn(text: string): YgnDocument {
     const line = rawLine.trim();
     if (!line) continue;
 
-    // Single-line comments (; Comment)
-    if (line.startsWith(";")) continue;
+    // Single-line comments (-- Comment or ; Comment)
+    if (line.startsWith("--") || line.startsWith(";")) continue;
 
     // YBN Board State Keyframe (YBN: or @YBN:)
     if (line.startsWith("YBN:") || line.startsWith("@YBN:")) {
