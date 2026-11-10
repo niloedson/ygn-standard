@@ -116,12 +116,17 @@ export function partitionRawLinesIntoGames(rawLines: string[]): string[][] {
     if (/Admitted defeat|Finished siding/i.test(line)) {
       sidingOrDefeat = true;
     }
-    if (/^----------------\(Turn 1\)----------------/i.test(line)) {
-      if (seenFirstTurn1 && sidingOrDefeat && currentGame.length > 0) {
+    const isGameTurn1 = /^[-]+\(Game\s+\d+\s+-\s+Turn\s+1\)[-]+/i.test(line);
+    const isStdTurn1 = /^----------------\(Turn 1\)----------------/i.test(line);
+
+    if (isGameTurn1 || (isStdTurn1 && seenFirstTurn1 && sidingOrDefeat)) {
+      if (currentGame.length > 0) {
         games.push(currentGame);
         currentGame = [];
         sidingOrDefeat = false;
       }
+      seenFirstTurn1 = true;
+    } else if (isStdTurn1) {
       seenFirstTurn1 = true;
     }
     currentGame.push(line);
@@ -402,7 +407,7 @@ export function convertDuelingBookToYgn(
 
     for (const line of gameLines) {
       // Turn Demarcation
-      if (/^----------------\(Turn\s+(\d+)\)----------------/i.test(line)) {
+      if (/^[-]+\((?:Game\s+\d+\s+-\s+)?Turn\s+(\d+)\)[-]+/i.test(line)) {
         actions.push({
           raw: line,
           type: 'TURN',
